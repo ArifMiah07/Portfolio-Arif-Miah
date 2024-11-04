@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter } from 'lucide-react';
 
-import img from './assets/459320652_2503704503153200_5513227696289903947_n.jpg';
+import img from './assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview.png';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +21,30 @@ const Portfolio = () => {
     },
     {
       title: "Task Management System",
+      description: "CRUD application with RESTful API and Material-UI components",
+      tech: ["MongoDB", "Express", "React", "Node.js", "Material-UI"],
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      title: "Smartkidz - Education Platform",
+      description: "Full-stack MERN application with React router dom and JWT authentication",
+      tech: ["MongoDB", "Express", "React", "Node.js", "react router dom"],
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
+      title: "Xonxoni fnf - friends and Family Application",
+      description: "WebSocket-based chat with MongoDB persistence and React frontend",
+      tech: ["Socket.io", "Express", "React", "Node.js", "MongoDB"],
+      icon: <Terminal className="w-6 h-6" />
+    },
+    {
+      title: "Survey Application",
+      description: "CRUD application with RESTful API and Material-UI components",
+      tech: ["MongoDB", "Express", "React", "Node.js", "Material-UI"],
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      title: "Eco wonderland - Tour Management Application",
       description: "CRUD application with RESTful API and Material-UI components",
       tech: ["MongoDB", "Express", "React", "Node.js", "Material-UI"],
       icon: <Database className="w-6 h-6" />
@@ -120,7 +144,7 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <div className="h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto flex flex-col items-center px-4 py-24">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6 items-center px-4 py-24">
           <div className='w-52 flex items-center justify-center border-4 border-white rounded-full'>
             <img src={img} className='w-48 rounded-full' alt="" />
           </div>
@@ -128,10 +152,23 @@ const Portfolio = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">MERN Stack Developer</h1>
             <p className="text-xl md:text-2xl mb-8">Building robust web applications with modern technologies</p>
             <div className="flex justify-center space-x-4">
-              <a href=''><Github className="w-6 h-6 cursor-pointer hover:text-indigo-200" /></a>
-              <a href=''><Linkedin className="w-6 h-6 cursor-pointer hover:text-indigo-200" /></a>
-              <a href=''><Mail className="w-6 h-6 cursor-pointer hover:text-indigo-200" /></a>
+              <a href="https://github.com/ArifMiah07">
+                <Github className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
+              </a>
+              <a href="https://www.linkedin.com/in/arifmiah01/">
+                <Linkedin className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
+              </a>
+              <a
+                href="#"
+                onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=arifmiah.me101@gmail.com")}
+              >
+                <Mail className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
+              </a>
+              <a href="https://x.com/ArifMiah01">
+                <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
+              </a>
             </div>
+
           </div>
         </div>
       </div>
