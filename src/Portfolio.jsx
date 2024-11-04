@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter } from 'lucide-react';
-
+import { TbFileCv } from "react-icons/tb";
 import img from './assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview.png';
 
 const Portfolio = () => {
@@ -167,8 +167,12 @@ const Portfolio = () => {
               <a href="https://x.com/ArifMiah01">
                 <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
               </a>
+              <div className='w-8 h-8 cursor-pointer hover:text-indigo-200'>
+                <a href='../src/assets/CV-Arif Miah.pdf' download="CV-Arif Miah.pdf" target="_blank" rel="noopener noreferrer">
+                  <TbFileCv className='w-6 h-6' />
+                </a>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
