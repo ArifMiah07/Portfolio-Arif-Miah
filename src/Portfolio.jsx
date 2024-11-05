@@ -195,7 +195,9 @@ const Portfolio = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex justify-between h-16">
               <div className="flex items-center">
-                <span className="text-2xl font-bold text-indigo-600">Arif Miah</span>
+                <a href="https://arifmiah.netlify.app/">
+                  <span className="text-2xl font-bold text-indigo-600">Arif Miah</span>
+                </a>
               </div>
               
               {/* Desktop Navigation */}
@@ -254,7 +256,7 @@ const Portfolio = () => {
                   <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
                 </a>
                 <div className='w-8 h-8 cursor-pointer hover:text-indigo-200'>
-                  <a href='../src/assets/CV-Arif-Miah.pdf' download="CV-Arif-Miah.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href='https://drive.google.com/file/d/10Cf5uKo2ewTm6aouCweC_V2M4eFbTjS0/view?usp=sharing' download="CV-Arif Miah.pdf" target="_blank" rel="noopener noreferrer">
                     <TbFileCv className='w-6 h-6' />
                   </a>
                 </div>
