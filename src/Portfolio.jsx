@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Serv
 import { TbFileCv } from "react-icons/tb";
 import img from './assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview.png';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -152,7 +153,7 @@ const Portfolio = () => {
         "TypeScript"
       ]
     };
-
+// href="https://arifmiah.netlify.app/"
   return (
     <>
       <Helmet>
@@ -195,9 +196,9 @@ const Portfolio = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex justify-between h-16">
               <div className="flex items-center">
-                <a href="https://arifmiah.netlify.app/">
+                <Link to={'/'}>
                   <span className="text-2xl font-bold text-indigo-600">Arif Miah</span>
-                </a>
+                </Link>
               </div>
               
               {/* Desktop Navigation */}
