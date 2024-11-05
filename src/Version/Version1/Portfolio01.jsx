@@ -1,12 +1,54 @@
 import { useState } from 'react';
 import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter } from 'lucide-react';
 import { TbFileCv } from "react-icons/tb";
-import img from './assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview.png';
+import profileImg from '../../../public/assets/profile.jpg'; // Moved to public folder
+// import cvFile from '../../../public/assets/CV-Arif-Miah.pdf'; // Moved to public folder
 import { Helmet } from 'react-helmet-async';
 
-const Portfolio = () => {
+const Portfolio1 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: ''
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [submitError, setSubmitError] = useState('');
+
+  // Form handling
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitError('');
+
+  //   try {
+  //     // Replace with your actual form submission logic
+  //     await fetch('/api/contact', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+      
+  //     setFormData({ name: '', email: '', message: '' });
+  //     alert('Message sent successfully!');
+  //   } catch (error) {
+  //     setSubmitError('Failed to send message. Please try again.');
+  //     console.error('Form submission error:', error);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -102,54 +144,56 @@ const Portfolio = () => {
       "Security Best Practices"
     ]
   };
-    // SEO Data
-    const seoData = {
-      title: "Arif Miah | Frontend & MERN Stack Developer from Bangladesh",
-      description: "Professional portfolio of Arif Miah - Frontend Developer specializing in React.js, Node.js, and modern web technologies. View projects and skills in web development.",
-      keywords: "Arif Miah, Frontend Developer, MERN Stack, React.js, Web Developer Bangladesh, Chittagong Developer, JavaScript Developer",
-      image: "https://arifmiah.netlify.app/assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview-BHptUUMX.png", // 
-      url: "https://arifmiah.netlify.app",
-      socialLinks: {
-        github: "https://github.com/ArifMiah07",
-        linkedin: "https://www.linkedin.com/in/arifmiah01/",
-        twitter: "https://x.com/ArifMiah01",
-        facebook: "https://www.facebook.com/profile.php?id=61564664411937"
-      }
-    };
-  
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Arif Miah",
-      "jobTitle": "Frontend Developer | Mern stack developer",
-      "url": seoData.url,
-      "sameAs": [
-        seoData.socialLinks.github,
-        seoData.socialLinks.linkedin,
-        seoData.socialLinks.twitter,
-        seoData.socialLinks.facebook
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chittagong",
-        "addressRegion": "Patenga",
-        "addressCountry": "Bangladesh"
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Bepza Public School and College, CEPZ"
-      },
-      "knowsAbout": [
-        "Frontend Development",
-        "React.js",
-        "Node.js",
-        "MongoDB",
-        "Web Design",
-        "UI/UX Design",
-        "JavaScript",
-        "TypeScript"
-      ]
-    };
+
+  const seoData = {
+    title: "Arif Miah | Frontend & MERN Stack Developer from Bangladesh",
+    description: "Professional portfolio of Arif Miah - Frontend Developer specializing in React.js, Node.js, and modern web technologies. View projects and skills in web development.",
+    keywords: "Arif Miah, Frontend Developer, MERN Stack, React.js, Web Developer Bangladesh, Chittagong Developer, JavaScript Developer",
+    image: "https://arifmiah.netlify.app/assets/profile.png",
+    url: "https://arifmiah.netlify.app",
+    socialLinks: {
+      github: "https://github.com/ArifMiah07",
+      linkedin: "https://www.linkedin.com/in/arifmiah01/",
+      twitter: "https://x.com/ArifMiah01",
+      facebook: "https://www.facebook.com/profile.php?id=61564664411937"
+    }
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arif Miah",
+    "jobTitle": "Frontend Developer | Mern stack developer",
+    "url": seoData.url,
+    "sameAs": [
+      seoData.socialLinks.github,
+      seoData.socialLinks.linkedin,
+      seoData.socialLinks.twitter,
+      seoData.socialLinks.facebook
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chittagong",
+      "addressRegion": "Patenga",
+      "addressCountry": "Bangladesh"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Bepza Public School and College, CEPZ"
+    },
+    "knowsAbout": [
+      "Frontend Development",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Web Design",
+      "UI/UX Design",
+      "JavaScript",
+      "TypeScript"
+    ]
+  };
+
+  const structuredDataString = `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`;
 
   return (
     <>
@@ -183,10 +227,10 @@ const Portfolio = () => {
         <link rel="canonical" href={seoData.url} />
         
         {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <div dangerouslySetInnerHTML={{ __html: structuredDataString }} />
       </Helmet>
+
+      
       <div className="min-h-screen bg-slate-50">
         {/* Navigation */}
         <nav className="bg-white shadow-lg">
@@ -230,7 +274,7 @@ const Portfolio = () => {
         <div className="h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto flex flex-col gap-6 items-center px-4 py-24">
             <div className='w-52 flex items-center justify-center border-4 border-white rounded-full'>
-              <img src={img} className='w-48 rounded-full' alt="" />
+              <img src={profileImg} className='w-48 rounded-full' alt="" />
             </div>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">MERN Stack Developer</h1>
@@ -384,4 +428,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Portfolio1;
