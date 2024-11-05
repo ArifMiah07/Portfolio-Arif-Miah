@@ -113,7 +113,8 @@ const Portfolio = () => {
         github: "https://github.com/ArifMiah07",
         linkedin: "https://www.linkedin.com/in/arifmiah01/",
         twitter: "https://x.com/ArifMiah01",
-        facebook: "https://www.facebook.com/profile.php?id=61564664411937"
+        facebook: "https://www.facebook.com/profile.php?id=61564664411937",
+        instagram: "https://www.instagram.com/r_if32d/"
       }
     };
   
@@ -127,7 +128,8 @@ const Portfolio = () => {
         seoData.socialLinks.github,
         seoData.socialLinks.linkedin,
         seoData.socialLinks.twitter,
-        seoData.socialLinks.facebook
+        seoData.socialLinks.facebook,
+        seoData.socialLinks.instagram,
       ],
       "address": {
         "@type": "PostalAddress",
