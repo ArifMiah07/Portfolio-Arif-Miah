@@ -237,7 +237,7 @@ const Portfolio = () => {
         <div className="h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto flex flex-col gap-6 items-center px-4 py-24">
             <div className='w-52 flex items-center justify-center border-4 border-white rounded-full'>
-              <img src={img} className='w-48 rounded-full' alt="" />
+              <img src={img} className='w-48 rounded-full' alt="arif miah hero section cover image" />
             </div>
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">MERN Stack Developer</h1>
