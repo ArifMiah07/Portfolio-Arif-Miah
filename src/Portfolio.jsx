@@ -254,7 +254,7 @@ const Portfolio = () => {
                   <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
                 </a>
                 <div className='w-8 h-8 cursor-pointer hover:text-indigo-200'>
-                  <a href='../src/assets/CV-Arif Miah.pdf' download="CV-Arif Miah.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href='../src/assets/CV-Arif-Miah.pdf' download="CV-Arif-Miah.pdf" target="_blank" rel="noopener noreferrer">
                     <TbFileCv className='w-6 h-6' />
                   </a>
                 </div>

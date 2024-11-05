@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter, Link } from 'lucide-react';
 import { TbFileCv } from "react-icons/tb";
 import profileImg from '../../../public/assets/profile.jpg'; // Moved to public folder
 // import cvFile from '../../../public/assets/CV-Arif-Miah.pdf'; // Moved to public folder
@@ -237,7 +237,7 @@ const Portfolio1 = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex justify-between h-16">
               <div className="flex items-center">
-                <span className="text-2xl font-bold text-indigo-600">Arif Miah</span>
+                <Link to={'/'}><span className="text-2xl font-bold text-indigo-600">Arif Miah</span></Link>
               </div>
               
               {/* Desktop Navigation */}
@@ -296,7 +296,7 @@ const Portfolio1 = () => {
                   <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
                 </a>
                 <div className='w-8 h-8 cursor-pointer hover:text-indigo-200'>
-                  <a href='../src/assets/CV-Arif Miah.pdf' download="CV-Arif Miah.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href='../src/assets/CV-Arif-Miah.pdf' download="CV-Arif-Miah.pdf" target="_blank" rel="noopener noreferrer">
                     <TbFileCv className='w-6 h-6' />
                   </a>
                 </div>
