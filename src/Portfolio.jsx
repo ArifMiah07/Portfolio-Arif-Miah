@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Terminal, Database, Globe, Code2, Server, Cloud, } from 'lucide-react';
 import { TbFileCv } from "react-icons/tb";
 import img from './assets/9dc658f5-2f64-4c07-ae03-7ad522ccaf6c-removebg-preview.png';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { RiTwitterXLine } from "react-icons/ri";
+
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -254,7 +256,7 @@ const Portfolio = () => {
                   <Mail className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
                 </a>
                 <a href="https://x.com/ArifMiah01">
-                  <Twitter className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
+                  <RiTwitterXLine className="w-6 h-6 cursor-pointer hover:text-indigo-200" />
                 </a>
                 <div className='w-8 h-8 cursor-pointer hover:text-indigo-200'>
                   <a href='https://drive.google.com/file/d/10Cf5uKo2ewTm6aouCweC_V2M4eFbTjS0/view?usp=sharing' download="CV-Arif Miah.pdf" target="_blank" rel="noopener noreferrer">
