@@ -263,6 +263,9 @@ const Portfolio = () => {
                     <TbFileCv className='w-6 h-6' />
                   </a>
                 </div>
+                <div>
+                  <Link to={'/v2'}><span className='w-6 h-6'><img className='w-6 h-6' src="../src/assets/icons8-version.png" alt="" /> </span></Link>
+                </div>
               </div>
             </div>
           </div>
