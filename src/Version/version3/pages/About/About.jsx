@@ -1,10 +1,33 @@
 import { ScrollContainer } from "react-nice-scroll";
 import "react-nice-scroll/dist/styles.css";
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
+import { useState } from "react";
+// import Dropdown from "../../components/Dropdown/Dropdown";
+// import { useState } from "react";
 
 const About = () => {
+    const [font, setFont]= useState('laila');
+
+    const [fontSize, setFontSize] = useState(14);
+    
+    const handleSelectFont = (event) => {
+        const selectedText = event.target.options[event.target.selectedIndex].text;
+        console.log(selectedText);
+        setFont(selectedText);
+      };
+
+      const handleFontSize =(e)=>{
+        e.preventDefault()
+
+        const form = e.target
+        const size = form.size.value;
+        console.log(size)
+        setFontSize(size);
+      }
   return (
-    <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden ">
+    <div
+    style={{ fontSize: `${fontSize}px` }}
+      className={`bg-red-50 mx-auto ${font} text-[33px] w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
       {/* left */}
       <section className="lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-5">
         <LeftSideBar></LeftSideBar>
@@ -15,10 +38,34 @@ const About = () => {
           <div className="bg-[#D663A080]  p-1 lg:p-5 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
               <div className="mb-3">
+                <div>
+                  {/* <Dropdown items={dropdownItems} label="Font" /> */}
+                    <select onChange={handleSelectFont} name="select" id="select" className="select">
+                        <option value="bungee-tint">bungee-tint</option>
+                        <option value="inter">inter</option>
+                        <option value="lato">lato</option>
+                        <option value="matemasie">matemasie</option>
+                        <option value="merriweather">merriweather</option>
+                        <option value="new-amsterdam">new-amsterdam</option>
+                        <option value="open-sans">open-sans</option>
+                        <option value="playfair-display">playfair-display</option>
+                        <option value="poppins">poppins</option>
+                        <option value="raleway">raleway</option>
+                        <option value="roboto">roboto</option>
+                        <option value="laila">laila</option>
+                        <option value="playwrite-au-sa">playwrite-au-sa</option>
+                    </select>
+                    <div>
+                        <form onSubmit={handleFontSize} >
+                            <input className="bg-red-50" type="text" name="size" />
+                            <input className="cursor-pointer border border-emerald-500 bg-red-100 p-2" type="submit" value="apply" />
+                        </form>
+                    </div>
+                </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
               <div className="p-5 bg-[#D9D5D5] border-l-4 border-[#009400]">
-                <p className="laila">
+                <p className="">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
                   student at Premier University, Chittagong. My fascination with
@@ -61,7 +108,7 @@ const About = () => {
             {/* footer */}
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center mb-10 md:mb-32 lg:mb-2 ">
               <div className="p-5 bg-[#D9D5D5] border-l-2 border-[#009400]">
-                <p>
+                <p className="">
                   I am passionate about continuous learning and creative
                   application of technology, always eager to tackle new
                   challenges and create innovative solutions in the world of web
