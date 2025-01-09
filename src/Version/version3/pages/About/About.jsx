@@ -1,59 +1,13 @@
 import { ScrollContainer } from "react-nice-scroll";
 import "react-nice-scroll/dist/styles.css";
-import profileImg from '../../../../../public/assets/profile-removebg-preview.png'
-import { Link } from "react-router-dom";
+import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
+
 const About = () => {
   return (
     <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden ">
       {/* left */}
       <section className="lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-5">
-        <div className=" bg-[#60A15680] lg:p-5 ">
-            <div className="bg-red-500 w-[40px] md:w-[120px] lg:w-full border border-green-500 ">
-                <img className="" src={profileImg} alt="" />
-            </div>
-            <div className="flex items-center justify-evenly mt-2">
-                <div className="w-4 h-4 bg-red-100 rounded-full ">
-
-                </div>
-                <div className="w-4 h-4 bg-red-100 rounded-full ">
-
-                </div>
-                <div className="w-4 h-4 bg-red-100 rounded-full ">
-
-                </div>
-                <div className="w-4 h-4 bg-red-100 rounded-full ">
-
-                </div>
-            </div>
-            {/* divider */}
-            <div className="w-full h-1 bg-red-700">
-
-            </div>
-            <div>
-                {/* nav */}
-                <div>
-                    <ul>
-                        <li>
-                            <Link to={'/v3/about'}>About</Link>
-                        </li>
-                        <li>
-                            <Link to={'/v3/skills'}>Skills</Link>
-                        </li>
-                        <li>
-                            <Link to={'/v3/projects'}>Projects</Link>
-                        </li>
-                        <li>
-                            <Link to={'/v3/blogs'}>Blogs</Link>
-                        </li>
-                        <li>
-                            <Link to={'/v3/contact'}>Contact</Link>
-                        </li>
-                    </ul>
-                </div>
-                {/* link */}
-                <div></div>
-            </div>
-        </div>
+        <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
       <section className="lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-2 mb-3">
@@ -64,7 +18,7 @@ const About = () => {
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
               <div className="p-5 bg-[#D9D5D5] border-l-4 border-[#009400]">
-                <p>
+                <p className="laila">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
                   student at Premier University, Chittagong. My fascination with

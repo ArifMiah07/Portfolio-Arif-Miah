@@ -1,5 +1,6 @@
 import { ScrollContainer } from "react-nice-scroll";
 import "react-nice-scroll/dist/styles.css";
+import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       {/* left */}
       <section className="lg:col-span-3 lg:w-[330px] bg-[#1B8B09] p-5">
         <div className="lg:w-[270px] bg-[#60A15680] ">
-            <h1>this is home</h1>
+            <LeftSideBar></LeftSideBar>
         </div>
       </section>
       {/* right */}

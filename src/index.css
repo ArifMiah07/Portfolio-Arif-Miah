@@ -1,11 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Laila:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* tailwind.css */
 @layer utilities {
-    ::selection {
-      @apply bg-selectionBg text-selectionText;
-    }
+  ::selection {
+    @apply bg-selectionBg text-selectionText;
   }
-  
+}
+
+.bungee-tint {
+  font-family: "Bungee Tint", serif;
+}
+.inter {
+  font-family: "Inter", serif;
+}
+.lato {
+  font-family: "Lato", serif;
+}
+.matemasie {
+  font-family: "Matemasie", serif;
+}
+.merriweather {
+  font-family: "Merriweather", serif;
+}
+.montserrat {
+  font-family: "Montserrat", serif;
+}
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", serif;
+}
+.open-sans {
+  font-family: "Open Sans", serif;
+}
+.playfair-display {
+  font-family: "Playfair Display", serif;
+}
+.poppins {
+  font-family: "Poppins", serif;
+}
+.raleway {
+  font-family: "Raleway", serif;
+}
+.roboto {
+  font-family: "Roboto", serif;
+}
+.laila {
+  font-family: "Laila", serif;
+}
+.playwrite-au-sa {
+  font-family: "Playwrite AU SA", serif;
+}
