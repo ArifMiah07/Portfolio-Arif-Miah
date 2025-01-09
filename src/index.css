@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* tailwind.css */
+@layer utilities {
+    ::selection {
+      @apply bg-selectionBg text-selectionText;
+    }
+  }
+  

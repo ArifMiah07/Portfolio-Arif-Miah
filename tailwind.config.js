@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        selectionBg: '#FFEB3B', // Custom background color for selected text
+        selectionText: '#1A202C', // Custom text color for selected text
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '::selection': {
+          backgroundColor: 'var(--tw-selection-bg)',
+          color: 'var(--tw-selection-text)',
+        },
+      });
+    },
+  ],
 }
