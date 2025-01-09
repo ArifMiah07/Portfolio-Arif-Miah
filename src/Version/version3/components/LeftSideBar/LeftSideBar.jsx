@@ -1,22 +1,47 @@
 import profileImg from "../../../../../public/assets/profile-removebg-preview.png";
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
+import { FaAngleDoubleRight, FaGithub } from "react-icons/fa";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { TbFileCv } from "react-icons/tb";
+import { FaAngleDoubleLeft } from "react-icons/fa";
+import { useState } from "react";
+import { GiNightSky } from "react-icons/gi";
+
+import { CiBrightnessDown } from "react-icons/ci";
 
 // import { SiGmail } from 'react-icons/si';
 // import Dropdown from '../Dropdown/Dropdown';
 
 const LeftSideBar = () => {
+  const [sideBarClose, setSideBarClose] = useState(false);
+  const [nightModeClose, setNightModeClose] = useState(false);
+
+  const handleSideBar = () => {
+    console.log("clicked");
+    setSideBarClose(!sideBarClose);
+  };
+  const handleNightMode = () => {
+    console.log("clicked");
+    setNightModeClose(!nightModeClose);
+  };
+
   return (
-    <div className=" bg-[#60A15680] lg:p-5 ">
+    <div className={`bg-[#60A15680] lg:p-5 `}>
       <div className="bg-red-500 w-[40px] md:w-[120px] lg:w-full border border-green-500 ">
         <img className="" src={profileImg} alt="" />
       </div>
       <div className="flex items-center justify-evenly mt-2">
-        <div className="w-4 h-4 bg-red-100 rounded-full "></div>
-        <div className="w-4 h-4 bg-red-100 rounded-full "></div>
+        <div
+          onClick={handleSideBar}
+          className="w-4 h-4 bg-red-100 rounded-full ">
+          {sideBarClose ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
+        </div>
+        <div
+          onClick={handleNightMode}
+          className="w-4 h-4 bg-red-100 rounded-full ">
+          {nightModeClose ? <CiBrightnessDown /> : <GiNightSky />}
+        </div>
         <div className="w-4 h-4 bg-red-100 rounded-full "></div>
         <div className="w-4 h-4 bg-red-100 rounded-full "></div>
       </div>

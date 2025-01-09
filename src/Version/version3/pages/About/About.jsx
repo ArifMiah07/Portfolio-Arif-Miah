@@ -26,14 +26,14 @@ const About = () => {
       }
   return (
     <div
-    style={{ fontSize: `${fontSize}px` }}
-      className={`bg-red-50 mx-auto ${font} text-[33px] w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
+    
+      className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
       {/* left */}
-      <section className="lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-5">
+      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-5">
         <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
-      <section className="lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-2 mb-3">
+      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-2 mb-3">
         <ScrollContainer>
           <div className="bg-[#D663A080]  p-1 lg:p-5 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
@@ -64,7 +64,7 @@ const About = () => {
                 </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
-              <div className="p-5 bg-[#D9D5D5] border-l-4 border-[#009400]">
+              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#D9D5D5] border-l-4 border-[#009400]">
                 <p className="">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
