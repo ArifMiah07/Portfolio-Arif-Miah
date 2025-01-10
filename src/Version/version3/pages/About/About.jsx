@@ -33,9 +33,9 @@ const About = () => {
         <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
-      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-2 mb-3">
+      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-1 mb-3">
         <ScrollContainer>
-          <div className="bg-[#D663A080]  p-1 lg:p-5 mb-5">
+          <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
               <div className="mb-3">
                 <div>
