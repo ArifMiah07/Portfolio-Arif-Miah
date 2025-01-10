@@ -9,6 +9,13 @@ import { useState } from "react";
 import { GiNightSky } from "react-icons/gi";
 
 import { CiBrightnessDown } from "react-icons/ci";
+import { IoSettings } from "react-icons/io5";
+
+import { IoSettingsOutline } from "react-icons/io5";
+import { CiStar } from "react-icons/ci";
+import { FaStar } from "react-icons/fa";
+
+
 
 // import { SiGmail } from 'react-icons/si';
 // import Dropdown from '../Dropdown/Dropdown';
@@ -16,6 +23,20 @@ import { CiBrightnessDown } from "react-icons/ci";
 const LeftSideBar = () => {
   const [sideBarClose, setSideBarClose] = useState(false);
   const [nightModeClose, setNightModeClose] = useState(false);
+  const [settingModeClose, setSettingModeClose] = useState(false);
+  const [startClose, setStartClose] = useState(false);
+
+
+  const handleStar = ()=>{
+    console.log('hello');
+    setStartClose(!startClose);
+  }
+
+
+  const handleSettingMode= ()=>{
+    console.log('clicked')
+    setSettingModeClose(!settingModeClose);
+  }
 
   const handleSideBar = () => {
     console.log("clicked");
@@ -34,39 +55,47 @@ const LeftSideBar = () => {
       <div className="flex items-center justify-evenly mt-2">
         <div
           onClick={handleSideBar}
-          className="w-4 h-4 bg-red-100 rounded-full ">
-          {sideBarClose ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
+          className="w-4 h-4 bg-green-50 rounded-full ">
+          {sideBarClose ? <FaAngleDoubleRight />: <FaAngleDoubleLeft /> }
         </div>
         <div
           onClick={handleNightMode}
-          className="w-4 h-4 bg-red-100 rounded-full ">
+          className="w-4 h-4 bg-green-50 rounded-full ">
           {nightModeClose ? <CiBrightnessDown /> : <GiNightSky />}
         </div>
-        <div className="w-4 h-4 bg-red-100 rounded-full "></div>
-        <div className="w-4 h-4 bg-red-100 rounded-full "></div>
+        <div onClick={handleSettingMode} className="w-4 h-4 bg-green-50 rounded-full ">
+          {
+            settingModeClose ? <IoSettings /> : <IoSettingsOutline />
+          }
+        </div>
+        <div onClick={handleStar} className={`w-4 h-4 bg-green-50 rounded-full `}>
+        {
+          startClose ? <FaStar className="text-yellow-300" />: <CiStar className="" /> 
+        }
+        </div>
       </div>
       {/* divider */}
       <div className="w-full h-1 bg-red-700"></div>
       <div>
         {/* nav */}
         <div className="bg-red-300 p-5">
-          <ul>
-            <li>
+          <ul className="">
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/"}>Home</Link>
             </li>
-            <li>
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/about"}>About</Link>
             </li>
-            <li>
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/skills"}>Skills</Link>
             </li>
-            <li>
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/projects"}>Projects</Link>
             </li>
-            <li>
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/blogs"}>Blogs</Link>
             </li>
-            <li>
+            <li className="border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 ">
               <Link to={"/v3/contact"}>Contact</Link>
             </li>
           </ul>
