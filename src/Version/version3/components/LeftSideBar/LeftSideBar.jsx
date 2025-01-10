@@ -56,25 +56,29 @@ const LeftSideBar = () => {
   };
   console.log(viewEyes);
   return (
-    <div className={`bg-[#60A15680] lg:p-5 `}>
+    <div className={`bg-[#60A15680] lg:p-5 flex lg:flex-col lg:gap-3 `}>
       <div className="flex justify-center items-center   ">
         <img
-          className="w-[40px] md:w-[120px] lg:w-[160px] xl:w-[180px] xl:h-[160.28]  "
+          className="shadow-xl drop-shadow-xl rounded-full w-[40px] md:w-[120px] lg:w-[160px] xl:w-[180px] xl:h-[160.28]  "
           src={profileImg}
           alt="profile image of arif miah"
         />
       </div>
+      {/* settings / users interactions */}
       <div className="flex items-center justify-evenly mt-2">
+        {/* sidebar folding / Drawer */}
         <div
           onClick={handleSideBar}
           className="flex items-center justify-center bg-green-50 rounded-full w-10 h-10 ">
           {sideBarClose ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}
         </div>
+        {/* night mode toggle / theme */}
         <div
           onClick={handleNightMode}
           className="flex items-center justify-center bg-green-50 rounded-full w-10 h-10 ">
           {nightModeClose ? <CiBrightnessDown /> : <GiNightSky />}
         </div>
+        {/* apply settings */}
         <div
           onClick={handleSettingMode}
           className="flex items-center justify-center bg-green-50 rounded-full w-10 h-10 ">
@@ -82,22 +86,22 @@ const LeftSideBar = () => {
             <div className="relative">
               {" "}
               <IoSettings className="" />{" "}
-              <div className="absolute top-50 right-50 bg-sky-400 p-5 ">
+              <div className="absolute top-50 right-50 bg-sky-300 p-5 rounded-xl ">
                 {" "}
-                <h1>Customization Setting</h1>
+                <h1 className="text-center">Customization Setting</h1>
                 <div>
-                  <ul>
-                    <li>
-                      abcd
+                  <ul className="border border-red-400 bg-sky-200 rounded-lg p-1">
+                    <li className="border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md">
+                      Font Size
                     </li>
-                    <li>
-                      abcd
+                    <li className="border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md">
+                      Front Family
                     </li>
-                    <li>
-                      abcd
+                    <li className="border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md">
+                      Color
                     </li>
-                    <li>
-                      abcd
+                    <li className="border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md">
+                      Mode
                     </li>
                   </ul>
                 </div>
@@ -109,8 +113,8 @@ const LeftSideBar = () => {
               <IoSettingsOutline />{" "}
             </div>
           )}
-          {/* {settingModeClose ?  : <div className="mt-10"> </div>} */}
         </div>
+        {/* give star  */}
         <div
           onClick={handleStar}
           className={`flex items-center justify-center bg-green-50 rounded-full w-10 h-10 `}>
@@ -120,15 +124,17 @@ const LeftSideBar = () => {
             <CiStar className="" />
           )}
         </div>
+        {/* show website view */}
         <div
           onMouseEnter={handleView}
           className={`flex items-center justify-center bg-green-50 rounded-full w-10 h-10 text-[15px] hover:text-[14px] hover:transition-all hover:delay-75 `}>
           {view ? viewEyes : <PiEyes />}
         </div>
       </div>
-      {/* divider */}
-      <div className="w-full h-1 bg-red-700"></div>
+      {/* footer */}
       <div>
+        {/* divider */}
+        <div className="w-full h-1 bg-red-700"></div>
         {/* nav */}
         <div className="bg-red-300 p-5">
           <ul className="">
@@ -152,7 +158,7 @@ const LeftSideBar = () => {
             </li>
           </ul>
         </div>
-        {/* link */}
+        {/* end footer social media links */}
         <div className="bg-red-200 p-5 flex items-center justify-evenly">
           <FaGithub className="text-2xl hover:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out" />
           <FaLinkedin className="text-2xl hover:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out" />
