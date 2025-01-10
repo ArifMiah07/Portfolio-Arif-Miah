@@ -32,32 +32,32 @@ const LeftSideBar = () => {
   const viewEyes = "1.4k";
 
   const handleNavbarTToggle = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setNavbarClose(!navbarClose);
   };
 
   const handleView = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView(!view);
   };
 
   const handleStar = () => {
-    console.log("hello");
+    // console.log("hello");
     setStartClose(!startClose);
     setCountStar(countStar + 1);
     if( countStar === 11){
       setCountStar(countStar = 0)
     }
-    console.log(countStar);
+    // console.log(countStar);
   };
 
   const handleSettingMode = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setSettingModeClose(!settingModeClose);
   };
 
   const handleSideBar = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setSideBarClose(!sideBarClose);
   };
   const handleNightMode = () => {

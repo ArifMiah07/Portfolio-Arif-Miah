@@ -38,7 +38,7 @@ const About = () => {
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
               <div className="mb-3">
-                <div>
+                <div className="lg:hidden">
                   {/* <Dropdown items={dropdownItems} label="Font" /> */}
                     <select onChange={handleSelectFont} name="select" id="select" className="select">
                         <option value="bungee-tint">bungee-tint</option>
