@@ -29,11 +29,11 @@ const About = () => {
     
       className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
       {/* left */}
-      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 ">
+      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-0">
         <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
-      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-1 mb-3">
+      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-1 mb-3 z-10 lg:z-0">
         <ScrollContainer>
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
