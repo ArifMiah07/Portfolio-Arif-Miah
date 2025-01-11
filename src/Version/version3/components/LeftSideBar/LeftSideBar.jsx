@@ -351,7 +351,7 @@ const LeftSideBar = () => {
 
   return (
     <div
-      className={`bg-[#a1565680] p-5 flex flex-col gap-3  `}>
+      className={`bg-[#60A15680] p-5 flex flex-col gap-3  `}>
       <div className="flex justify-center items-center   ">
         <img
           className="shadow-xl drop-shadow-xl rounded-full w-[160px]  "
