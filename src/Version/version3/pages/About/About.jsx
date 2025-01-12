@@ -29,7 +29,7 @@ const About = () => {
     
       className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
       {/* left */}
-      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-0">
+      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50">
         <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
