@@ -94,7 +94,7 @@ const SkillsContent = () => {
             view={view1}
             title={"Frontend"}
             description={
-              "HTML, CSS, SCSS, Tailwind, Bootstrap, JavaScript ES6+, TypeScript, React Js,  React router dom, Redux, Redux toolkit, Transtack Query, Matarial Ui, Shadcn Ui, Ant Design, Motion,  "
+              "HTML, CSS, SCSS, Tailwind, Bootstrap, JavaScript ES6+, TypeScript, React Js,  React router dom, Redux, Redux toolkit, Transtack Query, Matarial Ui, Shadcn Ui, Motion,  "
             }></SkillsSubContentSection>
         </div>
         {/* Backend */}
@@ -134,7 +134,7 @@ const SkillsContent = () => {
             view={view4}
             title={"Others"}
             description={
-              "C/C++, Python, Git, Github, Linux, GIMP, Inkscape, Capcut, Figma, Photopea, "
+              "C/C++, Python, Git, Github, Notion, Google Docs, Linux, GIMP, Inkscape, Capcut, Figma, Photopea, "
             }></SkillsSubContentSection>
         </div>
         {/* soft skills */}
@@ -147,7 +147,7 @@ const SkillsContent = () => {
             view={view5}
             title={"Soft Skills"}
             description={
-              "English, Spanish, Communication, Creative Writing, Problem Solving"
+              "English, Spanish, Communication, Creative Writing, Problem Solving, Prompting, Art Generations"
             }></SkillsSubContentSection>
         </div>
 

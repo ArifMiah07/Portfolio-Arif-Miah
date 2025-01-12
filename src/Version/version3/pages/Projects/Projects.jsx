@@ -2,6 +2,7 @@ import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 import { ScrollContainer } from "react-nice-scroll";
 import "react-nice-scroll/dist/styles.css";
 import ProjectsContent from "../../components/ProjectsContent/ProjectsContent";
+import CountdownDisplay from "./Count";
 
 const Projects = () => {
   return (
@@ -22,6 +23,9 @@ const Projects = () => {
             <ProjectsContent />
           </div>
         ))}
+      </div>
+      <div>
+        <CountdownDisplay></CountdownDisplay>
       </div>
     </div>
   </ScrollContainer>
