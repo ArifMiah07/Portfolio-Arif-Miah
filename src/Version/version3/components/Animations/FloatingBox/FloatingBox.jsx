@@ -19,11 +19,7 @@ export const FloatingBox = () => {
                   <div className="animate-bounce  flex items-center justify-center w-[25px] h-[25px] rounded-full bg-blue-100 ">
                     <div className="animate-bounce  flex items-center justify-center w-[20px] h-[20px] rounded-full bg-blue-50 ">
                       <div className="animate-spin flex items-center justify-center w-[15px] h-[15px] rounded-full cursor-pointer">
-                        <img
-                          className="w-[12px] h-[12px] "
-                          src={letterA}
-                          alt="a stylish image of english alphabet A"
-                        />
+                        <span className="bungee-tint">A</span>
                       </div>
                     </div>
                   </div>
@@ -50,7 +46,7 @@ export const FloatingBox2 = () => {
                   <div className="flex items-center justify-center w-[25px] h-[25px] rounded-full bg-blue-100 ">
                     <div className="flex items-center justify-center w-[20px] h-[20px] rounded-full bg-blue-50 ">
                       <div className="flex items-center justify-center w-[15px] h-[15px] rounded-full cursor-pointer">
-                        {/* <span><TbCircleDashedLetterA /></span>  */}A
+                        <img src={letterA} alt="" />
                       </div>
                     </div>
                   </div>
@@ -73,13 +69,15 @@ export const FloatingBox3 = () => {
           <div className="flex items-center justify-center w-[45px] h-[45px] rounded-full bg-blue-500 ">
             <div className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-blue-400 ">
               <div className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-blue-300 ">
-                <div className="animate-ping flex items-center justify-center w-[30px] h-[30px] rounded-full bg-blue-200 ">
+                <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-blue-200 ">
                   <div className="flex items-center justify-center w-[25px] h-[25px] rounded-full bg-blue-100 ">
-                    <div className="animate-pulse flex items-center justify-center w-[20px] h-[20px] rounded-full bg-blue-50 ">
+                    <div className=" flex items-center justify-center w-[20px] h-[20px] rounded-full bg-blue-50 ">
                       <div className="flex items-center justify-center w-[15px] h-[15px] rounded-full cursor-pointer">
-                        <Link to={"about"}>
-                          <FcAbout />
-                        </Link>
+                        <span className="text-white animate-ping hover:text-[24px] transition-all duration-300 hover:animate-bounce ">
+                          <Link to={"/v3/about"}>
+                            <FcAbout />
+                          </Link>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -106,9 +104,9 @@ export const FloatingBox4 = () => {
                   <div className="flex items-center justify-center w-[25px] h-[25px] rounded-full bg-blue-600 ">
                     <div className="flex items-center justify-center w-[20px] h-[20px] rounded-full bg-blue-700 ">
                       <div className="flex items-center justify-center w-[15px] h-[15px] rounded-full cursor-pointer bg-blue-800 ">
-                        <span>
+                        <span className="text-white animate-bounce hover:animate-ping">
                           <Link to={"/v3/blogs"}>
-                            <FaMicroblog />
+                            <FaMicroblog size={24} />
                           </Link>
                         </span>
                       </div>

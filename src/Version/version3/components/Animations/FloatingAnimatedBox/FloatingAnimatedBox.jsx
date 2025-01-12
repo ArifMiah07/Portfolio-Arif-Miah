@@ -1,6 +1,6 @@
 
 
-const FloatingAnimatedBox = ({ color }) => {
+const FloatingAnimatedBox = ({ color, font }) => {
   const baseClasses =
     "animate-bounce flex items-center justify-center rounded-full";
 
@@ -33,7 +33,7 @@ const FloatingAnimatedBox = ({ color }) => {
                       className={`${baseClasses} w-[20px] h-[20px] bg-${color}-50`}
                     >
                       <div className="animate-spin flex items-center justify-center w-[15px] h-[15px] rounded-full cursor-pointer">
-                        A
+                        <span className={`${font}`}>A</span>
                       </div>
                     </div>
                   </div>

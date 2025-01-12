@@ -11,6 +11,22 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'bungee-tint': ['"Bungee Tint"', 'serif'],
+        'inter': ['"Inter"', 'serif'],
+        'lato': ['"Lato"', 'serif'],
+        'matemasie': ['"Matemasie"', 'serif'],
+        'merriweather': ['"Merriweather"', 'serif'],
+        'montserrat': ['"Montserrat"', 'serif'],
+        'new-amsterdam': ['"New Amsterdam"', 'serif'],
+        'open-sans': ['"Open Sans"', 'serif'],
+        'playfair-display': ['"Playfair Display"', 'serif'],
+        'poppins': ['"Poppins"', 'serif'],
+        'raleway': ['"Raleway"', 'serif'],
+        'roboto': ['"Roboto"', 'serif'],
+        'laila': ['"Laila"', 'serif'],
+        'playwrite-au-sa': ['"Playwrite AU SA"', 'serif'],
+      },
       colors: {
         selectionBg: '#FFEB3B', // Custom background color for selected text
         selectionText: '#1A202C', // Custom text color for selected text

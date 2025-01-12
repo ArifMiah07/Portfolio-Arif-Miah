@@ -37,75 +37,75 @@ const Portfolio3 = () => {
           </div>
         ) : countClick === 4 ? (
           <div >
-            <FloatingAnimatedBox color={'green'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'green'} font={'poppins'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 5 ? (
           <div >
-            <FloatingAnimatedBox color={'yellow'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'yellow'} font={'inter'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 6 ? (
           <div >
-            <FloatingAnimatedBox color={'red'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'red'} font={'lato'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 7 ? (
           <div >
-            <FloatingAnimatedBox color={'stone'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'stone'} font={''} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 8 ? (
           <div >
-            <FloatingAnimatedBox color={'slate'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'slate'} font={'playwrite-au-sa '} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 9 ? (
           <div >
-            <FloatingAnimatedBox color={'rose'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'rose'} font={'bungee-tint'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 10 ? (
           <div >
-            <FloatingAnimatedBox color={'pink'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'pink'} font={'laila'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 11 ? (
           <div >
-            <FloatingAnimatedBox color={'fuchsia'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'fuchsia'} font={'roboto'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 12 ? (
           <div >
-            <FloatingAnimatedBox color={'purple'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'purple'} font={'raleway '} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 13 ? (
           <div >
-            <FloatingAnimatedBox color={'violet'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'violet'} font={'playfair-display'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 14 ? (
           <div >
-            <FloatingAnimatedBox color={'indigo'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'indigo'} font={'open-sans'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 15 ? (
           <div >
-            <FloatingAnimatedBox color={'sky'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'sky'} font={'new-amsterdam'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 16 ? (
           <div >
-            <FloatingAnimatedBox color={'cyan'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'cyan'} font={'montserrat'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 17 ? (
           <div >
-            <FloatingAnimatedBox color={'teal'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'teal'} font={'merriweather'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 18 ? (
           <div >
-            <FloatingAnimatedBox color={'emerald'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'emerald'} font={'matemasie'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 19 ? (
           <div >
-            <FloatingAnimatedBox color={'lime'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'lime'} font={'lato'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 20 ? (
           <div >
-            <FloatingAnimatedBox color={'amber'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'amber'} font={'bungee-tint'} ></FloatingAnimatedBox>
           </div>
         ) : countClick === 21 ? (
           <div >
-            <FloatingAnimatedBox color={'orange'}></FloatingAnimatedBox>
+            <FloatingAnimatedBox color={'orange'} font={'playfair-display'} ></FloatingAnimatedBox>
           </div>
         ) : (
           <div className="">
