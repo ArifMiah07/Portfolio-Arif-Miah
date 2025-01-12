@@ -51,7 +51,7 @@ const HomeContent = () => {
               <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="bg-[#D9D5D5] flex flex-col items-center justify-end w-full">
+                className="bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full">
                 <div className="flex flex-col items-center w-full ">
                   <div className="flex items-center">
                     <div className="flex items-center justify-center">
@@ -75,7 +75,7 @@ const HomeContent = () => {
                   <div
                     className={`transition-all duration-300 mt-4  ${
                       view
-                        ? " w-full border border-green-700 "
+                        ? "w-full h-[4px]  mt-5 bg-green-800 "
                         : "w-[100px] h-[2px] bg-slate-600 "
                     }`}></div>
                 </div>
@@ -84,7 +84,7 @@ const HomeContent = () => {
               <div
                 onMouseEnter={handleMouseEnter2}
                 onMouseLeave={handleMouseLeave2}
-                className="bg-[#D9D5D5] flex flex-col items-center justify-end w-full">
+                className="bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full">
                 <div>
                   <div className="flex items-center">
                     <div className="flex items-center justify-center">
@@ -108,7 +108,7 @@ const HomeContent = () => {
                 <div
                   className={`transition-all duration-300 mt-4  ${
                     view2
-                      ? " w-full border border-green-700 "
+                      ? "w-full h-[4px]  mt-5 bg-green-800"
                       : "w-[100px] h-[2px] bg-slate-600 "
                   }`}></div>
               </div>
@@ -116,7 +116,7 @@ const HomeContent = () => {
               <div
                 onMouseEnter={handleMouseEnter3}
                 onMouseLeave={handleMouseLeave3}
-                className="bg-[#D9D5D5] flex flex-col items-center justify-end w-full">
+                className="bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full">
                 <div className="flex flex-col items-center w-full p-2">
                   <div className="flex items-center">
                     <div className="flex items-center justify-center">
@@ -140,7 +140,7 @@ const HomeContent = () => {
                 <div
                   className={`transition-all duration-300 mt-4  ${
                     view3
-                      ? " w-full border border-green-700 "
+                      ? "w-full h-[4px] mt-5 bg-green-800"
                       : "w-[100px] h-[2px] bg-slate-600 "
                   }`}></div>
               </div>
