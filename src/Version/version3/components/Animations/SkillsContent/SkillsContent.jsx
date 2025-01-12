@@ -13,7 +13,7 @@ const SkillsContent = () => {
   // handle events
   //   1
   const handleMouseEnter1 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView1(true);
   };
 
@@ -22,7 +22,7 @@ const SkillsContent = () => {
   };
   //2
   const handleMouseEnter2 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView2(true);
   };
 
@@ -31,7 +31,7 @@ const SkillsContent = () => {
   };
   //3
   const handleMouseEnter3 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView3(true);
   };
 
@@ -40,7 +40,7 @@ const SkillsContent = () => {
   };
   //4
   const handleMouseEnter4 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView4(true);
   };
 
@@ -49,7 +49,7 @@ const SkillsContent = () => {
   };
   //5
   const handleMouseEnter5 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView5(true);
   };
 
@@ -58,7 +58,7 @@ const SkillsContent = () => {
   };
   //6
   const handleMouseEnter6 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView6(true);
   };
 
@@ -77,8 +77,8 @@ const SkillsContent = () => {
     <div className="bg-[#D663A080]  lg:w-[930px] shadow-lg drop-shadow-md p-1  lg:mb-2 ">
       <div className="p-5 bg-[#D9D9D9] flex flex-col items-center gap-3 lg:mb-2 ">
         {/* intro */}
-        <div className="bg-[#D9D5D5] flex flex-col items-center w-full p-2">
-          <h1 className="text-[36px] ">Skills & Vision</h1>
+        <div className="bg-[#D9D5D5] flex flex-col items-center w-full p-2 text-center">
+          <h1 className="text-[36px] font-bold">Skills & Vision</h1>
           <p className="text-[24px] ">
             {" "}
             I&apos;m a MERN Stack-focused Full Stack Web Developer
@@ -93,7 +93,7 @@ const SkillsContent = () => {
             makeTriangleStyle={makeTriangleStyle}
             view={view1}
             title={'Frontend'}
-            description={'HTML, CSS, JavaScript, TypeScript, Node JS, Express, MongoDB, Firebase, JWT, C/C++, Python, English, Spanish ...'}
+            description={'HTML, CSS, SCSS, Tailwind, Bootstrap, JavaScript ES6+, TypeScript, React Js,  React router dom, Redux, Redux toolkit, Transtack Query, Matarial Ui, Shadcn Ui, Ant Design, Motion,  '}
             ></SkillsSubContentSection>
         </div>
         {/* Backend */}
@@ -117,7 +117,7 @@ const SkillsContent = () => {
             makeTriangleStyle={makeTriangleStyle}
             view={view3}
             title={'Database'}
-            description={'MongoDb, Mongoose, DBMS'}
+            description={'MongoDb, Mongoose, DBMS, Database Design, Data Modeling, Indexing & Optimization'}
             ></SkillsSubContentSection>
         </div>
         
@@ -142,7 +142,7 @@ const SkillsContent = () => {
             makeTriangleStyle={makeTriangleStyle}
             view={view5}
             title={'Soft Skills'}
-            description={'English, Spanish, Communication, Creative Writing, Problem SOlving'}
+            description={'English, Spanish, Communication, Creative Writing, Problem Solving'}
             ></SkillsSubContentSection>
         </div>
         
@@ -154,7 +154,7 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view6}
-            title={'Next Learning Mission'}
+            title={'What’s Next'}
             description={' SQL,PostgreSQL, Prisma, Redis, Next Js, Docker, Ruby, Go, Rust, Zig, '}
             ></SkillsSubContentSection>
         </div>
