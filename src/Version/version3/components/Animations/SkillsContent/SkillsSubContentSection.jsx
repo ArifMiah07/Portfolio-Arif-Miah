@@ -30,7 +30,7 @@ const SkillsSubContentSection = ({
         </div>
         {/* description */}
         <div>
-          <p className="text-[16px] p-3">{description}</p>
+          <p className="text-[16px] p-3 font-normal ">{description}</p>
         </div>
         {/* border div */}
         <div
