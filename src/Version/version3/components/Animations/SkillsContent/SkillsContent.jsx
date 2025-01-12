@@ -79,9 +79,9 @@ const SkillsContent = () => {
         {/* intro */}
         <div className="bg-[#D9D5D5] flex flex-col items-center w-full p-2 text-center">
           <h1 className="text-[36px] font-bold">Skills & Vision</h1>
-          <p className="text-[24px] ">
-            {" "}
-            I&apos;m a MERN Stack-focused Full Stack Web Developer
+          <p className="text-[24px] font-light ">
+            Frontend, backend, databases, and everything in between—these are
+            the skills I use to build robust and scalable solutions.
           </p>
         </div>
         {/* Frontend */}
@@ -92,9 +92,10 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view1}
-            title={'Frontend'}
-            description={'HTML, CSS, SCSS, Tailwind, Bootstrap, JavaScript ES6+, TypeScript, React Js,  React router dom, Redux, Redux toolkit, Transtack Query, Matarial Ui, Shadcn Ui, Ant Design, Motion,  '}
-            ></SkillsSubContentSection>
+            title={"Frontend"}
+            description={
+              "HTML, CSS, SCSS, Tailwind, Bootstrap, JavaScript ES6+, TypeScript, React Js,  React router dom, Redux, Redux toolkit, Transtack Query, Matarial Ui, Shadcn Ui, Ant Design, Motion,  "
+            }></SkillsSubContentSection>
         </div>
         {/* Backend */}
         <div className="w-full">
@@ -104,9 +105,10 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view2}
-            title={'Backend'}
-            description={'Fresher but 1 years of solid Learning & Problem Solving Experience'}
-            ></SkillsSubContentSection>
+            title={"Backend"}
+            description={
+              "Node js, Express, Firebase Auth, JWT, Stripe, RESTful APIs ✅,"
+            }></SkillsSubContentSection>
         </div>
         {/* Database */}
         <div className="w-full">
@@ -116,11 +118,12 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view3}
-            title={'Database'}
-            description={'MongoDb, Mongoose, DBMS, Database Design, Data Modeling, Indexing & Optimization'}
-            ></SkillsSubContentSection>
+            title={"Database"}
+            description={
+              "MongoDb, Mongoose, DBMS, Database Design, Data Modeling, Indexing & Optimization"
+            }></SkillsSubContentSection>
         </div>
-        
+
         {/* others */}
         <div className="w-full">
           <SkillsSubContentSection
@@ -129,9 +132,10 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view4}
-            title={'Others'}
-            description={'C/C++, Python, Git, Github, Linux, GIMP, Inkscape, Capcut, Figma, Photopea, '}
-            ></SkillsSubContentSection>
+            title={"Others"}
+            description={
+              "C/C++, Python, Git, Github, Linux, GIMP, Inkscape, Capcut, Figma, Photopea, "
+            }></SkillsSubContentSection>
         </div>
         {/* soft skills */}
         <div className="w-full">
@@ -141,11 +145,12 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view5}
-            title={'Soft Skills'}
-            description={'English, Spanish, Communication, Creative Writing, Problem Solving'}
-            ></SkillsSubContentSection>
+            title={"Soft Skills"}
+            description={
+              "English, Spanish, Communication, Creative Writing, Problem Solving"
+            }></SkillsSubContentSection>
         </div>
-        
+
         {/* Next to Leaning */}
         <div className="w-full">
           <SkillsSubContentSection
@@ -154,9 +159,10 @@ const SkillsContent = () => {
             hoverStylesForContentDiv={hoverStylesForContentDiv}
             makeTriangleStyle={makeTriangleStyle}
             view={view6}
-            title={'What’s Next'}
-            description={' SQL,PostgreSQL, Prisma, Redis, Next Js, Docker, Ruby, Go, Rust, Zig, '}
-            ></SkillsSubContentSection>
+            title={"What’s Next"}
+            description={
+              "GraphQL, AuthO, 0Auth SQL,PostgreSQL, Prisma, Redis, Next Js, Docker, Ruby, Go, Rust, Zig, "
+            }></SkillsSubContentSection>
         </div>
         {/* footer nav */}
         <div className="bg-[#D9D5D5] flex flex-row items-center justify-center gap-4 w-full p-2">
