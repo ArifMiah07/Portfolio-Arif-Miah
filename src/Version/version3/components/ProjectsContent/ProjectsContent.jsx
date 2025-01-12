@@ -1,13 +1,14 @@
 const ProjectsContent = () => {
-    const img =
-      "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-  
-    return (
-        <div className="relative group border-2 border-gray-400 hover:border-8 hover:border-gray-800 transition-all duration-500 ease-in-out overflow-hidden">
+  const img =
+    "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+
+  return (
+    <div className="mx-auto w-full h-full p-5 lg:p-5 gap-5 bg-[#D9D9D9] flex flex-col ">
+      <div className="relative group border-2 border-gray-400 hover:border-8 hover:border-gray-800 transition-all duration-500 ease-in-out overflow-hidden">
         {/* Image Container */}
         <div className="p-3 w-full flex justify-center">
           <img
-            className="w-[700px] object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-50"
+            className=" object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-50"
             src={img}
             alt="Project"
           />
@@ -25,8 +26,8 @@ const ProjectsContent = () => {
           </div>
         </div>
       </div>
-    );
-  };
-  
-  export default ProjectsContent;
-  
+    </div>
+  );
+};
+
+export default ProjectsContent;

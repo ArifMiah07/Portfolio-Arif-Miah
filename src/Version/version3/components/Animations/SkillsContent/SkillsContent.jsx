@@ -107,7 +107,7 @@ const SkillsContent = () => {
             view={view2}
             title={"Backend"}
             description={
-              "Node js, Express, Firebase Auth, JWT, Stripe, RESTful APIs ✅,"
+              "Node js, Express, Firebase Auth, JWT, Stripe, RESTful APIs,"
             }></SkillsSubContentSection>
         </div>
         {/* Database */}
