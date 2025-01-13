@@ -161,7 +161,7 @@ const SkillsContent = () => {
             view={view6}
             title={"What’s Next"}
             description={
-              "GraphQL, AuthO, 0Auth SQL,PostgreSQL, Prisma, Redis, Next Js, Docker, Ruby, Go, Rust, Zig, "
+              "GraphQL, OAuth 2.0, Auth0 SQL,PostgreSQL, Prisma, Redis, Next Js, Docker, Ruby, Go, Rust, Zig, "
             }></SkillsSubContentSection>
         </div>
         {/* footer nav */}

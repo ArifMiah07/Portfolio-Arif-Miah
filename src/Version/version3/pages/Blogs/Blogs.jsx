@@ -1,6 +1,7 @@
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 import { ScrollContainer } from "react-nice-scroll";
 import "react-nice-scroll/dist/styles.css";
+import BlogsContent from "../../components/BlogsContent/BlogsContent";
 
 
 const Blogs = () => {
@@ -16,9 +17,7 @@ const Blogs = () => {
       <section className="lg:col-span-9 w-full  bg-[#FF0088] p-2 ">
         <ScrollContainer>
           <div className="bg-[#D663A080] lg:w-[930px]  p-5 ">
-            <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
-              <p>hi this is blogs</p>
-            </div>
+            <BlogsContent ></BlogsContent>
           </div>
         </ScrollContainer>
       </section>
