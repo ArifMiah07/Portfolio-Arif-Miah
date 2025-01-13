@@ -1,9 +1,9 @@
 
 import bImg from '../../../../assets/apple/1.webp'
 
-const BlogsContent = (img) => {
+const BlogsContent = () => {
 
-    
+
   return (
     <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
       <div className="bg-[#EEEDEA] border-4 border-red-500 w-full h-full grid grid-cols-1 lg:grid-cols-12 ">
