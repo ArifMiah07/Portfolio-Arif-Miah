@@ -20,7 +20,7 @@ const Blogs = () => {
       {/* right */}
       <section className="lg:col-span-9 w-full  bg-[#FF0088] p-3 ">
         <ScrollContainer>
-          <div className="bg-[#D663A080] lg:w-full  p-3 shadow-xl drop-shadow-2xl ">
+          <div className="bg-[#D663A080] lg:w-full  p-3 shadow-xl drop-shadow-2xl  mb-6">
             <div className="w-full bg-[#D9D9D9] flex flex-col justify-center items-center ">
               <div className="flex flex-row items-center justify-center mt-3 ">
                 <div className="w-fit h-fit p-2 border-y border-b border-t border-r-0 border-green-950">
@@ -51,7 +51,7 @@ const Blogs = () => {
                 <BlogPost image={appleImg}></BlogPost>
               </div>
             </div>
-            <div className="w-full bg-[#D9D9D9] flex flex-col ">
+            <div className="w-full bg-[#D9D9D9] flex flex-col mb-3">
               <div className="flex flex-row items-center justify-center mt-3 ">
                 <div className="w-fit h-fit p-2 border-y border-b border-t border-r-0 border-green-950">
                   <h2>Date : 22-1-28</h2>
