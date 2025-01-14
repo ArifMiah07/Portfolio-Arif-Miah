@@ -8,7 +8,7 @@ import { useState } from "react";
 const About = () => {
     const [font, setFont]= useState('laila');
 
-    const [fontSize, setFontSize] = useState(14);
+    const [fontSize, setFontSize] = useState(16);
     
     const handleSelectFont = (event) => {
         const selectedText = event.target.options[event.target.selectedIndex].text;
@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div
     
-      className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 overflow-hidden `}>
+      className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
       {/* left */}
       <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50">
         <LeftSideBar></LeftSideBar>
@@ -38,7 +38,7 @@ const About = () => {
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
               <div className="mb-3">
-                <div className="lg:hidden">
+                <div className="hidden">
                   {/* <Dropdown items={dropdownItems} label="Font" /> */}
                     <select onChange={handleSelectFont} name="select" id="select" className="select">
                         <option value="bungee-tint">bungee-tint</option>
@@ -64,8 +64,8 @@ const About = () => {
                 </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
-              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#D9D5D5] border-l-4 border-[#009400]">
-                <p className="">
+              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#D9D5D5] flex flex-col gap-[32px] ">
+                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
                   student at Premier University, Chittagong. My fascination with
@@ -73,7 +73,7 @@ const About = () => {
                   development over the past few years.
                 </p>
 
-                <p>
+                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Programming is not just my profession; it is my passion. I
                   find joy in problem-solving and creating something new through
                   code. My ability to learn quickly and think creatively is one
@@ -81,7 +81,7 @@ const About = () => {
                   span across various fields - from mathematics and science to
                   literature and language learning.
                 </p>
-                <p>
+                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   For the past year, I have been intensively studying web
                   development, though my interest in coding and programming
                   dates back 4-5 years. What excites me most is not just writing
@@ -97,7 +97,7 @@ const About = () => {
                   well as programming languages such as Java, C++, Ruby, Red,
                   C#, and Zig.
                 </p>
-                <p>
+                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   I am passionate about continuous learning and creative
                   application of technology, always eager to tackle new
                   challenges and create innovative solutions in the world of web

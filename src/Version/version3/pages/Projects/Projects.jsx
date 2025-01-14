@@ -14,7 +14,7 @@ const Projects = () => {
         </div>
       </section>
       {/* right */}
-      <section className="lg:col-span-9 w-full bg-[#FF0088] p-2 lg:p-1 flex items-center">
+      <section className="lg:col-span-9 w-full bg-[#FF0088] p-1 lg:p-1 flex items-center">
         <ScrollContainer>
           <div className="bg-[#D663A080] w-full shadow-lg drop-shadow-md p-1  lg:mb-2">
             <ProjectsContent img={img1} name={'Artymia'} overview={'Artymia is a art selling Website'} tech={'HTML, CSS, SCSS, Tailwind \n css, React Js, Node js, Stripe, JWT, Firebase'} />
