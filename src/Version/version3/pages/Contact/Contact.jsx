@@ -27,11 +27,11 @@ const Contact = () => {
         </div>
       </section>
       {/* right */}
-      <section className="lg:col-span-9 w-full  bg-[#FF0088] p-2 ">
+      <section className="lg:col-span-9 w-full drop-shadow-lg shadow-lg bg-[#FF0088] p-1">
         <ScrollContainer>
-          <div className="bg-[#D663A080] lg:w-[930px]  p-5 ">
+          <div className="bg-[#D663A080] lg:w-full  mb-2 p-1 ">
             {/* content container */}
-            <div className="w-full p-5 bg-[#D9D9D9] flex flex-col items-center gap-5 ">
+            <div className="w-full p-5 drop-shadow-lg shadow-lg bg-[#D9D9D9] flex flex-col items-center gap-5 ">
               {/* top */}
               <div className="bg-[#D9D5D5] w-full flex flex-col p-5 ">
                 {/* heading */}
@@ -48,7 +48,7 @@ const Contact = () => {
                     <div className="w-full h-full p-5 bg-[#EEEDEA] flex flex-col gap-5">
                       <div className="w-full flex flex-col lg:flex-row gap-5">
                         <input
-                          className=" bg-[#D9D9D9] hover:bg-[#fff] w-full outline-none p-3"
+                          className=" bg-[#D9D9D9] font-medium text-[19px] hover:text-black hover:bg-[#fff] w-full outline-none p-3"
                           placeholder="Your Name"
                           type="text"
                           name="name"
@@ -92,37 +92,41 @@ const Contact = () => {
                     </p>
                   </div>
                   {/* content */}
-                  <div className="p-5 bg-[#D9D9D9] flex flex-col items-center gap-4 ">
+                  <div className="w-full p-5 bg-[#D9D9D9] flex flex-col items-center gap-3 ">
                     {/* email */}
                     <div className="flex flex-row items-center justify-center gap-1">
                       <span>
-                        <SiGmail></SiGmail>{" "}
+                        <SiGmail></SiGmail>
                       </span>
                       <p>arifmiah.me101@gmail.com</p>
                     </div>
                     {/* icons */}
-                    <div>
+                    <div className="w-fit flex flex-row items-center text-[21px] gap-4 ">
                       <span>
-                        {" "}
+                        
                         <Link to={"https://github.com/arifmiah07"}>
-                          <FaGithub></FaGithub>{" "}
+                          <FaGithub></FaGithub>
                         </Link>
                       </span>
                       <span>
-                        {" "}
-                        <FaFacebook></FaFacebook>{" "}
+                        <Link to={"https://www.facebook.com/"}>
+                          <FaFacebook></FaFacebook>
+                        </Link>
                       </span>
                       <span>
-                        {" "}
-                        <FaInstagram></FaInstagram>{" "}
+                        <Link to={'https://www.instagram.com/'}>
+                          <FaInstagram></FaInstagram>
+                        </Link>
                       </span>
                       <span>
-                        {" "}
-                        <FaLinkedin></FaLinkedin>{" "}
+                        <Link to={'https://www.linkedin.com/in/arifmiah01/'}>
+                        <FaLinkedin></FaLinkedin>
+                        </Link>
                       </span>
                       <span>
-                        {" "}
-                        <FaSquareXTwitter></FaSquareXTwitter>{" "}
+                        <Link to={'https://x.com/ArifMiah01'}>
+                        <FaSquareXTwitter></FaSquareXTwitter>
+                        </Link>
                       </span>
                     </div>
                   </div>
