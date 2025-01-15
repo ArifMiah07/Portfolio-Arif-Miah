@@ -396,7 +396,7 @@ const LeftSideBar = () => {
     "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
 
   return (
-    <div className={`bg-[#60A15680] p-5 flex flex-col gap-3  `}>
+    <div className={`bg-[#60A15680] p-5 flex flex-col gap-3 w-full h-full `}>
       <div className="flex justify-center items-center   ">
         <img
           className="shadow-xl drop-shadow-xl rounded-full w-[160px]  "

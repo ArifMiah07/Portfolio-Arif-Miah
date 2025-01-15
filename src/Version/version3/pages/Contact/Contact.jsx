@@ -21,8 +21,8 @@ const Contact = () => {
   return (
     <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden ">
       {/* left */}
-      <section className="lg:col-span-3 lg:w-[330px] bg-[#60A15680] p-5">
-        <div className="lg:w-[270px] bg-[#ffffbb] ">
+      <section className="lg:col-span-3 lg:w-[330px] bg-[#1B8B09] p-5">
+        <div className="lg:w-full h-full bg-[#ffffbb] ">
           <LeftSideBar></LeftSideBar>
         </div>
       </section>
