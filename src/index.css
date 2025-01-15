@@ -53,3 +53,9 @@
 .playwrite-au-sa {
   font-family: "Playwrite AU SA", serif;
 }
+
+/* css styles */
+
+.input-field{
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+}

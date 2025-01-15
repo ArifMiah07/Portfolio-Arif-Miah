@@ -21,23 +21,23 @@ const Contact = () => {
   return (
     <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden ">
       {/* left */}
-      <section className="lg:col-span-3 lg:w-[330px] bg-[#1B8B09] p-5">
-        <div className="lg:w-[270px] bg-[#60A15680] ">
+      <section className="lg:col-span-3 lg:w-[330px] bg-[#60A15680] p-5">
+        <div className="lg:w-[270px] bg-[#ffffbb] ">
           <LeftSideBar></LeftSideBar>
         </div>
       </section>
       {/* right */}
-      <section className="lg:col-span-9 w-full drop-shadow-lg shadow-lg bg-[#FF0088] p-1">
+      <section className="lg:col-span-9 w-full drop-shadow-lg shadow-lg bg-[#] p-1">
         <ScrollContainer>
-          <div className="bg-[#D663A080] lg:w-full  mb-2 p-1 ">
+          <div className="bg-[#] lg:w-full  mb-2 p-1 ">
             {/* content container */}
-            <div className="w-full p-5 drop-shadow-lg shadow-lg bg-[#D9D9D9] flex flex-col items-center gap-5 ">
+            <div className="w-full p-5 drop-shadow-lg shadow-lg bg-[#] flex flex-col items-center gap-5 ">
               {/* top */}
-              <div className="bg-[#D9D5D5] w-full flex flex-col p-5 ">
+              <div className="bg-[#] w-full flex flex-col p-5 ">
                 {/* heading */}
-                <div className="bg-[#D9D5D5] w-full flex flex-col items-center ">
+                <div className="bg-[#F5F5F5] w-full flex flex-col items-center ">
                   <h1 className="text-center text-[48px]">Get in Touch</h1>
-                  <h2 className="text-center text-[24px] mb-4">
+                  <h2 className="text-center text-[#1F2937]  text-[24px] mb-4">
                     I&apos;m always open to new opportunities and interesting
                     projects.
                   </h2>
@@ -45,16 +45,16 @@ const Contact = () => {
                 {/* content */}
                 <div className="w-full">
                   <form onSubmit={handleSubmit} className="w-full">
-                    <div className="w-full h-full p-5 bg-[#EEEDEA] flex flex-col gap-5">
+                    <div className="w-full h-full p-5 bg-[#F5F5F5] flex flex-col gap-5">
                       <div className="w-full flex flex-col lg:flex-row gap-5">
                         <input
-                          className=" bg-[#D9D9D9] font-medium text-[19px] hover:text-black hover:bg-[#fff] w-full outline-none p-3"
+                          className=" input-field border border-[#D1D5DB] font-medium text-[19px] hover:text-black hover:bg-[#fff] w-full outline-none p-3"
                           placeholder="Your Name"
                           type="text"
                           name="name"
                         />
                         <input
-                          className=" bg-[#D9D9D9] hover:bg-[#fff] w-full outline-none p-3"
+                          className=" input-field border border-[#D1D5DB] bg-[#fff] w-full outline-none p-3"
                           placeholder="Your Email"
                           type="email"
                           name="email"
@@ -63,14 +63,14 @@ const Contact = () => {
 
                       <div className="w-full">
                         <textarea
-                          className="bg-[#D9D9D9] hover:bg-[#fff] w-full h-[160px] outline-none p-3 "
+                          className="input-field border border-[#D1D5DB] bg-[#fff] w-full h-[160px] outline-none p-3 "
                           placeholder="Write Your Message"
                           name="message"
                           id="message"></textarea>
                       </div>
 
-                      <div className="w-full bg-[#D9D9D9] hover:bg-[#fff] ">
-                        <button type="submit " className="w-full p-3">
+                      <div className="w-full input-field border border-[#D1D5DB] bg-[#fff] ">
+                        <button type="submit " className="w-full bg-[#3B82F6] text-white p-3">
                           Send Message
                         </button>
                       </div>
@@ -79,10 +79,10 @@ const Contact = () => {
                 </div>
               </div>
               {/* down */}
-              <div className="bg-[#D9D5D5] w-full p-5">
-                <div className="bg-[#EEEDEA] flex flex-col items-center justify-center p-5 gap-5 ">
+              <div className="bg-[#] w-full p-5">
+                <div className="bg-[#F5F5F5] flex flex-col items-center justify-center p-5 gap-5 ">
                   {/* heading */}
-                  <div className="w-full flex flex-col items-center p-5 bg-[#D9D9D9] ">
+                  <div className="w-full flex flex-col items-center p-5 bg-[#fff] ">
                     <h1 className="text-center text-[24px]">
                       Contact Information
                     </h1>
@@ -92,7 +92,7 @@ const Contact = () => {
                     </p>
                   </div>
                   {/* content */}
-                  <div className="w-full p-5 bg-[#D9D9D9] flex flex-col items-center gap-3 ">
+                  <div className="w-full p-5 bg-[#fff] flex flex-col items-center gap-3 ">
                     {/* email */}
                     <div className="flex flex-row items-center justify-center gap-1">
                       <span>
