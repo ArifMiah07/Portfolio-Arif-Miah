@@ -37,15 +37,14 @@ const HomeContent = () => {
 
   //following dry: ---<do not repeat yourself>---|---<style>---|
   const hoverStylesForContentDiv =
-    "bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full";
+    "bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full h-full";
   const makeTriangleStyle =
     "w-4 h-4 border-b-2 border-l-2 border-current rounded-sm rotate-45";
   const footerNavStyle =
     "w-[24px] hover:w-[48px] h-[12px] transition-all duration-200 rounded-full bg-slate-400 hover:bg-slate-500";
 
   return (
-    <div className="bg-[#D663A080] lg:w-[930px] shadow-lg drop-shadow-md p-1  lg:mb-2 ">
-      <div className="p-5 bg-[#D9D9D9] flex flex-col items-center gap-3 lg:mb-2 ">
+      <div className=" p-5 bg-[#D9D9D9] flex flex-col items-centerw-full min-h-screen gap-3 ">
         {/* intro */}
         <div className="bg-[#D9D5D5] flex flex-col items-center w-full p-2">
           <h1 className="text-[36px] ">Hi, I’m Arif Miah</h1>
@@ -158,7 +157,7 @@ const HomeContent = () => {
           <div className={footerNavStyle}></div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
