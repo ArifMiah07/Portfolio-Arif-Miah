@@ -36,7 +36,7 @@ const About = () => {
       <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-1 mb-3 z-10 lg:z-0">
         <ScrollContainer>
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
-            <div className="p-5 bg-[#D9D9D9] flex flex-col items-center ">
+            <div className="p-5 bg-[#17072B] text-white flex flex-col items-center ">
               <div className="mb-3">
                 <div className="hidden">
                   {/* <Dropdown items={dropdownItems} label="Font" /> */}
@@ -64,8 +64,8 @@ const About = () => {
                 </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
-              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#D9D5D5] flex flex-col gap-[32px] ">
-                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#17072B] text-white flex flex-col gap-[32px] ">
+                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
                   student at Premier University, Chittagong. My fascination with
@@ -73,7 +73,7 @@ const About = () => {
                   development over the past few years.
                 </p>
 
-                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Programming is not just my profession; it is my passion. I
                   find joy in problem-solving and creating something new through
                   code. My ability to learn quickly and think creatively is one
@@ -81,7 +81,7 @@ const About = () => {
                   span across various fields - from mathematics and science to
                   literature and language learning.
                 </p>
-                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   For the past year, I have been intensively studying web
                   development, though my interest in coding and programming
                   dates back 4-5 years. What excites me most is not just writing
@@ -97,7 +97,7 @@ const About = () => {
                   well as programming languages such as Java, C++, Ruby, Red,
                   C#, and Zig.
                 </p>
-                <p className="border-l-4 border-[#009400] px-3 bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   I am passionate about continuous learning and creative
                   application of technology, always eager to tackle new
                   challenges and create innovative solutions in the world of web
@@ -107,7 +107,7 @@ const About = () => {
             </div>
             {/* footer */}
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center mb-10 md:mb-32 lg:mb-2 ">
-              <div className="p-5 bg-[#D9D5D5] border-l-2 border-[#009400]">
+              <div className="p-5 bg-[#17072B] text-white border-l-2 border-[#009400]">
                 <p className="">
                   I am passionate about continuous learning and creative
                   application of technology, always eager to tackle new
