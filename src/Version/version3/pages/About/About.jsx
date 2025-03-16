@@ -36,8 +36,11 @@ const About = () => {
     <div
       className={` bg-red-50 mx-auto ${font} text-black w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
       {/* left */}
-      <section className={` ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-[100px] lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+      <section className={` ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+        <ScrollContainer>
+
         <LeftSideBar handleSideBar={handleSideBar} isSideBarClose={sideBarClose} ></LeftSideBar>
+        </ScrollContainer>
       </section>
       {/* right */}
       {/* bgFor1stSection ==> bg-[#FF0088] */}
@@ -85,11 +88,11 @@ const About = () => {
                 style={{ fontSize: `${fontSize}px` }}
                 className="p-5 bg-[#FAFAFA] over:bg-[#fff5df] text-black flex flex-col gap-[32px] ">
                 {/* 1st para */}
-
+                {/*  at Premier University, Chittagong */}
                 <CustomParagraphField
                   propStylesClasses={[" hover:bg-[#ffebf2]", "text-[#FF0088]"]}
                   pText={
-                    "Hello! I am Arif Mia, an aspiring full-stack developer. Currently, I am a first-year Computer Science and Engineering student at Premier University, Chittagong. My fascination with programming began early, which has guided me toward MERN stack development over the past few years."
+                    "Hello! I am Arif Mia, an aspiring full-stack developer. Currently, I am a first-year Computer Science and Engineering student. My fascination with programming began early, which has guided me toward MERN stack development over the past few years."
                   }></CustomParagraphField>
                 {/* 2nd para */}
 
@@ -120,7 +123,7 @@ const About = () => {
                 <CustomParagraphField
                   propStylesClasses={["hover:bg-[#e0f7f1]", "text-[#26c2a3]"]}
                   pText={
-                    "  Just as I find peace in the night sky and nature&apos; greenery, I find joy in creating through code. I love exploring new human languages like Spanish, Arabic, Bahasa Indonesia, Japanese, Mandarin, and English, as well as programming languages such as Java, C++, Ruby, Rust, Red, Lua, C#, and Zig."
+                    "  Just as I find peace in the night sky and nature's; greenery, I find joy in creating through code. I love exploring new human languages like Spanish, Arabic, Bahasa Indonesia, Japanese, Mandarin, and English, as well as programming languages such as Java, C++, Ruby, Rust, Red, Lua, C#, and Zig."
                   }></CustomParagraphField>
 
                 {/* 6th para */}
