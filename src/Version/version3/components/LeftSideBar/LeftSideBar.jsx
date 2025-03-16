@@ -259,8 +259,9 @@ import Modal from "../Modal/Modal";
 // import { SiGmail } from 'react-icons/si';
 // import Dropdown from '../Dropdown/Dropdown';
 
-const LeftSideBar = () => {
-  const [sideBarClose, setSideBarClose] = useState(false);
+// eslint-disable-next-line react/prop-types
+const LeftSideBar = ({handleSideBar, isSideBarClose}) => {
+
   const [nightModeClose, setNightModeClose] = useState(false);
   const [settingModeClose, setSettingModeClose] = useState(false);
   const [startClose, setStartClose] = useState(false);
@@ -336,10 +337,7 @@ const LeftSideBar = () => {
   //   setSettingModeClose(!settingModeClose);
   // };
 
-  const handleSideBar = () => {
-    // console.log("clicked");
-    setSideBarClose(!sideBarClose);
-  };
+
   const handleNightMode = () => {
     console.log("clicked");
     setNightModeClose(!nightModeClose);
@@ -396,7 +394,7 @@ const LeftSideBar = () => {
     "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
 
   return (
-    <div className={`bg-[#60A15680] p-5 flex flex-col gap-3 w-full h-full `}>
+    <div className={`bg-[#60A15680] p-5 flex flex-col gap-3 ${isSideBarClose ? "w-full":'w-[100px]'} h-full `}>
       <div className="flex justify-center items-center   ">
         <img
           className="shadow-xl drop-shadow-xl rounded-full w-[160px]  "
@@ -405,10 +403,10 @@ const LeftSideBar = () => {
         />
       </div>
       {/* settings / users interactions */}
-      <div className="flex flex-row justify-between items-center gap-1 lg:justify-evenly lg:mt-2">
+      <div className={`${isSideBarClose ? "flex flex-row justify-between items-center gap-1 lg:justify-evenly lg:mt-2" : "flex flex-col justify-between items-center gap-1 lg:justify-evenly lg:mt-2"}`}>
         {/* sidebar folding / Drawer */}
         <div onClick={handleSideBar} className={interactionIconsStyle}>
-          {sideBarClose ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}
+          {isSideBarClose ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}
         </div>
         {/* night mode toggle / theme */}
         <div onClick={handleNightMode} className={interactionIconsStyle}>

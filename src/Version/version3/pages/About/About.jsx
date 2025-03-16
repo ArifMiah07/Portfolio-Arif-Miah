@@ -10,6 +10,7 @@ const About = () => {
   // states
   const [font, setFont] = useState("laila");
   const [fontSize, setFontSize] = useState(16);
+  const [sideBarClose, setSideBarClose] = useState(false);
 
   // handlers
   const handleSelectFont = (event) => {
@@ -25,17 +26,22 @@ const About = () => {
     console.log(size);
     setFontSize(size);
   };
-  
+// 
+  const handleSideBar = () => {
+    // console.log("clicked");
+    setSideBarClose(!sideBarClose);
+  };
+
   return (
     <div
       className={` bg-red-50 mx-auto ${font} text-black w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
       {/* left */}
-      <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50">
-        <LeftSideBar></LeftSideBar>
+      <section className={` ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-[100px] lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+        <LeftSideBar handleSideBar={handleSideBar} isSideBarClose={sideBarClose} ></LeftSideBar>
       </section>
       {/* right */}
       {/* bgFor1stSection ==> bg-[#FF0088] */}
-      <section className="mx-auto lg:col-span-9 w-full bg-[#FAFAFA] over:bg-[#fff5df] bgFor1stSection p-1 lg:p-1  z-10 lg:z-0">
+      <section className={`${sideBarClose ? "mx-auto lg:col-span-9 w-full bg-[#FAFAFA] over:bg-[#fff5df] bgFor1stSection p-1 lg:p-1  z-10 lg:z-0" : 'lg:col-span-11 w-full'} `}>
         <ScrollContainer>
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-2">
             <div className="p-5 bg-[#FAFAFA] over:bg-[#fff5df] text-black flex flex-col items-center ">
@@ -74,6 +80,7 @@ const About = () => {
                 </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
+              {/* content section */}
               <div
                 style={{ fontSize: `${fontSize}px` }}
                 className="p-5 bg-[#FAFAFA] over:bg-[#fff5df] text-black flex flex-col gap-[32px] ">
