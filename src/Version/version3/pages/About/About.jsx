@@ -6,66 +6,76 @@ import { useState } from "react";
 // import { useState } from "react";
 
 const About = () => {
-    const [font, setFont]= useState('laila');
+  const [font, setFont] = useState("laila");
 
-    const [fontSize, setFontSize] = useState(16);
-    
-    const handleSelectFont = (event) => {
-        const selectedText = event.target.options[event.target.selectedIndex].text;
-        console.log(selectedText);
-        setFont(selectedText);
-      };
+  const [fontSize, setFontSize] = useState(16);
 
-      const handleFontSize =(e)=>{
-        e.preventDefault()
+  const handleSelectFont = (event) => {
+    const selectedText = event.target.options[event.target.selectedIndex].text;
+    console.log(selectedText);
+    setFont(selectedText);
+  };
 
-        const form = e.target
-        const size = form.size.value;
-        console.log(size)
-        setFontSize(size);
-      }
+  const handleFontSize = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const size = form.size.value;
+    console.log(size);
+    setFontSize(size);
+  };
   return (
     <div
-    
-      className={` bg-red-50 mx-auto ${font} w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
+      className={` bg-red-50 mx-auto ${font} text-black w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
       {/* left */}
       <section className="mx-auto lg:col-span-3 w-full bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50">
         <LeftSideBar></LeftSideBar>
       </section>
       {/* right */}
-      <section className="mx-auto lg:col-span-9 w-full  bg-[#FF0088] p-1 lg:p-1 mb-3 z-10 lg:z-0">
+      {/* bgFor1stSection ==> bg-[#FF0088] */}
+      <section className="mx-auto lg:col-span-9 w-full bg-[#FAFAFA] over:bg-[#fff5df] bgFor1stSection p-1 lg:p-1 mb-3 z-10 lg:z-0">
         <ScrollContainer>
           <div className="bg-[#D663A080]  p-1 lg:p-1 mb-5">
-            <div className="p-5 bg-[#17072B] text-white flex flex-col items-center ">
+            <div className="p-5 bg-[#FAFAFA] over:bg-[#fff5df] text-black flex flex-col items-center ">
               <div className="mb-3">
                 <div className="hidden">
                   {/* <Dropdown items={dropdownItems} label="Font" /> */}
-                    <select onChange={handleSelectFont} name="select" id="select" className="select">
-                        <option value="bungee-tint">bungee-tint</option>
-                        <option value="inter">inter</option>
-                        <option value="lato">lato</option>
-                        <option value="matemasie">matemasie</option>
-                        <option value="merriweather">merriweather</option>
-                        <option value="new-amsterdam">new-amsterdam</option>
-                        <option value="open-sans">open-sans</option>
-                        <option value="playfair-display">playfair-display</option>
-                        <option value="poppins">poppins</option>
-                        <option value="raleway">raleway</option>
-                        <option value="roboto">roboto</option>
-                        <option value="laila">laila</option>
-                        <option value="playwrite-au-sa">playwrite-au-sa</option>
-                    </select>
-                    <div>
-                        <form onSubmit={handleFontSize} >
-                            <input className="bg-red-50" type="text" name="size" />
-                            <input className="cursor-pointer border border-emerald-500 bg-red-100 p-2" type="submit" value="apply" />
-                        </form>
-                    </div>
+                  <select
+                    onChange={handleSelectFont}
+                    name="select"
+                    id="select"
+                    className="select">
+                    <option value="bungee-tint">bungee-tint</option>
+                    <option value="inter">inter</option>
+                    <option value="lato">lato</option>
+                    <option value="matemasie">matemasie</option>
+                    <option value="merriweather">merriweather</option>
+                    <option value="new-amsterdam">new-amsterdam</option>
+                    <option value="open-sans">open-sans</option>
+                    <option value="playfair-display">playfair-display</option>
+                    <option value="poppins">poppins</option>
+                    <option value="raleway">raleway</option>
+                    <option value="roboto">roboto</option>
+                    <option value="laila">laila</option>
+                    <option value="playwrite-au-sa">playwrite-au-sa</option>
+                  </select>
+                  <div>
+                    <form onSubmit={handleFontSize}>
+                      <input className="bg-red-50" type="text" name="size" />
+                      <input
+                        className="cursor-pointer border border-emerald-500 bg-red-100 p-2"
+                        type="submit"
+                        value="apply"
+                      />
+                    </form>
+                  </div>
                 </div>
                 <h1 className="text-5xl">Yo, This is Arif Miah</h1>
               </div>
-              <div style={{ fontSize: `${fontSize}px` }} className="p-5 bg-[#17072B] text-white flex flex-col gap-[32px] ">
-                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+              <div
+                style={{ fontSize: `${fontSize}px` }}
+                className="p-5 bg-[#FAFAFA] over:bg-[#fff5df] text-black flex flex-col gap-[32px] ">
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#ffebf2] text-[#FF0088] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Hello! I am Arif Mia, an aspiring full-stack developer.
                   Currently, I am a first-year Computer Science and Engineering
                   student at Premier University, Chittagong. My fascination with
@@ -73,7 +83,7 @@ const About = () => {
                   development over the past few years.
                 </p>
 
-                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#ffe4e1] text-red-500 transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   Programming is not just my profession; it is my passion. I
                   find joy in problem-solving and creating something new through
                   code. My ability to learn quickly and think creatively is one
@@ -81,23 +91,26 @@ const About = () => {
                   span across various fields - from mathematics and science to
                   literature and language learning.
                 </p>
-                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#ffedd5] text-orange-500 transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   For the past year, I have been intensively studying web
                   development, though my interest in coding and programming
                   dates back 4-5 years. What excites me most is not just writing
                   code, but seeing the output of my work come to life. I am
                   currently expanding my expertise in full-stack development,
-                  mastering various technologies and frameworks. My goal is to
-                  join a professional company as a skilled full-stack developer
-                  where I can enhance my abilities and make meaningful
-                  contributions to the industry. Just as I find peace in the
-                  night sky and nature&aposs greenery, I find joy in creating
-                  through code. I love exploring new human languages like
-                  Spanish, Arabic, Bahasa Indonesia, Mandarin, and English, as
-                  well as programming languages such as Java, C++, Ruby, Red,
-                  C#, and Zig.
+                  mastering various technologies and frameworks.
                 </p>
-                <p className="border-l-4 border-[#009400] px-3 bg-[#17072B] text-white transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#d1fae5] text-green-500 transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                  My goal is to join a professional company as a skilled
+                  full-stack developer where I can enhance my abilities and make
+                  meaningful contributions to the industry.
+                </p>
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#e0f7f1] text-[#26c2a3] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                  Just as I find peace in the night sky and nature&apos;                  greenery, I find joy in creating through code. I love
+                  exploring new human languages like Spanish, Arabic, Bahasa
+                  Indonesia, Mandarin, and English, as well as programming
+                  languages such as Java, C++, Ruby, Rust, Red, C#, and Zig.
+                </p>
+                <p className="border-l-4 hover:p-4 border-[#009400] px-3 bg-[#FAFAFA] hover:bg-[#e0f2fe] text-[#2563eb] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
                   I am passionate about continuous learning and creative
                   application of technology, always eager to tackle new
                   challenges and create innovative solutions in the world of web
@@ -105,14 +118,12 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* footer */}
+            {/* footer ==> foot note?? */}
             <div className="p-5 bg-[#D9D9D9] flex flex-col items-center mb-10 md:mb-32 lg:mb-2 ">
-              <div className="p-5 bg-[#17072B] text-white border-l-2 border-[#009400]">
-                <p className="">
-                  I am passionate about continuous learning and creative
-                  application of technology, always eager to tackle new
-                  challenges and create innovative solutions in the world of web
-                  development.
+              <div className="p-5 bg-[#FAFAFA] border-l-2 border-[#009400]">
+                <p className="  hover:p-4 px-3 bg-[#FAFAFA] hover:bg-[#d1fae5] text-green-600 transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 flex flex-col items-center justify-end w-full hover:text-[19px] ">
+                  
+                I&apos;m always eager to learn and tackle new challenges. My goal is to create meaningful solutions and contribute to the tech world in a way that makes a difference.
                 </p>
               </div>
             </div>
