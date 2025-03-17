@@ -1,0 +1,51 @@
+/* This will define the container section's position and general layout */
+.section-container {
+    position: relative;
+    width: 1108px;
+    height: 1049px;
+    flex-shrink: 0;
+    border-radius: 208px;
+    background-color: #FAFAFA; /* Content background color */
+    overflow: hidden; /* Ensures the content doesn't overflow outside the section */
+  }
+  
+  /* This will style the blurred background element */
+  .section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #112597;
+    filter: blur(200px);
+    z-index: -1; /* Place it behind the content */
+  }
+  
+  /* This is for the content to ensure it sits above the blurred background */
+  .section-content {
+    position: relative;
+    z-index: 10; /* Content sits above the blurred background */
+    background-color: #FAFAFA; /* Content background color */
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* You can adjust the padding */
+    box-sizing: border-box;
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+  
+  /* Scrollable container if needed */
+  .scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  /* Optional styles for HomeContent to give it shadowing and elevation */
+  .home-content {
+    background-color: #FAFAFA;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  

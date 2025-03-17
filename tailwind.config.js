@@ -28,7 +28,7 @@ export default {
         'playwrite-au-sa': ['"Playwrite AU SA"', 'serif'],
       },
       colors: {
-        selectionBg: '#fff', // Custom background color for selected text
+        selectionBg: '#00f', // Custom background color for selected text
         selectionText: '#1A202C', // Custom text color for selected text
       },
     },
