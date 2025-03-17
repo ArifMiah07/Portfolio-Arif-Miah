@@ -1,4 +1,17 @@
-date - [16-03-2025]
+date - [17-03-2025]
+subject: [Update Code in <Home><About> page & <Right Side Bar> components ---<Add more Functionality>]
+total time : []
+    ---------------
+|       topic          |
+    ---------------
+    [start time] - 8 pm
+    [end time] - 10 pm
+    [2 hours] - time
+    [task] - list
+        1.[x] -- <Fix unnecessary spacing>
+        2.[x] -- <Add functionality for Close arrow left side bar>
+        2.[!] --
+date - [18-03-2025]
 subject: [Update Code in <Home><About> page & <Right Side Bar> components ---<Add more Functionality>]
 total time : []
     ---------------
@@ -10,4 +23,4 @@ total time : []
     [task] - list
         1.[x] -- <Fix unnecessary spacing>
         2.[!] -- <Add functionality for Close arrow left side bar>
-        2.[!] --
+        2.[!] -- <use context api for not to repeat same thing at many place>

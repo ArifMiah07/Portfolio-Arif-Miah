@@ -6,9 +6,9 @@
 ## **Colors**
 #### **Colors on**
 -   layout -
-    - background color -
-        - primary color - 
-        - secondary color -
+    - background color - 
+        - primary color - bg-[#FAFAFA]
+        - secondary color - 
     - text color - 
         - primary color - 
         - secondary color -
