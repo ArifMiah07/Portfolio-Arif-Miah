@@ -292,6 +292,9 @@ export const AboutIcon = () => {
 
 // eslint-disable-next-line react/prop-types
 const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
+
+
+  // states
   const [nightModeClose, setNightModeClose] = useState(false);
   // const [settingModeClose, setSettingModeClose] = useState(false);
   const [startClose, setStartClose] = useState(false);
@@ -305,6 +308,11 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const [fontFamily, setFontFamily] = useState("Arial"); // State for Font Family
   const [selectedColor, setSelectedColor] = useState("blue"); // State for Color
   const [mode, setMode] = useState("Light"); // State for Mode
+
+
+
+
+  // handles 
 
   // Toggle the settings panel
   // const handleSettingMode = () => {
@@ -392,44 +400,93 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const customClassesForNavLinks = `${navLinksStyle}  ${
     isSideBarClose ? navLinksStyle : navLinksStyleFF
   }`;
-  
+
   const smLinksStyle =
     "text-2xl hover:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out";
-    const interactionIconsStyle =
-      "flex items-center justify-center bg-green-50 shadow-xl drop-shadow-xl rounded-full w-10 h-10 ";
-    const interactionIconsStyleFF =
-      "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm";
-    // following Dry method
-    const customClassesForUserInteractions = `${interactionIconsStyle} ${
-      isSideBarClose ? interactionIconsStyle : interactionIconsStyleFF
-    }`;
-  
-    const applyCustomizationStyle =
-      "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
+  const interactionIconsStyle =
+    "flex items-center justify-center bg-green-50 shadow-xl drop-shadow-xl rounded-full w-10 h-10 ";
+  const interactionIconsStyleFF =
+    "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm";
+  // following Dry method
+  const customClassesForUserInteractions = `${interactionIconsStyle} ${
+    isSideBarClose ? interactionIconsStyle : interactionIconsStyleFF
+  }`;
+
+  const applyCustomizationStyle =
+    "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
+
+
+    // Links
   const navLinks = (
     <>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/"}>{isSideBarClose ? "Home" : <Tooltip text="Home"> <FaHome /></Tooltip>}</Link>
+        <Link to={"/v3/"}>
+          {isSideBarClose ? (
+            "Home"
+          ) : (
+            <Tooltip text="Home">
+              {" "}
+              <FaHome />
+            </Tooltip>
+          )}
+        </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/about"}>{isSideBarClose ? "About" : <Tooltip text="About"><FaUserTie /></Tooltip>}</Link>
+        <Link to={"/v3/about"}>
+          {isSideBarClose ? (
+            "About"
+          ) : (
+            <Tooltip text="About">
+              <FaUserTie />
+            </Tooltip>
+          )}
+        </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/skills"}>
-          {isSideBarClose ? "Skills" : <Tooltip text="Skills"><GiSkills /></Tooltip>}
+          {isSideBarClose ? (
+            "Skills"
+          ) : (
+            <Tooltip text="Skills">
+              <GiSkills />
+            </Tooltip>
+          )}
         </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/projects"}>
-          {isSideBarClose ? "Projects" : <Tooltip text="Projects"> <GiSpaceShuttle /></Tooltip>}
+          {isSideBarClose ? (
+            "Projects"
+          ) : (
+            <Tooltip text="Projects">
+              {" "}
+              <GiSpaceShuttle />
+            </Tooltip>
+          )}
         </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/blogs"}>{isSideBarClose ? "Blogs" : <Tooltip text="Blogs"> <ImBlog /></Tooltip>}</Link>
+        <Link to={"/v3/blogs"}>
+          {isSideBarClose ? (
+            "Blogs"
+          ) : (
+            <Tooltip text="Blogs">
+              {" "}
+              <ImBlog />
+            </Tooltip>
+          )}
+        </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/contact"}>
-          {isSideBarClose ? "Contact" : <Tooltip text="Contact"> <RiContactsBook3Line /></Tooltip>}
+          {isSideBarClose ? (
+            "Contact"
+          ) : (
+            <Tooltip text="Contact">
+              {" "}
+              <RiContactsBook3Line />
+            </Tooltip>
+          )}
         </Link>
       </li>
     </>
@@ -444,7 +501,6 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
       <TbFileCv className={smLinksStyle} />
     </>
   );
-
 
   return (
     <div
@@ -629,11 +685,11 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
         </div>
         {/* show website view */}
         {isSideBarClose ? (
-            <div
-              onMouseEnter={handleView}
-              className={`${customClassesForUserInteractions}`}>
-              {view ? viewEyes : <PiEyes />}
-            </div>
+          <div
+            onMouseEnter={handleView}
+            className={`${customClassesForUserInteractions}`}>
+            {view ? viewEyes : <PiEyes />}
+          </div>
         ) : (
           <Tooltip text="Total visitors">
             <div

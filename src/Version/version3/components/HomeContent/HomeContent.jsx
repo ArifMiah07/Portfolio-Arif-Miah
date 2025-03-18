@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const HomeContent = () => {
-
   // states
   const [view, setView] = useState(false);
   const [view2, setView2] = useState(false);
@@ -44,15 +43,16 @@ const HomeContent = () => {
     "w-[24px] hover:w-[48px] h-[12px] transition-all duration-200 rounded-full bg-slate-400 hover:bg-slate-500";
 
   return (
-      <div className=" p-5 g-[#FAFAFA] flex flex-col items-center w-full min-h-screen gap-3 ">
-        {/* intro */}
-        <div className="g-[#FAFAFA] flex flex-col items-center w-full p-2 lg:mt-12 ">
-          <h1 className="text-3xl font-medium ">Hi, I’m Arif Miah</h1>
-          <p className="text-xl mt-4 ">
-            {" "}
-            I&apos;m a MERN Stack-focused Full Stack Web Developer
-          </p>
-        </div>
+    <div className=" p-5 g-[#FAFAFA] flex flex-col items-center w-full min-h-screen gap-3 ">
+      {/* intro */}
+      <div className="g-[#FAFAFA] flex flex-col items-center w-full p-2 lg:mt-12 ">
+        <h1 className="text-3xl font-medium ">Hi, I’m Arif Miah</h1>
+        <p className="text-xl mt-4 ">
+          {" "}
+          I&apos;m a MERN Stack-focused Full Stack Web Developer
+        </p>
+      </div>
+      <div className="w-full p-5 g-[#FAFAFA] flex flex-col items-center gap-3">
         {/* skills */}
         <div
           onMouseEnter={handleMouseEnter}
@@ -149,15 +149,15 @@ const HomeContent = () => {
                 : "w-[100px] h-[2px] bg-slate-600 "
             }`}></div>
         </div>
-        {/* footer nav */}
-        <div className="g-[#FAFAFA] flex flex-row items-center justify-center gap-4 w-full p-2">
-          <div className={footerNavStyle}></div>
-          <div className={footerNavStyle}></div>
-          <div className={footerNavStyle}></div>
-          <div className={footerNavStyle}></div>
-        </div>
       </div>
-    
+      {/* footer nav */}
+      <div className="g-[#FAFAFA] flex flex-row items-center justify-center gap-4 w-full p-2">
+        <div className={footerNavStyle}></div>
+        <div className={footerNavStyle}></div>
+        <div className={footerNavStyle}></div>
+        <div className={footerNavStyle}></div>
+      </div>
+    </div>
   );
 };
 
