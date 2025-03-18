@@ -23,4 +23,5 @@ total time : []
     [task] - list
         1.[x] -- <Fix unnecessary spacing>
         2.[!] -- <Add functionality for Close arrow left side bar>
-        2.[!] -- <use context api for not to repeat same thing at many place>
+        3.[!] -- <use context api for not to repeat same thing at many place>
+        4.[!] -- <make a custom tooltip>

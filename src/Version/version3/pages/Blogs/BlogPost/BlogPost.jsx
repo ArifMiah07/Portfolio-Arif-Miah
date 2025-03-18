@@ -13,7 +13,7 @@ const BlogPost = ({ image }) => {
   const hashTags = ["HTML", "CSS", "Web Dev", "Div", "Alignment", "Blog"];
   const eventBtns = ["Share", "Star", "Download", "Comment", "Love", "Down"];
   return (
-    <div className="p-5 bg-[#D9D9D9] flex flex-col items-center hover:bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 hover:rounded-md justify-end w-full ">
+    <div className="p-5 bg-[#FAFAFA] flex flex-col items-center hover:bg-[#D9D5D5] transition-all duration-300 hover:drop-shadow-2xl hover:shadow-2xl hover:scale-105 hover:rounded-md justify-end w-full ">
       <div className="bg-[#EEEDEA] border-2 border-red-500 w-full h-full grid grid-cols-1 lg:grid-cols-12 ">
         <div className="col-span-5  border-2 border-green-500 flex flex-col items-center justify-center">
           <img

@@ -18,16 +18,27 @@ const Contact = () => {
     console.log(name, email, message);
   };
 
+  
+  const [sideBarClose, setSideBarClose] = useState(false);
+
+  const handleSideBar = () => {
+    // console.log("clicked");
+    setSideBarClose(!sideBarClose);
+  };
+
+
   return (
     <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden ">
       {/* left */}
-      <section className="lg:col-span-3 lg:w-[330px] bg-[#1B8B09] p-5">
-        <div className="lg:w-full h-full bg-[#ffffbb] ">
-          <LeftSideBar></LeftSideBar>
-        </div>
+      <section className={` fixed lg:relative transition-all duration-300 ease-in-out  ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+        <ScrollContainer>
+
+        <LeftSideBar handleSideBar={handleSideBar} isSideBarClose={sideBarClose} ></LeftSideBar>
+        </ScrollContainer>
       </section>
       {/* right */}
-      <section className="lg:col-span-9 w-full drop-shadow-lg shadow-lg bg-[#] p-1">
+      <section className={`fixed lg:relative transition-all duration-300 ease-in-out bg-[#FAFAFA]  ${sideBarClose ? "mx-auto lg:col-span-9 w-full bg-[#FAFAFA] over:bg-[#fff5df] bgFor1stSection p-1 lg:p-1  z-10 lg:z-0" : 'lg:col-span-11 w-full'} `}>
+        <div className="w-full bg-[#FAFAFA] h-full">
         <ScrollContainer>
           <div className="bg-[#] lg:w-full  mb-2 p-1 ">
             {/* content container */}
@@ -135,6 +146,7 @@ const Contact = () => {
             </div>
           </div>
         </ScrollContainer>
+        </div>
       </section>
     </div>
   );

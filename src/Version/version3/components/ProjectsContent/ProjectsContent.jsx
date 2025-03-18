@@ -4,7 +4,7 @@ const ProjectsContent = ({img, name, overview, tech}) => {
   //   "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
   return (
-    <div className="mx-auto w-full h-full p-2 lg:p-2 gap-5 bg-[#D9D9D9] flex flex-col ">
+    <div className="mx-auto w-full h-full p-2 lg:p-2 gap-5 bg-[#FAFAFA] flex flex-col ">
       <div className="relative group border-2 border-gray-400 hover:border-8 hover:border-gray-800 transition-all duration-500 ease-in-out overflow-hidden">
         {/* Image Container */}
         <div className="p-3 w-full flex justify-center">

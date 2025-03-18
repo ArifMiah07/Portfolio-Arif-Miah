@@ -17,12 +17,6 @@ const Home = () => {
   return (
     <div className="bg-red-50 mx-auto w-full min-h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden">
       {/* left */}
-      {/* <section className="lg:col-span-3 w-full bg-[#1B8B09] p-5 z-50 lg:z-0">
-        <div className="w-full h-full bg-[#60A15680]">
-          <LeftSideBar handleSideBar={handleSideBar} />
-        </div>
-      </section> */}
-      {/* left */}
       <section className={` fixed lg:relative transition-all duration-300 ease-in-out  ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
         <ScrollContainer>
 
