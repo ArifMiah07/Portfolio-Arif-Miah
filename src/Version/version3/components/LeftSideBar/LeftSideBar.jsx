@@ -262,6 +262,7 @@ import { ImBlog } from "react-icons/im";
 import { GiSpaceShuttle } from "react-icons/gi";
 
 import { RiContactsBook3Line } from "react-icons/ri";
+import Tooltip from "../Tooltip/Tooltip";
 
 // import { TbMenuOrder } from "react-icons/tb";
 // import { CgMenuLeft } from "react-icons/cg";
@@ -296,6 +297,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const [startClose, setStartClose] = useState(false);
   let [countStar, setCountStar] = useState(1);
   const [view, setView] = useState(false);
+  const [view2, setView2] = useState(false);
 
   const [settingModeOpen, setSettingModeOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null); // Tracks the active modal
@@ -351,6 +353,11 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
     setView(!view);
   };
 
+  const handleView2 = () => {
+    // console.log("hovered");
+    setView2(!view2);
+  };
+
   const handleStar = () => {
     // console.log("hello");
     setStartClose(!startClose);
@@ -377,6 +384,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   // };
   // console.log(viewEyes);
 
+  // styles
   const navLinksStyle =
     "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm ";
   const navLinksStyleFF = "text-2xl";
@@ -384,37 +392,49 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const customClassesForNavLinks = `${navLinksStyle}  ${
     isSideBarClose ? navLinksStyle : navLinksStyleFF
   }`;
+  
+  const smLinksStyle =
+    "text-2xl hover:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out";
+    const interactionIconsStyle =
+      "flex items-center justify-center bg-green-50 shadow-xl drop-shadow-xl rounded-full w-10 h-10 ";
+    const interactionIconsStyleFF =
+      "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm";
+    // following Dry method
+    const customClassesForUserInteractions = `${interactionIconsStyle} ${
+      isSideBarClose ? interactionIconsStyle : interactionIconsStyleFF
+    }`;
+  
+    const applyCustomizationStyle =
+      "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
   const navLinks = (
     <>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/"}>{isSideBarClose ? "Home" : <FaHome />}</Link>
+        <Link to={"/v3/"}>{isSideBarClose ? "Home" : <Tooltip text="Home"> <FaHome /></Tooltip>}</Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/about"}>{isSideBarClose ? "About" : <FaUserTie />}</Link>
+        <Link to={"/v3/about"}>{isSideBarClose ? "About" : <Tooltip text="About"><FaUserTie /></Tooltip>}</Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/skills"}>
-          {isSideBarClose ? "Skills" : <GiSkills />}
+          {isSideBarClose ? "Skills" : <Tooltip text="Skills"><GiSkills /></Tooltip>}
         </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/projects"}>
-          {isSideBarClose ? "Projects" : <GiSpaceShuttle />}
+          {isSideBarClose ? "Projects" : <Tooltip text="Projects"> <GiSpaceShuttle /></Tooltip>}
         </Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
-        <Link to={"/v3/blogs"}>{isSideBarClose ? "Blogs" : <ImBlog />}</Link>
+        <Link to={"/v3/blogs"}>{isSideBarClose ? "Blogs" : <Tooltip text="Blogs"> <ImBlog /></Tooltip>}</Link>
       </li>
       <li className={` ${customClassesForNavLinks}`}>
         <Link to={"/v3/contact"}>
-          {isSideBarClose ? "Contact" : <RiContactsBook3Line />}
+          {isSideBarClose ? "Contact" : <Tooltip text="Contact"> <RiContactsBook3Line /></Tooltip>}
         </Link>
       </li>
     </>
   );
 
-  const smLinksStyle =
-    "text-2xl hover:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out";
   const smLinks = (
     <>
       <FaGithub className={smLinksStyle} />
@@ -425,20 +445,8 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
     </>
   );
 
-  const interactionIconsStyle =
-    "flex items-center justify-center bg-green-50 shadow-xl drop-shadow-xl rounded-full w-10 h-10 ";
-  const interactionIconsStyleFF =
-    "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm";
-  // following Dry method
-  const customClassesForUserInteractions = `${interactionIconsStyle} ${
-    isSideBarClose ? interactionIconsStyle : interactionIconsStyleFF
-  }`;
-
-  const applyCustomizationStyle =
-    "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
 
   return (
-    
     <div
       className={`bg-[#60A15680] h-full p-5 flex flex-col gap-3 ${
         isSideBarClose ? "w-full" : "w-full"
@@ -620,11 +628,21 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
           )}
         </div>
         {/* show website view */}
-        <div
-          onMouseEnter={handleView}
-          className={`${customClassesForUserInteractions}`}>
-          {view ? viewEyes : <PiEyes />}
-        </div>
+        {isSideBarClose ? (
+            <div
+              onMouseEnter={handleView}
+              className={`${customClassesForUserInteractions}`}>
+              {view ? viewEyes : <PiEyes />}
+            </div>
+        ) : (
+          <Tooltip text="Total visitors">
+            <div
+              onMouseEnter={handleView}
+              className={`${customClassesForUserInteractions}`}>
+              {view ? viewEyes : <PiEyes />}
+            </div>
+          </Tooltip>
+        )}
       </div>
       {/* footer */}
       <div>
@@ -632,9 +650,13 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
         <div className=" flex flex-col w-full ">
           {/* nav */}
           {/* divider */}
-          <div className={`w-full h-1 ${isSideBarClose ? 'bg-red-700' : 'bg-red-700'}`}></div>
+          <div
+            className={`w-full h-1 ${
+              isSideBarClose ? "bg-red-700" : "bg-red-700"
+            }`}></div>
           {/* navigation links */}
-          <div className={` p-5 ${isSideBarClose ? 'bg-red-300' : 'bg-red-300'}`}>
+          <div
+            className={` p-5 ${isSideBarClose ? "bg-red-300" : "bg-red-300"}`}>
             <ul
               className={`${
                 isSideBarClose
@@ -645,7 +667,10 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
             </ul>
           </div>
           {/* end footer social media links */}
-          <div className={` p-5 flex items-center justify-evenly gap-3 ${isSideBarClose ? 'bg-red-200' : 'bg-red-200 flex flex-col'}`}>
+          <div
+            className={` p-5 flex items-center justify-evenly gap-3 ${
+              isSideBarClose ? "bg-red-200" : "bg-red-200 flex flex-col"
+            }`}>
             {smLinks}
           </div>
         </div>
