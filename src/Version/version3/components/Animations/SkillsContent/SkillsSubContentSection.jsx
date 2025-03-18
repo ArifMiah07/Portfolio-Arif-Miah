@@ -22,7 +22,7 @@ const SkillsSubContentSection = ({
             <div className="sm:w-[120px] md:[160px] lg:[200px] h-[2px] bg-black "></div>
             <div className={makeTriangleStyle}></div>
           </div>
-          <h1 className="text-[32px] mx-3 ">{title}</h1>
+          <h1 className="text-2xl mx-3 ">{title}</h1>
           <div className=" flex items-center justify-center rotate-180">
             <div className="sm:w-[120px] md:[160px] lg:[200px] h-[2px] bg-black "></div>
             <div className={makeTriangleStyle}></div>
@@ -30,7 +30,7 @@ const SkillsSubContentSection = ({
         </div>
         {/* description */}
         <div>
-          <p className="text-[16px] p-3 font-normal ">{description}</p>
+          <p className="text-lg p-3 font-normal ">{description}</p>
         </div>
         {/* border div */}
         <div
