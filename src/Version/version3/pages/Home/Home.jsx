@@ -17,11 +17,11 @@ const Home = () => {
     " >
       {/* left */}
       <section
-        className={`  transition-all duration-300 ease-in-out h-[100px] md:h-full lg:h-full xl:h-full 2xl-h-full    ${
-          sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"
-        } bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+        className={`  transition-all duration-300 ease-in-out ${
+          sideBarClose ? "w-full h-[100px] md:h-[100px] lg:h-full xl:h-full 2xl-h-full mx-auto lg:col-span-3" : "w-full lg:col-span-1 h-[100px] md:h-[100px] lg:h-full xl:h-full 2xl-h-full "
+        } bg-[#1B8B09] h-full p-1 lg:p-1 z-50 lg:z-50`}>
         <ScrollContainer>
-          <LeftSideBar
+          <LeftSideBar className=""
             handleSideBar={handleSideBar}
             isSideBarClose={sideBarClose}></LeftSideBar>
         </ScrollContainer>
