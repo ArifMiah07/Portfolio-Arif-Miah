@@ -17,7 +17,7 @@ const Home = () => {
     " >
       {/* left */}
       <section
-        className={` fixed lg:relative transition-all duration-300 ease-in-out  ${
+        className={`  transition-all duration-300 ease-in-out h-[100px] md:h-full lg:h-full xl:h-full 2xl-h-full    ${
           sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"
         } bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
         <ScrollContainer>
@@ -29,7 +29,7 @@ const Home = () => {
       {/* right */}
       {/* <section className="lg:col-span-9 w-full bg-[#FF0088] z-10 lg:z-0"> */}
       <section
-        className={`fixed lg:relative transition-all duration-300 ease-in-out bg-[#FAFAFA]  ${
+        className={` transition-all duration-300 ease-in-out bg-[#FAFAFA]  ${
           sideBarClose
             ? "mx-auto lg:col-span-9 w-full bg-[#FAFAFA] over:bg-[#fff5df] bgFor1stSection p-1 lg:p-1  z-10 lg:z-0"
             : "lg:col-span-11 w-full"
