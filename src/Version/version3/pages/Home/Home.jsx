@@ -13,7 +13,8 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-red-50 mx-auto w-full min-h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden">
+    <div className="bg-red-50 mx-auto w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden  
+    " >
       {/* left */}
       <section
         className={` fixed lg:relative transition-all duration-300 ease-in-out  ${

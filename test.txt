@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/assets/profile.jpg" />
+    <link rel="icon" href="./public/assets/profile.jpg" sizes="any" />
+    <link rel="icon" href="./public/assets/profile.jpg" type="image/svg+xml" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the portfolio of Arif Miah, a MERN Stack Developer with expertise in React, Node.js, MongoDB, and Express. Discover projects, skills, and contact information for web development services." />
+    <meta name="keywords" content="Arif Miah, MERN Stack Developer, Full-Stack Web Developer, React Developer, Node.js Developer, MongoDB, JavaScript, portfolio, web developer, frontend, backend, full stack" />
+    <meta property="og:title" content="Arif Miah | MERN Stack Developer & Full-Stack Web Developer" />
+    <meta property="og:description" content="Check out Arif Miah’s portfolio featuring web development projects, skills, and contact information." />
+    <meta property="og:image" content="./public/assets/cover.png" />
+    <meta property="og:url" content="https://arifmiah.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arif Miah | MERN Stack Web Developer & Full-Stack Web Developer Portfolio | Arif Miah Portfolio | Arif Miah Web Developer | Arif Miah MERN Stack Web developer | Arif Miah Full Stack Web Developer | Arif Miah MERN Stack Web Developer From Bangladesh | Arif Miah Full Stack Web Developer From Bangladesh | ArifMiah01 | ArifMiah07 | ArifMiah | Arif | Miah | Full Stack Web Developer | MERN Stack Web Developer | Web Developer | Developer | Software Developer Engineer | Software | Developer | Engineer | Arif Miah Web Developer | Arif Miah Mern Stack Web developer | Arif Miah Full Stack web developer | Arif Miah Software Developer | Arif Miah Full Stack Software Developer | Arif Miah Software Developer Engineer | Arif Miah Full Stack Software Developer Engineer | ArifMiah01 Web Developer | ArifMiah01 Mern Stack Web developer | ArifMiah01 Full Stack web developer | ArifMiah01 Software Developer | ArifMiah01 Full Stack Software Developer | ArifMiah01 Software Developer Engineer | ArifMiah01 Full Stack Software Developer Engineer | ArifMiah07 Web Developer | ArifMiah07 Mern Stack Web developer | ArifMiah07 Full Stack web developer | ArifMiah07 Software Developer | ArifMiah07 Full Stack Software Developer | ArifMiah07 Software Developer Engineer | ArifMiah07 Full Stack Software Developer Engineer | Arif Miah | Arif Miah01 | ArifMiah07 | Arif Miah | MERN Stack Web Developer & Full-Stack Web Developer Portfolio | Arif Miah Portfolio | Arif Miah Web Developer | Arif Miah MERN Stack Web developer | Arif Miah Full Stack Web Developer | Arif Miah MERN Stack Web Developer From Bangladesh | Arif Miah Full Stack Web Developer From Bangladesh" />
+    <meta name="twitter:description" content="Discover the portfolio of Arif Miah, showcasing projects in React, Node.js, and MongoDB." />
+    <meta name="twitter:image" content="./public/assets/cover.png" />
+    <meta name="author" content="Arif Miah" />
+    <meta name="robots" content="index, follow" />
+    <meta name="publisher" content="Arif Miah" />
+
+
+
+    <title>Arif Miah | MERN Stack Web Developer & Full-Stack Web Developer Portfolio | Arif Miah Portfolio | Arif Miah Web Developer | Arif Miah MERN Stack Web developer | Arif Miah Full Stack Web Developer | Arif Miah MERN Stack Web Developer From Bangladesh | Arif Miah Full Stack Web Developer From Bangladesh | ArifMiah01 | ArifMiah07 | ArifMiah | Arif | Miah | Full Stack Web Developer | MERN Stack Web Developer | Web Developer | Developer | Software Developer Engineer | Software | Developer | Engineer | Arif Miah Web Developer | Arif Miah Mern Stack Web developer | Arif Miah Full Stack web developer | Arif Miah Software Developer | Arif Miah Full Stack Software Developer | Arif Miah Software Developer Engineer | Arif Miah Full Stack Software Developer Engineer | ArifMiah01 Web Developer | ArifMiah01 Mern Stack Web developer | ArifMiah01 Full Stack web developer | ArifMiah01 Software Developer | ArifMiah01 Full Stack Software Developer | ArifMiah01 Software Developer Engineer | ArifMiah01 Full Stack Software Developer Engineer | ArifMiah07 Web Developer | ArifMiah07 Mern Stack Web developer | ArifMiah07 Full Stack web developer | ArifMiah07 Software Developer | ArifMiah07 Full Stack Software Developer | ArifMiah07 Software Developer Engineer | ArifMiah07 Full Stack Software Developer Engineer | Arif Miah | Arif Miah01 | ArifMiah07 </title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arif Miah",
+        "jobTitle": "Full-Stack Web Developer",
+        "url": "https://arifmiah.netlify.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/arifmiah01/",
+          "https://x.com/ArifMiah01",
+          "https://github.com/ArifMiah07",
+          "https://www.facebook.com/profile.php?id=61564664411937"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Programming Hero Bangladesh"
+        },
+        "email": "arifmiah.me101@gmail.com"
+      }
+      </script>      
+  </body>
+</html>

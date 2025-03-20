@@ -292,8 +292,6 @@ export const AboutIcon = () => {
 
 // eslint-disable-next-line react/prop-types
 const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
-
-
   // states
   const [nightModeClose, setNightModeClose] = useState(false);
   // const [settingModeClose, setSettingModeClose] = useState(false);
@@ -309,10 +307,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const [selectedColor, setSelectedColor] = useState("blue"); // State for Color
   const [mode, setMode] = useState("Light"); // State for Mode
 
-
-
-
-  // handles 
+  // handles
 
   // Toggle the settings panel
   // const handleSettingMode = () => {
@@ -394,7 +389,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
 
   // styles
   const navLinksStyle =
-    "border-b-2 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm ";
+    "border-b-2 z-50 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm ";
   const navLinksStyleFF = "text-2xl";
   // following DRY method
   const customClassesForNavLinks = `${navLinksStyle}  ${
@@ -415,8 +410,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   const applyCustomizationStyle =
     "border-b-2 border-green-700 hover:border-b-2 hover:border-green-300 hover:p-2 hover:text-center cursor-pointer hover:bg-blue-700 hover:transition-all hover:rounded-md";
 
-
-    // Links
+  // Links
   const navLinks = (
     <>
       <li className={` ${customClassesForNavLinks}`}>
@@ -494,17 +488,74 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
 
   const smLinks = (
     <>
-      <FaGithub className={smLinksStyle} />
+      {/* <FaGithub className={smLinksStyle} />
       <FaLinkedin className={smLinksStyle} />
       <MdEmail className={smLinksStyle} />
       <FaXTwitter className={smLinksStyle} />
-      <TbFileCv className={smLinksStyle} />
+      <TbFileCv className={smLinksStyle} /> */}
+      <li className={` ${customClassesForNavLinks}`}>
+        <a href={"https://github.com/ArifMiah07"}>
+          {isSideBarClose ? (
+            <FaGithub className={smLinksStyle} />
+          ) : (
+            <Tooltip text="Github Profile">
+              {" "}
+              <FaGithub className={smLinksStyle} />
+            </Tooltip>
+          )}
+        </a>
+      </li>
+      <li className={` ${customClassesForNavLinks}`}>
+        <a href="https://github.com/ArifMiah07" target="_blank">
+          {isSideBarClose ? (
+            <FaLinkedin className={smLinksStyle} />
+          ) : (
+            <Tooltip text="linkedIn Profile">
+              <FaLinkedin className={smLinksStyle} />
+            </Tooltip>
+          )}
+        </a>
+      </li>
+      <li className={` ${customClassesForNavLinks}`}>
+        <a href={"https://github.com/ArifMiah07"}>
+          {isSideBarClose ? (
+            <MdEmail className={smLinksStyle} />
+          ) : (
+            <Tooltip text="EMail to Me">
+              {" "}
+              <MdEmail className={smLinksStyle} />
+            </Tooltip>
+          )}
+        </a>
+      </li>
+      <li className={` ${customClassesForNavLinks}`}>
+        <a href="https://github.com/ArifMiah07" target="_blank">
+          {isSideBarClose ? (
+            <FaXTwitter className={smLinksStyle} />
+          ) : (
+            <Tooltip text="Twitter/X Profile">
+              <FaXTwitter className={smLinksStyle} />
+            </Tooltip>
+          )}
+        </a>
+      </li>
+      <li className={` ${customClassesForNavLinks}`}>
+        <a href="https://github.com/ArifMiah07" target="_blank">
+          {isSideBarClose ? (
+            <TbFileCv className={smLinksStyle} />
+          ) : (
+            <Tooltip text="My CV/Resume">
+              <TbFileCv className={smLinksStyle} />
+            </Tooltip>
+          )}
+        </a>
+      </li>
     </>
   );
 
   return (
     <div
-      className={`bg-[#60A15680] h-full p-5 flex flex-col gap-3 ${
+      className={`bg-[#60A15680] h-full flex flex-row justify-between items-center  gap-3  p-1 lg:p-5  lg:flex-col lg:gap-3 ${
         isSideBarClose ? "w-full" : "w-full"
       }`}>
       <div className=" flex justify-center items-center ">
@@ -727,7 +778,14 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
             className={` p-5 flex items-center justify-evenly gap-3 ${
               isSideBarClose ? "bg-red-200" : "bg-red-200 flex flex-col"
             }`}>
-            {smLinks}
+            <ul
+              className={`w-full h-full flex flex-row justify-between items-center gap-2 ${
+                isSideBarClose
+                  ? "flex-row"
+                  : "flex-col"
+              }`}>
+              {smLinks}
+            </ul>
           </div>
         </div>
       </div>
