@@ -583,7 +583,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
             }`}>
             <ul
               className={`w-full h-full flex flex-row justify-between items-center gap-3 xl:gap-5 ${
-                isSideBarClose ? "flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col p-0 " : "flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col p-0"
+                isSideBarClose ? "flex-row md:flex-row lg:flex-col xl:flex-row 2xl:flex-row p-0 " : "flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col p-0"
               }`}>
               {smLinks}
             </ul>
