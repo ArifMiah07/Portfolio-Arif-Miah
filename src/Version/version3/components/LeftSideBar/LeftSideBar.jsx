@@ -548,6 +548,33 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
     </>
   );
 
+  const NavForSMDevice = (
+    <>
+      {/* footer */}
+      <div
+        className={`bg-[#60A15680] 
+        h-[70px] md:h-[50px] lg:h-full xl:h-full 2xl-h-full 
+        p-5 md:p-3 lg:p-5 xl:p-6 2xl:p-8
+        flex flex-row md:flex md:flex-row lg:flex lg:flex-col xl:flex xl:flex-col 2xl:flex-col
+        justify-between items-center md:justify-between md:items-center lg:justify-evenly lg:items-center
+        gap-1 md:gap-2 lg:gap-3 
+        ${isSideBarClose ? "w-full" : "w-full"}`}>
+        <div className="w-12 h-12 rounded-full border border-green-500">
+          <h1>Logo</h1>
+        </div>
+        <div>
+          <h1>Navigation</h1>
+        </div>
+        <div>
+          <h1>Profiles</h1>
+        </div>
+        <div>
+          <h1>Settings</h1>
+        </div>
+      </div>
+    </>
+  );
+
   const contents = (
     <>
       {/* footer */}
@@ -555,7 +582,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
         {/* lg */}
         <div
           className="w-full h-full 
-        flex md:flex-row lg:flex-col xl:flex-col 2xl:flex-col  ">
+          flex md:flex-row lg:flex-col xl:flex-col 2xl:flex-col  ">
           {/* nav */}
           {/* divider */}
           <div
@@ -565,10 +592,17 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
             {/*  */}
           </div>
           {/* navigation links */}
+          {/*  */}
+          <div className="hidden md:block">
+            <h1>Navigation</h1>
+          </div>
+          {/*  */}
           <div
-            className={`p-0 xl:p-5 ${isSideBarClose ? "bg-red-300" : "bg-red-300"}`}>
+            className={`block md:hidden p-0 xl:p-5 ${
+              isSideBarClose ? "bg-red-300" : "bg-red-300"
+            }`}>
             <ul
-              className={`${
+              className={` ${
                 isSideBarClose
                   ? "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col"
                   : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col justify-between items-center gap-2"
@@ -577,13 +611,20 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
             </ul>
           </div>
           {/* end footer social media links */}
+          {/*  */}
+          <div className="hidden md:block mx-8">
+            <h1>Profiles</h1>
+          </div>
+          {/*  */}
           <div
-            className={` p-1 md:p-0 lg:p-5 xl:p-5 2xl:p-6 flex items-center justify-evenly gap-3 rounded-b-lg ${
+            className={`md:hidden p-1 md:p-0 lg:p-5 xl:p-5 2xl:p-6 flex items-center justify-evenly gap-3 rounded-b-lg ${
               isSideBarClose ? "bg-red-200" : "bg-red-200 flex flex-col"
             }`}>
             <ul
               className={`w-full h-full flex flex-row justify-between items-center gap-3 xl:gap-5 ${
-                isSideBarClose ? "flex-row md:flex-row lg:flex-col xl:flex-row 2xl:flex-row p-0 " : "flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col p-0"
+                isSideBarClose
+                  ? "flex-row md:flex-row lg:flex-col xl:flex-row 2xl:flex-row p-0 "
+                  : "flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col p-0"
               }`}>
               {smLinks}
             </ul>
@@ -598,22 +639,28 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
     <div
       //  className={`bg-[#60A15680] p-1 lg:p-5 flex sm:flex-row sm:justify-between sm:items-center lg:flex-col lg:gap-3  `}>
       className={`bg-[#60A15680] 
-        h-[100px] md:h-[100px] lg:h-full xl:h-full 2xl-h-full 
+        h-[70px] md:h-[50px] lg:h-full xl:h-full 2xl-h-full 
         p-5 md:p-3 lg:p-5 xl:p-6 2xl:p-8
         flex flex-row md:flex md:flex-row lg:flex lg:flex-col xl:flex xl:flex-col 2xl:flex-col
         justify-between items-center md:justify-between md:items-center lg:justify-evenly lg:items-center
-        gap-1 md:gap-2 lg:gap-3 ${isSideBarClose ? "w-full" : "w-full"}`}>
-      <div className="w-[50px] md:w-[80px] lg:w-[160px] xl:w-[160px] 2xl:[170px] flex justify-center items-center ">
+        gap-1 md:gap-2 lg:gap-3 
+        ${isSideBarClose ? "w-full" : "w-full"}`}>
+      <div className="w-[50px] md:w-[48px] lg:w-[160px] xl:w-[160px] 2xl:[170px] flex justify-center items-center ">
         <img
-          className="shadow-xl drop-shadow-xl rounded-full w-[50px] md:w-[80px]  xl:w-[460px] 2xl:[170px]  "
+          className="shadow-xl drop-shadow-xl rounded-full w-[50px] md:w-[48px]  xl:w-[460px] 2xl:[170px]  "
           src={profileImg}
           alt="profile image of arif miah"
         />
       </div>
       {/* settings / users interactions */}
+      <div className="xs:hidden sm:hidden md:block lg:hidden xl:hidden 2xl:hidden">
+        <h1>Settings</h1>
+      </div>
       <div
-        className={` justify-between items-center gap-3 lg:justify-evenly lg:mt-2 ${
-          isSideBarClose ? "flex flex-row " : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col "
+        className={`xs:block sm:block md:hidden lg:block xl:block 2xl:block justify-between items-center gap-3 lg:justify-evenly lg:mt-2 ${
+          isSideBarClose
+            ? "flex flex-row "
+            : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col "
         }`}>
         {/* sidebar folding / Drawer */}
         <div
@@ -815,6 +862,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
         {/* Content for md devices */}
         {/* footer */}
         {contents}
+        {/* {NavForSMDevice} */}
       </div>
 
       {/* for lg */}
