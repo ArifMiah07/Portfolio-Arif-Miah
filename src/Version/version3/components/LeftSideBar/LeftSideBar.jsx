@@ -586,19 +586,19 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
           {/* nav */}
           {/* divider */}
           <div
-            className={`block md:hidden w-full h-1 rounded-t-lg ${
+            className={`hidden md:block lg:hidden xl:hidden 2xl:hidden w-full h-1 rounded-t-lg ${
               isSideBarClose ? "bg-red-700" : "bg-red-700"
             }`}>
             {/*  */}
           </div>
           {/* navigation links */}
           {/*  */}
-          <div className="hidden md:block">
+          <div className="hidden md:block lg:hidden xl:hidden 2xl:hidden">
             <h1>Navigation</h1>
           </div>
           {/*  */}
           <div
-            className={`block md:hidden p-0 xl:p-5 ${
+            className={`block md:hidden lg:block xl:block 2xl:block p-0 xl:p-5 ${
               isSideBarClose ? "bg-red-300" : "bg-red-300"
             }`}>
             <ul
@@ -612,12 +612,12 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
           </div>
           {/* end footer social media links */}
           {/*  */}
-          <div className="hidden md:block mx-8">
-            <h1>Profiles</h1>
+          <div className="hidden md:block lg:hidden xl:hidden 2xl:hidden mx-8">
+            <h1 >Profiles</h1>
           </div>
           {/*  */}
           <div
-            className={`md:hidden p-1 md:p-0 lg:p-5 xl:p-5 2xl:p-6 flex items-center justify-evenly gap-3 rounded-b-lg ${
+            className={`flex md:hidden lg:block xl:block 2xl:block p-1 md:p-0 lg:p-5 xl:p-5 2xl:p-6 items-center justify-evenly gap-3 rounded-b-lg ${
               isSideBarClose ? "bg-red-200" : "bg-red-200 flex flex-col"
             }`}>
             <ul
@@ -645,13 +645,16 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
         justify-between items-center md:justify-between md:items-center lg:justify-evenly lg:items-center
         gap-1 md:gap-2 lg:gap-3 
         ${isSideBarClose ? "w-full" : "w-full"}`}>
-      <div className="w-[50px] md:w-[48px] lg:w-[160px] xl:w-[160px] 2xl:[170px] flex justify-center items-center ">
-        <img
-          className="shadow-xl drop-shadow-xl rounded-full w-[50px] md:w-[48px]  xl:w-[460px] 2xl:[170px]  "
-          src={profileImg}
-          alt="profile image of arif miah"
-        />
-      </div>
+      <div className="w-[50px] md:w-[48px] lg:w-[160px] xl:w-[160px] 2xl:w-[170px] flex justify-center items-center">
+  <img
+    className={`shadow-xl drop-shadow-xl rounded-full 
+      ${isSideBarClose ? "w-[50px] md:w-[48px] lg:w-[160px] xl:w-[160px] 2xl:w-[170px]" 
+                       : "w-[50px] md:w-[48px] lg:w-[56px] xl:w-[60px] 2xl:w-[70px]"}`}
+    src={profileImg}
+    alt="profile image of arif miah"
+  />
+</div>
+
       {/* settings / users interactions */}
       <div className="xs:hidden sm:hidden md:block lg:hidden xl:hidden 2xl:hidden">
         <h1>Settings</h1>
@@ -659,8 +662,8 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
       <div
         className={`xs:block sm:block md:hidden lg:block xl:block 2xl:block justify-between items-center gap-3 lg:justify-evenly lg:mt-2 ${
           isSideBarClose
-            ? "flex flex-row "
-            : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col "
+            ? "flex flex-row gap-12"
+            : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col gap-6"
         }`}>
         {/* sidebar folding / Drawer */}
         <div

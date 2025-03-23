@@ -1,0 +1,1 @@
+export const smSizeProfile = 'flex md:hidden lg:block xl:block 2xl:block'
