@@ -397,7 +397,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
   }`;
 
   const smLinksStyle =
-    "text-lg xl:text-2xl hover:xl:text-3xl hover:text-[#384ba7] transition-all duration-300 ease-in-out";
+    "text-lg xl:text-2xl hover:xl:text-2xl hover:text-[#384ba7] transition-all duration-300 ease-in-out";
   const interactionIconsStyle =
     "flex items-center justify-center bg-green-50 shadow-xl drop-shadow-xl rounded-full w-10 h-10 ";
   const interactionIconsStyleFF =
