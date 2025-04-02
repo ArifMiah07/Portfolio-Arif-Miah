@@ -656,7 +656,7 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
 </div>
 
       {/* settings / users interactions */}
-      <div className="xs:hidden sm:hidden md:block lg:hidden xl:hidden 2xl:hidden">
+      <div className="xs:block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
         <h1>Settings</h1>
       </div>
       <div
