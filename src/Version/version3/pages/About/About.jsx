@@ -36,7 +36,7 @@ const About = () => {
     <div
       className={` bg-red-50 mx-auto ${font} text-black w-full h-screen grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden `}>
       {/* left */}
-      <section className={` ${sideBarClose ? "w-full mx-auto lg:col-span-3" : "w-full lg:col-span-1"} bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
+      <section className={` ${sideBarClose ? "w-full h-[70px] sm:h-[70px] md:h-[70px] lg:h-full xl:h-full 2xl:h-full  mx-auto lg:col-span-3" : "w-full  h-[70px] sm:h-[70px] md:h-[70px] lg:h-full xl:h-full 2xl:h-full lg:col-span-1"}  bg-[#1B8B09] p-1 lg:p-1 z-50 lg:z-50`}>
         <ScrollContainer>
 
         <LeftSideBar handleSideBar={handleSideBar} isSideBarClose={sideBarClose} ></LeftSideBar>
