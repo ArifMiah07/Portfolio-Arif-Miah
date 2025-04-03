@@ -150,8 +150,8 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
 
   // styles
   const navLinksStyle =
-    "border-b-2 z-50 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm ";
-  const navLinksStyleFF = "text-2xl";
+    "w-full border-b-2 z-50 border-green-800 hover:p-1 hover:bg-green-200 hover:shadow-2xl rounded-md hover:text-center delay-75 hover:transition-shadow transition-all hover:border-x-2 hover:border-green-600 hover:drop-shadow-sm ";
+  const navLinksStyleFF = "text-2xl w-full";
   // following DRY method
   const customClassesForNavLinks = `${navLinksStyle}  ${
     isSideBarClose ? navLinksStyle : navLinksStyleFF
@@ -181,7 +181,9 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
           ) : (
             <Tooltip text="Home">
               {" "}
-              <FaHome />
+              <div className="w-full h-full flex flex-row items-center justify-center text-center">
+                <FaHome />
+              </div>
             </Tooltip>
           )}
         </Link>
@@ -363,10 +365,10 @@ const LeftSideBar = ({ handleSideBar, isSideBarClose }) => {
               isSideBarClose ? "bg-red-300" : "bg-red-300"
             }`}>
             <ul
-              className={` ${
+              className={`w-full h-full flex flex-row justify-center items-center ${
                 isSideBarClose
-                  ? "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col"
-                  : "flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col justify-between items-center gap-2"
+                  ? " flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col"
+                  : " flex flex-row md:flex-row lg:flex-col xl:flex-col 2xl:flex-col justify-between items-center gap-2"
               }`}>
               {navLinks}
             </ul>
