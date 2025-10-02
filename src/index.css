@@ -56,8 +56,8 @@
 
 /* css styles */
 
-.input-field{
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+.input-field {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body h1 {
@@ -69,17 +69,20 @@ body p {
 
 /* version 4 styles */
 /* gradient text */
-.gradientName{
-  background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
-  background-position: 200% 200%;
-  animation: animateNameGradient 2s linear alternate ;
+.gradientName {
+  background: repeating-linear-gradient(transparent, #4d9f0c 40px),
+    repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+  background-position: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* animation: animateNameGradient 3s linear infinite; */
 }
 
-@keyframes animateNameGradient {
-  from {
-    background-size: 200% 200%;
+/* @keyframes animateNameGradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to{
-    background-size: 100% 100%;
+  100%{
+    background-position: 100% 50%;
   }
-}
+} */
