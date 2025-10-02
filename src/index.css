@@ -70,6 +70,10 @@ body p {
 /* version 4 styles */
 /* gradient text */
 .gradientName {
+  /* dark */
+  /* background: repeating-linear-gradient(transparent, #fffb00 40px),
+    repeating-linear-gradient(0.25turn, transparent, #ffffff 20px); */
+    /* light */
   background: repeating-linear-gradient(transparent, #4d9f0c 40px),
     repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
   background-position: 300% 300%;
@@ -86,3 +90,18 @@ body p {
     background-position: 100% 50%;
   }
 } */
+
+
+/* styles for landing page */
+.landingPageBg{
+  background:
+  /* dark */
+  /* linear-gradient(217deg, rgba(0, 0, 0, 1.0), transparent 75.00%),
+  linear-gradient(127deg, rgba(0, 0, 0, 1.0), transparent 75.00%),
+  linear-gradient(336deg, rgba(0, 0, 0, 1.0), transparent 75.00%); */
+  /* light */
+  
+  linear-gradient(217deg, rgba(252, 213, 213, 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgba(221, 249, 221, 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgba(185, 185, 255, 0.8), transparent 70.71%);
+}
