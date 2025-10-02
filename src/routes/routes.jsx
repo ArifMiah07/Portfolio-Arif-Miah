@@ -11,11 +11,8 @@ import Projects3 from "../Version/version3/pages/Projects/Projects";
 import Contact3 from "../Version/version3/pages/Contact/Contact";
 import BlurGradientBackground from "../Version/version3/components/BlurGadBg/BlurGradientBackground";
 import Portfolio4 from "../Version/version4/Portfolio4";
-
-
-
-
-
+import HomePage4 from "../Version/version4/pages/home/Home";
+import LandingPage from "../Version/version4/pages/landingPage/LandingPage";
 
 const router = createBrowserRouter([
   {
@@ -62,46 +59,53 @@ const router = createBrowserRouter([
       },
       {
         path: "blur-bg",
-        element: <BlurGradientBackground></BlurGradientBackground>
+        element: <BlurGradientBackground></BlurGradientBackground>,
       },
     ],
   },
   {
     path: "/v4",
-    element: <Portfolio4 />,
     children: [
       {
-        path: "", // This will match /v3
-        element: <Home3 />,
+        index: true,
+        element: <LandingPage />,
       },
       {
-        path: "about", // This will match /v3/about
-        element: <About3 />,
-      },
-      {
-        path: "blogs",
-        element: <Blogs3 />, // Define the Blogs component
-      },
-      {
-        path: "skills",
-        element: <Skills3 />, // Define the Skills component
-      },
-      {
-        path: "projects",
-        element: <Projects3 />, // Define the Projects component
-      },
-      {
-        path: "contact",
-        element: <Contact3 />, // Define the Contacts component
-      },
-      {
-        path: "blur-bg",
-        element: <BlurGradientBackground></BlurGradientBackground>
+        path: "",
+        element: <Portfolio4 />,
+        children: [
+          {
+            path: "home", // This will match /v3
+            element: <HomePage4 />,
+          },
+          {
+            path: "about", // This will match /v3/about
+            element: <About3 />,
+          },
+          {
+            path: "blogs",
+            element: <Blogs3 />, // Define the Blogs component
+          },
+          {
+            path: "skills",
+            element: <Skills3 />, // Define the Skills component
+          },
+          {
+            path: "projects",
+            element: <Projects3 />, // Define the Projects component
+          },
+          {
+            path: "contact",
+            element: <Contact3 />, // Define the Contacts component
+          },
+          {
+            path: "blur-bg",
+            element: <BlurGradientBackground></BlurGradientBackground>,
+          },
+        ],
       },
     ],
   },
 ]);
 
 export default router;
-
-

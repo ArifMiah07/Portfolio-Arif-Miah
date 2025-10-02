@@ -2,6 +2,8 @@
  * this is the main layout for version 4
  */
 
+import { Outlet } from "react-router-dom";
+
 export default function MainLayout() {
   return (
     <div>
@@ -22,6 +24,7 @@ export default function MainLayout() {
             {/* all content from pages */}
             <div className="border border-pink-400 ">
                 <h1>this is the actual content page</h1>
+                <Outlet />
             </div>
         </section>
       </div>

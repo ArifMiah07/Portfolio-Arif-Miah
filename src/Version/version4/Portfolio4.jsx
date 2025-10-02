@@ -10,7 +10,7 @@ export default function Portfolio4(){
     // write all the functionalities with proper documentation even if with comments at/on here
     return(
         // this the component
-        <div className="min-w-[100vw] min-h-screen border-4 border-red-500 ">
+        <div className=" min-h-screen border-4 box-border border-red-500 " style={{width: 'calc(100vw - 10)'}} >
             {/* this is the root page */}
             <MainLayout />
         </div>
