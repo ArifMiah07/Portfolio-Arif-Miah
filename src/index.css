@@ -66,3 +66,20 @@ body h1 {
 body p {
   font-family: "Laila", serif;
 }
+
+/* version 4 styles */
+/* gradient text */
+.gradientName{
+  background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+  background-position: 200% 200%;
+  animation: animateNameGradient 2s linear alternate ;
+}
+
+@keyframes animateNameGradient {
+  from {
+    background-size: 200% 200%;
+  }
+  to{
+    background-size: 100% 100%;
+  }
+}

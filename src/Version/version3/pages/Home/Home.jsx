@@ -5,6 +5,12 @@ import HomeContent from "../../components/HomeContent/HomeContent";
 import { useState } from "react";
 
 const Home = () => {
+  // this is home of V3
+  /**
+   * what is going on here?
+   * dont know.
+   * no idea>?
+   */
   const [sideBarClose, setSideBarClose] = useState(false);
 
   const handleSideBar = () => {

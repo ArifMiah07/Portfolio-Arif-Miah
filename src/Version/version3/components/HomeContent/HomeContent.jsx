@@ -8,7 +8,7 @@ const HomeContent = () => {
 
   // handle events
   const handleMouseEnter = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView(true);
   };
 
@@ -17,7 +17,7 @@ const HomeContent = () => {
   };
   //
   const handleMouseEnter2 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView2(true);
   };
 
@@ -26,7 +26,7 @@ const HomeContent = () => {
   };
   //
   const handleMouseEnter3 = () => {
-    console.log("hovered");
+    // console.log("hovered");
     setView3(true);
   };
 
@@ -43,7 +43,7 @@ const HomeContent = () => {
     "w-[24px] hover:w-[48px] h-[12px] transition-all duration-200 rounded-full bg-slate-400 hover:bg-slate-500";
 
   return (
-    <div className=" p-5 g-[#FAFAFA] flex flex-col items-center w-full min-h-screen gap-3 ">
+    <div className=" p-5 bg-[#faf] flex flex-col items-center w-full min-h-screen gap-3 ">
       {/* intro */}
       <div className="g-[#FAFAFA] flex flex-col items-center w-full p-2 lg:mt-12 ">
         <h1 className="text-3xl font-medium ">Hi, I’m Arif Miah</h1>
