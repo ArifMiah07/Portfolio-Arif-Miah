@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function LandingPageNavbar({scrollPositionY}) {
+export default function LandingPageNavbar({ scrollPositionY }) {
   // states
   const [isDark, setIsDark] = useState(true);
   // functionalities
   function handleToggleTheme() {
     setIsDark(!isDark);
   }
-
 
   console.log(scrollPositionY);
 
@@ -17,40 +16,56 @@ export default function LandingPageNavbar({scrollPositionY}) {
     /**
      * this nav bar will use in landing page
      */
-    <div className={` z-3 w-full h-full flex flex-row items-center justify-between gap-6 ${scrollPositionY >= 100  ?  'bg-red-500 ': 'bg-green-400'} `}>
+    <div
+      className={`  ${
+        scrollPositionY >= 100
+          ? " transition-all delay-75 ease-in duration-150 bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 w-fit flex flex-row gap-6 items-center justify-center border border-yellow-50 "
+          : "bg-green-400 z-3 w-full h-full flex flex-row items-center justify-between gap-6"
+      } `}>
       {/* logo */}
-      <div className="flex flex-row items-center justify-center ">
+      <div
+        className={`flex flex-row items-center justify-center ${
+          scrollPositionY >= 100 ? "hidden" : ""
+        } `}>
         <span>{"<"}</span>
         <span>Arif Miah</span>
         <span>{"/>"}</span>
       </div>
       {/* menu */}
-      <div className="flex items-center">
+      <div
+        className={`flex items-center ${
+          scrollPositionY >= 100 ? " w-full  justify-end" : ""
+        }`}>
         <ul className="flex flex-row items-center gap-6 ">
           <li>
             <Link>
-                <span>Home</span>
+              <span>Home</span>
             </Link>
           </li>
           <li>
             <Link>
-                <span>About</span>
+              <span>About</span>
             </Link>
           </li>
           <li>
             <Link>
-                <span>Blog</span>
+              <span>Blog</span>
             </Link>
           </li>
           <li>
             <Link>
-                <span>Lib</span>
+              <span>Lib</span>
             </Link>
           </li>
         </ul>
       </div>
       {/* extra */}
-      <div className="flex flex-row items-center justify-center  ">
+      <div
+        className={`  ${
+          scrollPositionY >= 100
+            ? "flex flex-row w-full items-start  "
+            : "flex flex-row items-center justify-center"
+        }`}>
         <button onClick={handleToggleTheme}>
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
