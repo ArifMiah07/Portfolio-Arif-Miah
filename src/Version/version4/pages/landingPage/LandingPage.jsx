@@ -63,6 +63,13 @@ export default function LandingPage() {
           web technologies.
         </p>
       </div>
+      {/* CTA btns */}
+      <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6 border border-red-400 ">
+          <button className={` px-6 py-3 shadow-lg  bdrImgLandingPage `} >My Resume</button>
+          <button className={` px-6 py-3  bdrImg2LandingPage `} >View Projects</button>
+          <button className={` px-6 py-3  bdrImg3LandingPage `} >Latest Blogs</button>
+      </div>
+      {/* just a div */}
       <div className=" w-full h-full flex flex-col items-center mt-6 ">
         <div
           className={`blockquote bg-white w-[90vw] h-[70vh] border border-gray-50  ${
