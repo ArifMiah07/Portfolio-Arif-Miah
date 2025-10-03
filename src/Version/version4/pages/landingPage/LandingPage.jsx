@@ -36,26 +36,33 @@ export default function LandingPage() {
      * add animation
      *
      */
-    <div className="z-1 landingPageBg w-full min-h-[200vh] border-4 border-red-500 ">
+    <div className="z-1 landingPageBg w-full min-h-[200vh]  ">
       {/* header section */}
-      <header className="relative w-full h-full flex items-center mb-6 px-6 py-2 ">
+      <header className="relative w-full h-full flex items-center mb-12 px-6 py-2 ">
         {/* nav section*/}
         <nav
           className={`w-full z-2  fixed flex items-center justify-center  ${
             scrollPositionY >= 100
               ? " transition-all delay-75 ease-in duration-150 w-full top-0 right-0 items-center justify-center"
-              : "top-0 right-0  w-full h-fit   "
+              : " transition-all delay-75 ease-out duration-200 top-0 right-0  w-full h-fit   "
           }`}>
           {/* nav component */}
           <LandingPageNavbar scrollPositionY={scrollPositionY} />
         </nav>
       </header>
       {/* this is the heading of landing page */}
-      <h1 className=" gradientName uppercase text-center font-black text-7xl  ">
-        <span>Junior</span>
-        <span> Full Stack</span>
-        <span> Developer</span>
-      </h1>
+      <div className="w-full flex flex-col items-center ">
+        <h1 className=" gradientName uppercase text-center font-black text-7xl  ">
+          <span>Junior</span>
+          <span> Full Stack</span>
+          <span> Developer</span>
+        </h1>
+        <p className="capitalize text-center font-medium text-md my-4  p-3 text-black ">
+          I build exceptional digital experiences that are fast, accessible, and <br />
+          visually appealing. Let&apos;s bring your ideas to life with modern <br />
+          web technologies.
+        </p>
+      </div>
       <div className=" w-full h-full flex flex-col items-center mt-6 ">
         <div
           className={`blockquote bg-white w-[90vw] h-[70vh] border border-gray-50  ${
