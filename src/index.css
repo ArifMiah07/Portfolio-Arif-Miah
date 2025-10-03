@@ -73,7 +73,7 @@ body p {
   /* dark */
   /* background: repeating-linear-gradient(transparent, #fffb00 40px),
     repeating-linear-gradient(0.25turn, transparent, #ffffff 20px); */
-    /* light */
+  /* light */
   background: repeating-linear-gradient(transparent, #4d9f0c 40px),
     repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
   background-position: 300% 300%;
@@ -91,17 +91,26 @@ body p {
   }
 } */
 
-
 /* styles for landing page */
-.landingPageBg{
+.landingPageBg {
   background:
-  /* dark */
-  /* linear-gradient(217deg, rgba(0, 0, 0, 1.0), transparent 75.00%),
-  linear-gradient(127deg, rgba(0, 0, 0, 1.0), transparent 75.00%),
-  linear-gradient(336deg, rgba(0, 0, 0, 1.0), transparent 75.00%); */
+  /* dark */ linear-gradient(
+      17deg,
+      rgba(224, 11, 189, 0.08),
+      transparent 75.4%
+    ),
+    linear-gradient(127deg, rgba(6, 216, 240, 0.08), transparent 75.4%),
+    linear-gradient(336deg, rgba(64, 238, 11, 0.08), transparent 75.4%);
   /* light */
-  
-  linear-gradient(217deg, rgba(252, 213, 213, 0.8), transparent 70.71%),
+
+  /* linear-gradient(217deg, rgba(252, 213, 213, 0.8), transparent 70.71%),
   linear-gradient(127deg, rgba(221, 249, 221, 0.8), transparent 70.71%),
-  linear-gradient(336deg, rgba(185, 185, 255, 0.8), transparent 70.71%);
+  linear-gradient(336deg, rgba(185, 185, 255, 0.8), transparent 70.71%); */
+}
+
+/* content */
+.blockquote {
+  padding: 20px;
+  box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%), 0 0 0 2px white,
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
 }

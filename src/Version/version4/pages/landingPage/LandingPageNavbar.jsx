@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function LandingPageNavbar() {
+export default function LandingPageNavbar({scrollPositionY}) {
   // states
   const [isDark, setIsDark] = useState(true);
   // functionalities
   function handleToggleTheme() {
     setIsDark(!isDark);
   }
+
+
+  console.log(scrollPositionY);
+
   return (
     // this is landing page nav bar
     /**
      * this nav bar will use in landing page
      */
-    <nav className=" w-full h-full flex flex-row items-center justify-between gap-6 ">
+    <div className={` z-3 w-full h-full flex flex-row items-center justify-between gap-6 ${scrollPositionY >= 100  ?  'bg-red-500 ': 'bg-green-400'} `}>
       {/* logo */}
       <div className="flex flex-row items-center justify-center ">
         <span>{"<"}</span>
@@ -51,6 +55,6 @@ export default function LandingPageNavbar() {
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
       </div>
-    </nav>
+    </div>
   );
 }
