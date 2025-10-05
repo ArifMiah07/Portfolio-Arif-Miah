@@ -36,7 +36,7 @@ export default function Register() {
       {/* form section */}
       <div className=" cardOuterOnly w-[80vw] h-full lg:h-[80vh] p-6 ccRegisterPageSection bg-white rounded-md drop-shadow-md flex flex-row items-center justify-center flex-wrap border gap-1 border-gray-200 ">
         <form
-          className=" border flex flex-col lg:flex-row w-full h-full"
+          className=" border rounded-md flex flex-col lg:flex-row w-full h-full"
           action="">
           {/* left side div */}
           <div className=" border-r-2 border-dashed border-black/20 lg:border-0 w-full h-full flex flex-col  ">
@@ -119,7 +119,7 @@ export default function Register() {
             <div className=" mt-3 ">
               <label>Solve this Captcha</label>
               <div className="my-3 rounded-md w-full h-[90px] border ">
-                <img src="placeholder.png" alt="" />
+                <img src="/numbers/0.svg" alt="" />
               </div>
               <span>
                 <input
