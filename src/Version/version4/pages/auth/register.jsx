@@ -1,15 +1,24 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Register() {
   const location = useLocation();
   const currentLocation = location.pathname;
-  console.log(currentLocation);
+  //   console.log(currentLocation);
 
-  const handleFormSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    console.log(form);
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const createPassword = formData.get("createPassword");
+    const confirmPassword = formData.get("confirmPassword");
+    const userData = {
+      name,
+      email,
+      createPassword,
+      confirmPassword,
+    };
+    console.log("e", userData);
   };
 
   return (
@@ -22,7 +31,9 @@ export default function Register() {
               ? "bg-green-500 px-3 rounded-l-sm text-white text-md font-medium tracking-wide py-1 "
               : "px-3 py-1  border border-green-500 bg-white"
           } /v4/register`}>
-          Register
+          <Link to={`/v4/register`}>
+            <span>Register</span>
+          </Link>
         </button>
         <button
           className={` px-3 py-1  border border-green-500 rounded-r-sm bg-white ${
@@ -30,14 +41,16 @@ export default function Register() {
               ? "bg-green-500 px-3 rounded-sm text-white text-md font-medium tracking-wide py-1  "
               : ""
           } /v4/register`}>
-          Login
+          <Link to={`/v4/login`}>
+            <span>Login</span>
+          </Link>
         </button>
       </div>
       {/* form section */}
       <div className=" cardOuterOnly w-[80vw] h-full lg:h-[80vh] p-6 ccRegisterPageSection bg-white rounded-md drop-shadow-md flex flex-row items-center justify-center flex-wrap border gap-1 border-gray-200 ">
         <form
-          className=" border rounded-md flex flex-col lg:flex-row w-full h-full"
-          action="">
+          onSubmit={handleSubmit}
+          className=" border rounded-md flex flex-col lg:flex-row w-full h-full">
           {/* left side div */}
           <div className=" border-r-2 border-dashed border-black/20 lg:border-0 w-full h-full flex flex-col  ">
             {/* name section */}
@@ -48,6 +61,8 @@ export default function Register() {
               <input
                 type="text"
                 name="name"
+                required
+                // value={name}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
@@ -63,6 +78,8 @@ export default function Register() {
               <input
                 type="email"
                 name="email"
+                required
+                // value={email}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
@@ -77,8 +94,10 @@ export default function Register() {
               htmlFor="name">
               <span className="mr-3">Creates a Password : </span>
               <input
-                type="text"
-                name="name"
+                type="password"
+                name="createPassword"
+                required
+                // value={createPassword}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
@@ -93,8 +112,10 @@ export default function Register() {
               htmlFor="name">
               <span className="mr-3">Confirm Password</span>
               <input
-                type="text"
-                name="name"
+                type="password"
+                name="confirmPassword"
+                required
+                // value={confirmPassword}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
