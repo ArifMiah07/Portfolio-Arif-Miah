@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import LandingPageNavbar from "./LandingPageNavbar";
+// import gsap from 'gsap';
+
 
 export default function LandingPage() {
   // states
@@ -75,44 +77,6 @@ export default function LandingPage() {
           className={`blockquote bg-white w-[90vw] h-[70vh] border border-gray-50  ${
             scrollPositionY >= 200 ? "" : ""
           } `}>
-          this is the content section Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Vitae laborum cum aspernatur quos voluptatum ab
-          recusandae incidunt, quaerat eum, laudantium sint quod culpa quisquam
-          doloremque velit? Libero natus animi dolorum dolores sunt quas quis
-          aspernatur odit ea quod, voluptate aliquid, voluptas excepturi, eos
-          soluta. Eligendi velit, blanditiis recusandae sed aliquid molestias
-          voluptatem obcaecati incidunt quos, ex repellat quis eius delectus,
-          molestiae labore ducimus neque asperiores nulla voluptatum sapiente
-          ratione perferendis animi illo? Perferendis fuga facilis quibusdam
-          officiis soluta vel voluptas maiores aspernatur similique consequuntur
-          quo unde expedita, nam eaque iste aliquam ipsa rerum dolorum officia
-          sequi aperiam repudiandae? Tenetur cupiditate similique voluptatum, ex
-          eum ipsum necessitatibus repellat. Illum adipisci officiis, tenetur
-          ducimus eius iure, perferendis beatae repellat at fugit totam sequi
-          debitis minus sint laudantium praesentium eaque fugiat quidem odit
-          inventore dolores facere incidunt doloribus a! Repellendus blanditiis
-          optio at, in perferendis enim facilis quo vitae dolores incidunt,
-          illo, mollitia id magni quasi laudantium odit commodi illum quia?
-          Impedit tempore expedita, quo id facilis quidem ratione, aliquid
-          consequuntur praesentium quia necessitatibus vel ullam tenetur!
-          Deserunt natus veritatis quasi voluptates iusto? Eaque, rerum, qui ut
-          itaque cum sapiente error explicabo neque voluptatem obcaecati soluta
-          reprehenderit quaerat. Repellendus iusto corrupti nulla velit ipsa
-          consectetur molestias impedit quisquam, id fugit quibusdam assumenda
-          praesentium distinctio, dicta harum placeat quidem, quos autem omnis
-          cupiditate delectus blanditiis et pariatur culpa. Quasi incidunt vel,
-          harum mollitia sunt dolorem magnam asperiores est ipsam tempore optio
-          fugiat rem officia autem maxime quas debitis cumque cupiditate facere
-          voluptate minima temporibus at, hic itaque. Harum voluptatum nisi
-          assumenda iste odit, rerum expedita. Officiis, laborum nulla? Id,
-          fugiat! Neque, ratione iste perferendis quasi saepe maiores, modi
-          voluptatibus ipsa est dignissimos nulla blanditiis eum vitae ex
-          asperiores. Error, temporibus aperiam aspernatur totam cumque soluta
-          facere voluptates nesciunt eveniet quod similique, odit ad commodi
-          doloribus dignissimos suscipit. Ipsum beatae obcaecati vero. Mollitia
-          cupiditate amet dicta, odio reprehenderit beatae, odit dolore vel nam
-          natus dolor recusandae et molestias veritatis vitae, laudantium a eius
-          cumque commodi doloribus nobis. Recusandae corrupti ullam aliquid,
           <span>{countProgress}</span>
           <span>{scrollPositionY}</span>
         </div>
