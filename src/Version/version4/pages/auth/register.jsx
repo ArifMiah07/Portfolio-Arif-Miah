@@ -40,8 +40,10 @@ export default function Register() {
           action="">
           {/* left side div */}
           <div className=" border-r-2 border-dashed border-black/20 lg:border-0 w-full h-full flex flex-col  ">
-          {/* name section */}
-            <label className=" border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
+            {/* name section */}
+            <label
+              className=" border-l-0 border-t-0 border-b border-r-0 w-full p-2"
+              htmlFor="name">
               <span className="mr-3">Name : </span>
               <input
                 type="text"
@@ -54,7 +56,9 @@ export default function Register() {
               </span>
             </label>
             {/* email section */}
-            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="email">
+            <label
+              className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
+              htmlFor="email">
               <span className="mr-3">Email : </span>
               <input
                 type="email"
@@ -68,7 +72,9 @@ export default function Register() {
               </span>
             </label>
             {/* create password section */}
-            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
+            <label
+              className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
+              htmlFor="name">
               <span className="mr-3">Creates a Password : </span>
               <input
                 type="text"
@@ -82,7 +88,9 @@ export default function Register() {
               </span>
             </label>
             {/* conform password section */}
-            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
+            <label
+              className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
+              htmlFor="name">
               <span className="mr-3">Confirm Password</span>
               <input
                 type="text"
@@ -97,7 +105,7 @@ export default function Register() {
           </div>
           {/* right side div */}
           <div className=" p-3 border-l-2 border-dashed border-black/20 w-full h-full">
-          {/* check box for terms and conditions */}
+            {/* check box for terms and conditions */}
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -141,9 +149,9 @@ export default function Register() {
               {/* login with github */}
               <button className="flex gap-1 px-5 items-center justify-center border rounded-md mb-3  ">
                 <img
-                  className="w-12 h-12"
-                  src="https://e7.pngegg.com/pngimages/646/324/png-clipart-github-computer-icons-github-logo-monochrome-thumbnail.png"
-                  alt="google logo"
+                  className="w-10 h-10"
+                  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                  alt="github logo"
                 />
                 <span>Sign up with Github</span>
               </button>
