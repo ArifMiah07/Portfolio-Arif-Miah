@@ -1,10 +1,31 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Register() {
+  /**
+   * +++++++++++++++++++++++++++++++++++++++++++
+   * STATES
+   * +++++++++++++++++++++++++++++++++++++++++++
+   */
+  const [checkCaptchaSolution, setCheckCaptchaSolution] = useState(0);
   const location = useLocation();
-  const currentLocation = location.pathname;
-  //   console.log(currentLocation);
 
+  /**
+   * ++++++++++++++++++++++++++++++++++++++++++
+   * VARIABLES
+   * ++++++++++++++++++++++++++++++++++++++++++
+   * */
+  // view current pathname
+  const currentLocation = location.pathname;
+  const captchaSolutionResult = 3;
+  // console.log(currentLocation);
+
+  /**
+   * ++++++++++++++++++++++++++++++++++++++++++
+   * HANDLER FUNCTIONS
+   * ++++++++++++++++++++++++++++++++++++++++++
+   */
+  //   handle form submit and auth
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -21,10 +42,35 @@ export default function Register() {
     console.log("e", userData);
   };
 
+  // handle captcha | solution
+
+  /**
+   * ++++++++++++++++++++++++++++++++++++++++++
+   * CONSTANTS | STYLE
+   * ++++++++++++++++++++++++++++++++++++++++++
+   */
+  // styles for captcha images
+  const captchaImageStyles = `w-full transition-all duration-300 ease-in-out blur-sm opacity-50 grayscale hover:blur-0 hover:opacity-100 hover:grayscale-0 hover:rotate-0 rotate-45`;
+  //
+
+  /**
+   * ++++++++++++++++++++++++++++++++++++++++++
+   *  CONSOLE
+   * ++++++++++++++++++++++++++++++++++++++++++
+   */
+  // captcha ans:
+  console.log("ans: ", checkCaptchaSolution);
+
   return (
+    // this is register page
+    /**
+     * this page will use as a page in root dir /register
+     *
+     */
     <div className=" ccRegisterPageBg py-6 flex flex-col items-center shadow-md justify-center w-full min-h-screen  ">
       {/* auth tab */}
       <div className="flex mb-6">
+        {/* register button : nav*/}
         <button
           className={`${
             currentLocation === "/v4/register"
@@ -35,8 +81,9 @@ export default function Register() {
             <span>Register</span>
           </Link>
         </button>
+        {/* login button : nav*/}
         <button
-          className={` px-3 py-1  border border-green-500 rounded-r-sm bg-white ${
+          className={` px-3 py-1  border border-green-500  bg-white ${
             currentLocation === "/v4/login"
               ? "bg-green-500 px-3 rounded-sm text-white text-md font-medium tracking-wide py-1  "
               : ""
@@ -45,9 +92,20 @@ export default function Register() {
             <span>Login</span>
           </Link>
         </button>
+        {/* goto home button: nav */}
+        <button
+          className={` px-3 py-1  border-l-0 border-t border-b border-r  border-green-500  rounded-r-sm bg-white ${
+            currentLocation === "/v4/login"
+              ? "bg-green-500 px-3  rounded-sm text-white text-md font-medium tracking-wide py-1  "
+              : ""
+          } /v4/home`}>
+          <Link to={`/v4/home`}>
+            <span>Home</span>
+          </Link>
+        </button>
       </div>
       {/* form section */}
-      <div className=" cardOuterOnly w-[80vw] h-full lg:h-[80vh] p-6 ccRegisterPageSection bg-white rounded-md drop-shadow-md flex flex-row items-center justify-center flex-wrap border gap-1 border-gray-200 ">
+      <div className=" cardOuterOnly w-[80vw] h-full p-6 ccRegisterPageSection bg-white rounded-md drop-shadow-md flex flex-row items-center justify-center flex-wrap border gap-1 border-gray-200 ">
         <form
           onSubmit={handleSubmit}
           className=" border rounded-md flex flex-col lg:flex-row w-full h-full">
@@ -139,17 +197,54 @@ export default function Register() {
             {/* captcha section */}
             <div className=" mt-3 ">
               <label>Solve this Captcha</label>
-              <div className="my-3 rounded-md w-full h-[90px] border ">
-                <img src="/numbers/0.svg" alt="" />
+              <div className=" w-full h-[90px]  flex flex-row items-center my-3 rounded-md border ">
+                <img
+                  className={`${captchaImageStyles}`}
+                  src="/numbers/0x0.svg"
+                  alt="captcha image"
+                />
+                <img
+                  className={`${captchaImageStyles}`}
+                  src="/numbers/0xA.svg"
+                  alt="captcha image"
+                />
+                <img
+                  className={`${captchaImageStyles}`}
+                  src="/numbers/0x3.svg"
+                  alt="captcha image"
+                />
+                <img
+                  className={`${captchaImageStyles}`}
+                  src="/numbers/0xE.svg"
+                  alt="captcha image"
+                />
+                <img
+                  className={`${captchaImageStyles}`}
+                  src="/numbers/0xF.svg"
+                  alt="captcha image"
+                />
               </div>
-              <span>
+              <div className="flex items-center justify-center">
                 <input
                   type="text"
                   name="captcha-solution"
-                  className="outline-none border  px-5 py-1 rounded-md  w-full"
+                  onChange={(e) => setCheckCaptchaSolution(e.target.value)}
+                  className="outline-none border-l border-t border-b border-r  px-5 py-1 rounded-l-md  rounded-t-md rounded-b-md  rounded-r-none  w-full"
                   placeholder="plz write what u r seeing in the top box"
                 />
-              </span>
+                <div
+                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[33px] flex flex-col items-center justify-center px-6 ${
+                    Number(checkCaptchaSolution) === captchaSolutionResult
+                      ? "bg-green-500"
+                      : "bg-gray-300"
+                  }  `}>
+                  <button
+                    disabled={checkCaptchaSolution === ""}
+                    className={`w-fit px-2 `}>
+                    Solved
+                  </button>
+                </div>
+              </div>
             </div>
             {/* OAuth login and register */}
             <div className=" flex items-center w-full">

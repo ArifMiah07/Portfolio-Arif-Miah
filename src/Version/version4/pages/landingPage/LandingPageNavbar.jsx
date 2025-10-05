@@ -71,7 +71,29 @@ export default function LandingPageNavbar({ scrollPositionY }) {
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
         {isAdmin && (
-          <button>{isAdmin ? <span>Login</span> : <span>Logout</span>}</button>
+          <button>
+            {isAdmin ? (
+              // TODO: fix this later
+              <div className="flex gap-6">
+                <button>
+                  <Link to={`/v4/login`}>
+                    <span>Login</span>
+                  </Link>{" "}
+                </button>
+                <button>
+                  <Link to={`/v4/register`}>
+                    <span>Register</span>
+                  </Link>{" "}
+                </button>
+              </div>
+            ) : (
+              <button>
+                <Link to={`/v4/logout`}>
+                  <span>Logout</span>
+                </Link>{" "}
+              </button>
+            )}
+          </button>
         )}
       </div>
     </div>
