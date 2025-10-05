@@ -13,19 +13,19 @@ export default function Register() {
   };
 
   return (
-    <div className=" border ccRegisterPageBg py-6 flex flex-col items-center shadow-md justify-center w-full min-h-screen  ">
+    <div className=" ccRegisterPageBg py-6 flex flex-col items-center shadow-md justify-center w-full min-h-screen  ">
       {/* auth tab */}
       <div className="flex mb-6">
         <button
           className={`${
             currentLocation === "/v4/register"
-              ? "bg-green-500 px-3 rounded-sm text-white text-md font-medium tracking-wide py-1 "
+              ? "bg-green-500 px-3 rounded-l-sm text-white text-md font-medium tracking-wide py-1 "
               : "px-3 py-1  border border-green-500 bg-white"
           } /v4/register`}>
           Register
         </button>
         <button
-          className={` px-3 py-1  border border-green-500 bg-white ${
+          className={` px-3 py-1  border border-green-500 rounded-r-sm bg-white ${
             currentLocation === "/v4/login"
               ? "bg-green-500 px-3 rounded-sm text-white text-md font-medium tracking-wide py-1  "
               : ""
@@ -33,13 +33,15 @@ export default function Register() {
           Login
         </button>
       </div>
+      {/* form section */}
       <div className=" cardOuterOnly w-[80vw] h-full lg:h-[80vh] p-6 ccRegisterPageSection bg-white rounded-md drop-shadow-md flex flex-row items-center justify-center flex-wrap border gap-1 border-gray-200 ">
         <form
           className=" border flex flex-col lg:flex-row w-full h-full"
           action="">
           {/* left side div */}
-          <div className=" border-r-2 border-dashed border-black/20 lg:border-0 w-full h-full flex flex-col items-start justify-evenly ">
-            <label className=" w-full p-2" htmlFor="name">
+          <div className=" border-r-2 border-dashed border-black/20 lg:border-0 w-full h-full flex flex-col  ">
+          {/* name section */}
+            <label className=" border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
               <span className="mr-3">Name : </span>
               <input
                 type="text"
@@ -47,11 +49,12 @@ export default function Register() {
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
-              <span className="text-green-600 text-pretty text-md font-semibold ">
+              <span className="text-green-600 text-pretty text-sm font-semibold ">
                 is a valid name {""}
               </span>
             </label>
-            <label className="w-full p-2" htmlFor="email">
+            {/* email section */}
+            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="email">
               <span className="mr-3">Email : </span>
               <input
                 type="email"
@@ -59,12 +62,13 @@ export default function Register() {
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
-              <span className="text-green-600 text-pretty text-md font-semibold ">
+              <span className="text-green-600 text-pretty text-sm font-semibold ">
                 {" "}
                 valid email {""}
               </span>
             </label>
-            <label className="w-full p-2" htmlFor="name">
+            {/* create password section */}
+            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
               <span className="mr-3">Creates a Password : </span>
               <input
                 type="text"
@@ -72,12 +76,13 @@ export default function Register() {
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
-              <span className="text-green-600 text-pretty text-md font-semibold ">
+              <span className="text-green-600 text-pretty text-sm font-semibold ">
                 {" "}
                 strong password hard to crack {""}
               </span>
             </label>
-            <label className="w-full p-2" htmlFor="name">
+            {/* conform password section */}
+            <label className="border-l-0 border-t-0 border-b border-r-0 w-full p-2" htmlFor="name">
               <span className="mr-3">Confirm Password</span>
               <input
                 type="text"
@@ -85,13 +90,14 @@ export default function Register() {
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
-              <span className="text-green-600 text-pretty text-md font-semibold ">
+              <span className="text-green-600 text-pretty text-sm font-semibold ">
                 password matched
               </span>
             </label>
           </div>
           {/* right side div */}
-          <div className=" p-4 border-l-2 border-dashed border-black/20 w-full h-full">
+          <div className=" p-3 border-l-2 border-dashed border-black/20 w-full h-full">
+          {/* check box for terms and conditions */}
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -101,6 +107,7 @@ export default function Register() {
               />
               <span>Conform You read term and conditions</span>
             </div>
+            {/* captcha section */}
             <div className=" mt-3 ">
               <label>Solve this Captcha</label>
               <div className="my-3 rounded-md w-full h-[90px] border ">
