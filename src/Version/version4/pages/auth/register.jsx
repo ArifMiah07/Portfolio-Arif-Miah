@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Register() {
@@ -9,6 +9,7 @@ export default function Register() {
    */
   const [checkCaptchaSolution, setCheckCaptchaSolution] = useState(0);
   const location = useLocation();
+  const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -17,8 +18,12 @@ export default function Register() {
    * */
   // view current pathname
   const currentLocation = location.pathname;
+  // TODO: Update it later | captcha solution
   const captchaSolutionResult = 3;
-  // console.log(currentLocation);
+  // check if Captcha Solved
+  useEffect(() => {
+    setIsCaptchaSolved(Number(checkCaptchaSolution) === captchaSolutionResult);
+  }, [checkCaptchaSolution]);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -59,7 +64,8 @@ export default function Register() {
    * ++++++++++++++++++++++++++++++++++++++++++
    */
   // captcha ans:
-  console.log("ans: ", checkCaptchaSolution);
+  // console.log(currentLocation);
+  // console.log("ans: ", checkCaptchaSolution);
 
   return (
     // this is register page
@@ -192,11 +198,18 @@ export default function Register() {
                 id="captcha"
                 placeholder="you are not a robot"
               />
-              <span>Conform You read term and conditions</span>
+              <span>Accept terms and conditions</span>
             </div>
             {/* captcha section */}
             <div className=" mt-3 ">
-              <label>Solve this Captcha</label>
+              <label className="flex flex-col  ">
+                <span>Solve This Captcha </span>
+                <span className="text-sm text-black/70">
+                  {
+                    "(Please hover over the images below to view the full captcha.)"
+                  }
+                </span>
+              </label>
               <div className=" w-full h-[90px]  flex flex-row items-center my-3 rounded-md border ">
                 <img
                   className={`${captchaImageStyles}`}
@@ -227,20 +240,16 @@ export default function Register() {
               <div className="flex items-center justify-center">
                 <input
                   type="text"
-                  name="captcha-solution"
+                  name="captchaSolution"
                   onChange={(e) => setCheckCaptchaSolution(e.target.value)}
                   className="outline-none border-l border-t border-b border-r  px-5 py-1 rounded-l-md  rounded-t-md rounded-b-md  rounded-r-none  w-full"
-                  placeholder="plz write what u r seeing in the top box"
+                  placeholder="Please Write Your Solution here"
                 />
                 <div
                   className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[33px] flex flex-col items-center justify-center px-6 ${
-                    Number(checkCaptchaSolution) === captchaSolutionResult
-                      ? "bg-green-500"
-                      : "bg-gray-300"
+                    isCaptchaSolved ? "bg-green-500 text-white" : "bg-gray-300"
                   }  `}>
-                  <button
-                    disabled={checkCaptchaSolution === ""}
-                    className={`w-fit px-2 `}>
+                  <button disabled={!isCaptchaSolved} className={`w-fit px-2 `}>
                     Solved
                   </button>
                 </div>
