@@ -44,10 +44,7 @@ export default function Register() {
   useEffect(() => {
     const handleNameValidation = () => {
       const validName = String(checkValidName).trim().toLowerCase();
-      if (validName) {
-        setIsValidName(true);
-        setCheckValidName(String(checkValidName).trim());
-      }
+      setIsValidName(validName.length > 0);
       // console.log("valid name: ", validName);
     };
 
@@ -169,7 +166,7 @@ export default function Register() {
                 <span className="text-green-600 text-pretty text-sm font-semibold ">
                   {isValidName && (
                     <span>
-                      &apos;{checkValidName}&apos; is a valid name {""}
+                      &apos;{(checkValidName).toString().trim()}&apos; is a valid name {""}
                     </span>
                   )}
                 </span>
