@@ -18,6 +18,7 @@ export default function Register() {
   const [createPassword, setCreatePassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checkValidName, setCheckValidName] = useState("");
+  const [isValidName, setIsValidName] = useState(false);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -42,11 +43,16 @@ export default function Register() {
   // check name validation
   useEffect(() => {
     const handleNameValidation = () => {
-      setCheckValidName(String("test"));
+      const validName = String(checkValidName).trim().toLowerCase();
+      if (validName) {
+        setIsValidName(true);
+        setCheckValidName(String(checkValidName).trim());
+      }
+      // console.log("valid name: ", validName);
     };
 
-    return handleNameValidation;
-  }, []);
+    handleNameValidation();
+  }, [checkValidName]);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -90,7 +96,7 @@ export default function Register() {
   // console.log(currentLocation);
   // console.log("ans: ", checkCaptchaSolution);
   // valid name
-  console.log(checkValidName);
+  // console.log(checkValidName);
 
   return (
     // this is register page
@@ -151,14 +157,23 @@ export default function Register() {
                 type="text"
                 name="name"
                 required
-                onChange={(e)=> {setCheckValidName(e.target.value)}}
+                onChange={(e) => {
+                  setCheckValidName(e.target.value);
+                }}
                 // value={name}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
-              <span className="text-green-600 text-pretty text-sm font-semibold ">
-                is a valid name {""}
-              </span>
+              {/* show Name validation msg */}
+              {checkValidName && (
+                <span className="text-green-600 text-pretty text-sm font-semibold ">
+                  {isValidName && (
+                    <span>
+                      &apos;{checkValidName}&apos; is a valid name {""}
+                    </span>
+                  )}
+                </span>
+              )}
             </label>
             {/* email section */}
             <label
