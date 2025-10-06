@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IoIosEye, IoIosEyeOff } from "react-icons/io";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Register() {
@@ -11,6 +11,10 @@ export default function Register() {
   const [checkCaptchaSolution, setCheckCaptchaSolution] = useState(0);
   const location = useLocation();
   const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
+  const [toggleConfirmPasswordVisibility, setToggleConfirmPasswordVisibility] =
+    useState(false);
+  const [toggleCreatePasswordVisibility, setToggleCreatePasswordVisibility] =
+    useState(false);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -46,6 +50,16 @@ export default function Register() {
       confirmPassword,
     };
     console.log("e", userData);
+  };
+
+  // handle create password visibility
+  const handleToggleCreatePasswordVisibility = () => {
+    setToggleCreatePasswordVisibility(!toggleCreatePasswordVisibility);
+  };
+
+  // handle confirm password visibility
+  const handleToggleConfirmPasswordVisibility = () => {
+    setToggleConfirmPasswordVisibility(!toggleConfirmPasswordVisibility);
   };
 
   // handle captcha | solution
@@ -158,14 +172,34 @@ export default function Register() {
               className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
               htmlFor="name">
               <span className="mr-3">Creates a Password : </span>
-              <input
-                type="password"
-                name="createPassword"
-                required
-                // value={createPassword}
-                placeholder="Enter Your Name"
-                className="outline-none border rounded-lg px-5 py-2 w-full   "
-              />
+              <div className="flex flex-row items-center justify-center    ">
+                <input
+                  type={`${
+                    toggleCreatePasswordVisibility ? "password" : "text"
+                  }`}
+                  name="createPassword"
+                  required
+                  // value={createPassword}
+                  placeholder="create a password"
+                  className="outline-none border-t border-b border-l rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none px-5 py-2 w-full   "
+                />
+                <div
+                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6 `}>
+                  <button
+                    onClick={handleToggleCreatePasswordVisibility}
+                    className={`w-fit px-2 `}>
+                    {toggleCreatePasswordVisibility ? (
+                      <span>
+                        <BsEye />
+                      </span>
+                    ) : (
+                      <span>
+                        <BsEyeSlash />
+                      </span>
+                    )}
+                  </button>
+                </div>
+              </div>
               <span className="text-green-600 text-pretty text-sm font-semibold ">
                 {" "}
                 strong password hard to crack {""}
@@ -176,21 +210,31 @@ export default function Register() {
               className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
               htmlFor="name">
               <span className="mr-3">Confirm Password</span>
-              <div className=" flex flex-row gap-4 bg-blue-500   ">
+              <div className=" flex flex-row items-center justify-center    ">
                 <input
-                  type="password"
+                  type={`${
+                    toggleConfirmPasswordVisibility ? "password" : "text"
+                  }`}
                   name="confirmPassword"
                   required
                   // value={confirmPassword}
-                  placeholder="Enter Your Name"
-                  className="outline-none border rounded-lg px-5 py-2 w-full   "
+                  placeholder="Confirm you password"
+                  className="outline-none border-t border-b border-l rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none px-5 py-2 w-full   "
                 />
                 <div
-                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[33px] flex flex-col items-center justify-center px-6 ${
-                    isCaptchaSolved ? "bg-green-500 text-white" : "bg-gray-300"
-                  }  `}>
-                  <button disabled={!isCaptchaSolved} className={`w-fit px-2 `}>
-                    <span><IoIosEyeOff /></span> <span><IoIosEye /></span>
+                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6  `}>
+                  <button
+                    onClick={handleToggleConfirmPasswordVisibility}
+                    className={`w-fit px-2 `}>
+                    {toggleConfirmPasswordVisibility ? (
+                      <span>
+                        <BsEye />
+                      </span>
+                    ) : (
+                      <span>
+                        <BsEyeSlash />
+                      </span>
+                    )}
                   </button>
                 </div>
               </div>
