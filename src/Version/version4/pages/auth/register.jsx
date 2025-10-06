@@ -25,6 +25,12 @@ export default function Register() {
   const currentLocation = location.pathname;
   // TODO: Update it later | captcha solution
   const captchaSolutionResult = 3;
+
+  /**
+   * ++++++++++++++++++++++++++++++++++++++++++
+   * HANDLE SIDEEFFECTs
+   * ++++++++++++++++++++++++++++++++++++++++++
+   */
   // check if Captcha Solved
   useEffect(() => {
     setIsCaptchaSolved(Number(checkCaptchaSolution) === captchaSolutionResult);
@@ -50,16 +56,6 @@ export default function Register() {
       confirmPassword,
     };
     console.log("e", userData);
-  };
-
-  // handle create password visibility
-  const handleToggleCreatePasswordVisibility = () => {
-    setToggleCreatePasswordVisibility(!toggleCreatePasswordVisibility);
-  };
-
-  // handle confirm password visibility
-  const handleToggleConfirmPasswordVisibility = () => {
-    setToggleConfirmPasswordVisibility(!toggleConfirmPasswordVisibility);
   };
 
   // handle captcha | solution
@@ -186,7 +182,11 @@ export default function Register() {
                 <div
                   className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6 `}>
                   <button
-                    onClick={handleToggleCreatePasswordVisibility}
+                    onClick={() =>
+                      setToggleCreatePasswordVisibility(
+                        !toggleCreatePasswordVisibility
+                      )
+                    }
                     className={`w-fit px-2 `}>
                     {toggleCreatePasswordVisibility ? (
                       <span>
@@ -224,7 +224,11 @@ export default function Register() {
                 <div
                   className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6  `}>
                   <button
-                    onClick={handleToggleConfirmPasswordVisibility}
+                    onClick={() =>
+                      setToggleConfirmPasswordVisibility(
+                        !toggleConfirmPasswordVisibility
+                      )
+                    }
                     className={`w-fit px-2 `}>
                     {toggleConfirmPasswordVisibility ? (
                       <span>
@@ -292,16 +296,16 @@ export default function Register() {
                   alt="captcha image"
                 />
               </div>
-              <div className="flex items-center justify-center">
+              <div className="w-full flex flex-row items-center justify-center">
                 <input
                   type="text"
                   name="captchaSolution"
                   onChange={(e) => setCheckCaptchaSolution(e.target.value)}
-                  className="outline-none border-l border-t border-b border-r  px-5 py-1 rounded-l-md  rounded-t-md rounded-b-md  rounded-r-none  w-full"
+                  className="outline-none border-t border-b border-l rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none  px-5 py-1 w-full"
                   placeholder="Please Write Your Solution here"
                 />
                 <div
-                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[33px] flex flex-col items-center justify-center px-6 ${
+                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[34px] flex flex-col items-center justify-center px-6 ${
                     isCaptchaSolved ? "bg-green-500 text-white" : "bg-gray-300"
                   }  `}>
                   <button disabled={!isCaptchaSolved} className={`w-fit px-2 `}>
@@ -309,6 +313,12 @@ export default function Register() {
                   </button>
                 </div>
               </div>
+            </div>
+            {/* submit btn */}
+            <div className="w-full  flex gap-1 items-center justify-center mt-3  ">
+              <button className="w-full h-full bg-green-400 text-lg font-medium  border rounded-md px-5 py-2">
+                Register
+              </button>
             </div>
             {/* OAuth login and register */}
             <div className=" flex items-center w-full">
@@ -334,12 +344,6 @@ export default function Register() {
                   alt="github logo"
                 />
                 <span>Sign up with Github</span>
-              </button>
-            </div>
-            {/* submit btn */}
-            <div className="w-full  flex gap-1 items-center justify-center mb-3  ">
-              <button className="w-full h-full border rounded-md px-5 py-2">
-                Register
               </button>
             </div>
           </div>
