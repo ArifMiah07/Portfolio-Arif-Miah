@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Register() {
@@ -175,14 +176,24 @@ export default function Register() {
               className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
               htmlFor="name">
               <span className="mr-3">Confirm Password</span>
-              <input
-                type="password"
-                name="confirmPassword"
-                required
-                // value={confirmPassword}
-                placeholder="Enter Your Name"
-                className="outline-none border rounded-lg px-5 py-2 w-full   "
-              />
+              <div className=" flex flex-row gap-4 bg-blue-500   ">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  required
+                  // value={confirmPassword}
+                  placeholder="Enter Your Name"
+                  className="outline-none border rounded-lg px-5 py-2 w-full   "
+                />
+                <div
+                  className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[33px] flex flex-col items-center justify-center px-6 ${
+                    isCaptchaSolved ? "bg-green-500 text-white" : "bg-gray-300"
+                  }  `}>
+                  <button disabled={!isCaptchaSolved} className={`w-fit px-2 `}>
+                    <span><IoIosEyeOff /></span> <span><IoIosEye /></span>
+                  </button>
+                </div>
+              </div>
               <span className="text-green-600 text-pretty text-sm font-semibold ">
                 password matched
               </span>
