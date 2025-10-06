@@ -15,6 +15,9 @@ export default function Register() {
     useState(false);
   const [toggleCreatePasswordVisibility, setToggleCreatePasswordVisibility] =
     useState(false);
+  const [createPassword, setCreatePassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [checkValidName, setCheckValidName] = useState("");
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -35,6 +38,15 @@ export default function Register() {
   useEffect(() => {
     setIsCaptchaSolved(Number(checkCaptchaSolution) === captchaSolutionResult);
   }, [checkCaptchaSolution]);
+
+  // check name validation
+  useEffect(() => {
+    const handleNameValidation = () => {
+      setCheckValidName(String("test"));
+    };
+
+    return handleNameValidation;
+  }, []);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -77,6 +89,8 @@ export default function Register() {
   // captcha ans:
   // console.log(currentLocation);
   // console.log("ans: ", checkCaptchaSolution);
+  // valid name
+  console.log(checkValidName);
 
   return (
     // this is register page
@@ -137,6 +151,7 @@ export default function Register() {
                 type="text"
                 name="name"
                 required
+                onChange={(e)=> {setCheckValidName(e.target.value)}}
                 // value={name}
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
@@ -158,6 +173,7 @@ export default function Register() {
                 placeholder="Enter Your Name"
                 className="outline-none border rounded-lg px-5 py-2 w-full   "
               />
+              {/* input validation msg */}
               <span className="text-green-600 text-pretty text-sm font-semibold ">
                 {" "}
                 valid email {""}
@@ -168,36 +184,45 @@ export default function Register() {
               className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
               htmlFor="name">
               <span className="mr-3">Creates a Password : </span>
+              {/* create password, input and visibility section*/}
               <div className="flex flex-row items-center justify-center    ">
+                {/* password input */}
                 <input
                   type={`${
                     toggleCreatePasswordVisibility ? "password" : "text"
                   }`}
+                  onChange={(e) => setCreatePassword(e.target.value)}
                   name="createPassword"
                   required
                   // value={createPassword}
                   placeholder="create a password"
                   className="outline-none border-t border-b border-l rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none px-5 py-2 w-full   "
                 />
+                {/* control password visibility section*/}
                 <div
                   className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6 `}>
-                  <button
-                    onClick={() =>
-                      setToggleCreatePasswordVisibility(
-                        !toggleCreatePasswordVisibility
-                      )
-                    }
-                    className={`w-fit px-2 `}>
-                    {toggleCreatePasswordVisibility ? (
-                      <span>
-                        <BsEye />
-                      </span>
-                    ) : (
-                      <span>
-                        <BsEyeSlash />
-                      </span>
-                    )}
-                  </button>
+                  {/* password toggle btn */}
+                  {createPassword && (
+                    <button
+                      // handle toggle password visibility
+                      onClick={() =>
+                        setToggleCreatePasswordVisibility(
+                          !toggleCreatePasswordVisibility
+                        )
+                      }
+                      className={`w-fit px-2 `}>
+                      {/* toggle visibility icons */}
+                      {toggleCreatePasswordVisibility ? (
+                        <span>
+                          <BsEye />
+                        </span>
+                      ) : (
+                        <span>
+                          <BsEyeSlash />
+                        </span>
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
               <span className="text-green-600 text-pretty text-sm font-semibold ">
@@ -210,36 +235,50 @@ export default function Register() {
               className="border-l-0 border-t-0 border-b border-r-0 w-full p-2"
               htmlFor="name">
               <span className="mr-3">Confirm Password</span>
+              {/* handle confirm password , input and toggle visibility */}
               <div className=" flex flex-row items-center justify-center    ">
+                {/* confirm password input */}
                 <input
+                  // toggle input type
                   type={`${
                     toggleConfirmPasswordVisibility ? "password" : "text"
                   }`}
+                  // use password input
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   name="confirmPassword"
                   required
                   // value={confirmPassword}
                   placeholder="Confirm you password"
                   className="outline-none border-t border-b border-l rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none px-5 py-2 w-full   "
                 />
+                {/* confirm password visibility section */}
                 <div
                   className={` border-l-0 border-t border-b border-r  rounded-r-md  w-[100px] h-[41.9px] flex flex-col items-center justify-center px-6  `}>
-                  <button
-                    onClick={() =>
-                      setToggleConfirmPasswordVisibility(
-                        !toggleConfirmPasswordVisibility
-                      )
-                    }
-                    className={`w-fit px-2 `}>
-                    {toggleConfirmPasswordVisibility ? (
-                      <span>
-                        <BsEye />
-                      </span>
-                    ) : (
-                      <span>
-                        <BsEyeSlash />
-                      </span>
-                    )}
-                  </button>
+                  {/* confirm password visibility section */}
+                  {
+                    // hide icons when no input
+                    confirmPassword && (
+                      <button
+                        // handle confirm password visibility toggle
+                        onClick={() =>
+                          setToggleConfirmPasswordVisibility(
+                            !toggleConfirmPasswordVisibility
+                          )
+                        }
+                        className={`w-fit px-2 `}>
+                        {/* toggle icons */}
+                        {toggleConfirmPasswordVisibility ? (
+                          <span>
+                            <BsEye />
+                          </span>
+                        ) : (
+                          <span>
+                            <BsEyeSlash />
+                          </span>
+                        )}
+                      </button>
+                    )
+                  }
                 </div>
               </div>
               <span className="text-green-600 text-pretty text-sm font-semibold ">
