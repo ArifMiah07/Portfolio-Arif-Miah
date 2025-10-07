@@ -9,10 +9,10 @@ import RootContextProvider from "./Version/version4/contexts/RootContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HelmetProvider>
-      <RootContextProvider>
+    <RootContextProvider>
+      <HelmetProvider>
         <RouterProvider router={router} />
-      </RootContextProvider>
-    </HelmetProvider>
+      </HelmetProvider>
+    </RootContextProvider>
   </StrictMode>
 );

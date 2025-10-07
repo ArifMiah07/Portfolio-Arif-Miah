@@ -1,14 +1,18 @@
 import { createContext } from "react";
 import PropTypes from "prop-types";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
+import { app } from "../../../Firebase/firebase.config";
 
+// create auth context
 export const AuthContext = createContext();
 
+
+// create auth context provider
 export default function AuthContextProvider({ children }) {
   // sign up new user with firebase
-  const auth = getAuth();
+  const auth = getAuth(app);
 
-  const signupUserWithEmailAndPassword = async (email, password) => {
+  const signupUserWithEmailAndPassword = async (email, password, name) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -16,6 +20,13 @@ export default function AuthContextProvider({ children }) {
         password
       );
       const user = userCredential.user;
+
+      // update user name
+      await updateProfile(user, {
+        displayName: name,
+      })
+
+
       console.log("User Signed up Successfully! ", user);
       return user;
     } catch (error) {

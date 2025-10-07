@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function Register() {
   /**
@@ -19,6 +20,9 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checkValidName, setCheckValidName] = useState("");
   const [isValidName, setIsValidName] = useState(false);
+
+  // auth context
+  const { signupUserWithEmailAndPassword } = useContext(AuthContext);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -57,7 +61,7 @@ export default function Register() {
    * ++++++++++++++++++++++++++++++++++++++++++
    */
   //   handle form submit and auth
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const name = formData.get("name");
@@ -71,6 +75,17 @@ export default function Register() {
       confirmPassword,
     };
     console.log("e", userData);
+
+    // validate input like name, email, both password
+    const user = await signupUserWithEmailAndPassword(
+      email,
+      createPassword,
+      name
+    );
+    // if validation fails show error message
+
+    // user
+    console.log("Signup User: ", user);
   };
 
   // handle captcha | solution
@@ -166,7 +181,8 @@ export default function Register() {
                 <span className="text-green-600 text-pretty text-sm font-semibold ">
                   {isValidName && (
                     <span>
-                      &apos;{(checkValidName).toString().trim()}&apos; is a valid name {""}
+                      &apos;{checkValidName.toString().trim()}&apos; is a valid
+                      name {""}
                     </span>
                   )}
                 </span>
@@ -216,6 +232,7 @@ export default function Register() {
                   {/* password toggle btn */}
                   {createPassword && (
                     <button
+                      type="button"
                       // handle toggle password visibility
                       onClick={() =>
                         setToggleCreatePasswordVisibility(
@@ -271,6 +288,7 @@ export default function Register() {
                     // hide icons when no input
                     confirmPassword && (
                       <button
+                        type="button"
                         // handle confirm password visibility toggle
                         onClick={() =>
                           setToggleConfirmPasswordVisibility(
@@ -367,7 +385,7 @@ export default function Register() {
             </div>
             {/* submit btn */}
             <div className="w-full  flex gap-1 items-center justify-center mt-3  ">
-              <button className="w-full h-full bg-green-400 text-lg font-medium  border rounded-md px-5 py-2">
+              <button type="submit" className="w-full h-full bg-green-400 text-lg font-medium  border rounded-md px-5 py-2">
                 Register
               </button>
             </div>
