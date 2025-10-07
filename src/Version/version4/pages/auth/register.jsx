@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { toast, Toaster } from "sonner";
 
 export default function Register() {
   /**
@@ -13,13 +14,14 @@ export default function Register() {
   const location = useLocation();
   const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
   const [toggleConfirmPasswordVisibility, setToggleConfirmPasswordVisibility] =
-    useState(false);
+    useState(true);
   const [toggleCreatePasswordVisibility, setToggleCreatePasswordVisibility] =
-    useState(false);
+    useState(true);
   const [createPassword, setCreatePassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [checkValidName, setCheckValidName] = useState("");
   const [isValidName, setIsValidName] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // auth context
   const { signupUserWithEmailAndPassword } = useContext(AuthContext);
@@ -75,17 +77,35 @@ export default function Register() {
       confirmPassword,
     };
     console.log("e", userData);
-
     // validate input like name, email, both password
-    const user = await signupUserWithEmailAndPassword(
+    if (createPassword !== confirmPassword) {
+      //show error msg
+      toast.warning(" Plz enter a same password! password did not matched");
+    }
+    setLoading(true);
+    const signupPromise = signupUserWithEmailAndPassword(
       email,
       createPassword,
       name
     );
-    // if validation fails show error message
 
-    // user
-    console.log("Signup User: ", user);
+    // show toast
+    toast.promise(signupPromise, {
+      loading: "Signing up...",
+      success: (user) => {
+        console.log("Signup User: ", user);
+        // if validation message
+        return user.uid ? "Successfully Signed Up!" : "Failed to Signed Up!";
+      },
+      error: "Something went wrong!",
+    });
+    const user = await signupPromise;
+    console.log("Signup User after await:", user);
+    setLoading(false);
+    // reset form
+    e.target.reset();
+    // reset name validation
+    setIsValidName(false);
   };
 
   // handle captcha | solution
@@ -117,6 +137,8 @@ export default function Register() {
      *
      */
     <div className=" ccRegisterPageBg py-6 flex flex-col items-center shadow-md justify-center w-full min-h-screen  ">
+      <Toaster richColors position="top-right" />
+
       {/* auth tab */}
       <div className="flex mb-6">
         {/* register button : nav*/}
@@ -385,8 +407,15 @@ export default function Register() {
             </div>
             {/* submit btn */}
             <div className="w-full  flex gap-1 items-center justify-center mt-3  ">
-              <button type="submit" className="w-full h-full bg-green-400 text-lg font-medium  border rounded-md px-5 py-2">
-                Register
+              <button
+                disabled={loading}
+                type="submit"
+                className={`w-full h-full text-lg font-medium border rounded-md px-5 py-2 ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-green-400 hover:bg-green-500"
+                }`}>
+                {loading ? "Registering..." : "Register"}
               </button>
             </div>
             {/* OAuth login and register */}
