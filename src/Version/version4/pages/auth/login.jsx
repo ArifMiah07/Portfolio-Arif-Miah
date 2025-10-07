@@ -90,7 +90,7 @@ export default function Login() {
    * ++++++++++++++++++++++++++++++++++++++++++
    */
   // captcha ans:
-  // console.log(currentLocation);
+  console.log(currentLocation);
   // console.log("ans: ", checkCaptchaSolution);
   // valid name
   // console.log(checkValidName);
@@ -119,9 +119,9 @@ export default function Login() {
         <button
           className={` px-3 py-1  border border-green-500  bg-white ${
             currentLocation === "/v4/login"
-              ? "bg-green-500 px-3 rounded-sm text-white text-md font-medium tracking-wide py-1  "
-              : ""
-          } /v4/register`}>
+              ? "bg-green-500 text px-3 rounded-sm text-white text-md font-medium tracking-wide py-1  "
+              : "text-black"
+          } /v4/login`}>
           <Link to={`/v4/login`}>
             <span>Login</span>
           </Link>
@@ -129,9 +129,9 @@ export default function Login() {
         {/* goto home button: nav */}
         <button
           className={` px-3 py-1  border-l-0 border-t border-b border-r  border-green-500  rounded-r-sm bg-white ${
-            currentLocation === "/v4/login"
+            currentLocation === "/v4/home"
               ? "bg-green-500 px-3  rounded-sm text-white text-md font-medium tracking-wide py-1  "
-              : ""
+              : "text-black"
           } /v4/home`}>
           <Link to={`/v4/home`}>
             <span>Home</span>
