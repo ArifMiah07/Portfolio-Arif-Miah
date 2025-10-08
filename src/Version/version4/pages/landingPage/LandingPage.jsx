@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import LandingPageNavbar from "./LandingPageNavbar";
 // import gsap from 'gsap';
 
-
 export default function LandingPage() {
   // states
   const [scrollPositionY, setScrollPositionY] = useState(0);
@@ -11,14 +10,11 @@ export default function LandingPage() {
   useEffect(() => {
     const maxScrollY =
       document.documentElement.scrollHeight - window.innerHeight;
-    console.log("MaxScrollY : ", maxScrollY);
 
     const progress = window.scrollY / maxScrollY;
     setCountProgress(progress);
-    console.log("progress: ", progress);
     const handleScrollPosition = () => {
       setScrollPositionY(window.scrollY);
-      console.log(window.scrollY);
     };
     window.addEventListener("scroll", handleScrollPosition);
 
@@ -26,7 +22,7 @@ export default function LandingPage() {
     return () => window.removeEventListener("scroll", handleScrollPosition);
   }, []);
 
-  console.log(scrollPositionY);
+  // console.log(scrollPositionY);
 
   // functionalities
 
@@ -38,7 +34,7 @@ export default function LandingPage() {
      * add animation
      *
      */
-    <div className="z-1 landingPageBg w-full min-h-[200vh]  ">
+    <div className="z-1 landingPageBg w-full h-full min-h-screen  ">
       {/* header section */}
       <header className="relative w-full h-full flex items-center mb-12 px-6 py-2 ">
         {/* nav section*/}
@@ -52,35 +48,47 @@ export default function LandingPage() {
           <LandingPageNavbar scrollPositionY={scrollPositionY} />
         </nav>
       </header>
-      {/* this is the heading of landing page */}
-      <div className="w-full flex flex-col items-center ">
-        <h1 className=" gradientName uppercase text-center font-black text-7xl  ">
-          <span>Junior</span>
-          <span> Full Stack</span>
-          <span> Developer</span>
-        </h1>
-        <p className="capitalize text-center font-medium text-md my-4  p-3 text-black ">
-          I build exceptional digital experiences that are fast, accessible, and <br />
-          visually appealing. Let&apos;s bring your ideas to life with modern <br />
-          web technologies.
-        </p>
-      </div>
-      {/* CTA btns */}
-      <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6 border border-red-400 ">
-          <button className={` px-6 py-3 shadow-lg  bdrImgLandingPage `} >My Resume</button>
-          <button className={` px-6 py-3  bdrImg2LandingPage `} >View Projects</button>
-          <button className={` px-6 py-3  bdrImg3LandingPage `} >Latest Blogs</button>
-      </div>
-      {/* just a div */}
-      <div className=" w-full h-full flex flex-col items-center mt-6 ">
-        <div
-          className={`blockquote bg-white w-[90vw] h-[70vh] border border-gray-50  ${
-            scrollPositionY >= 200 ? "" : ""
-          } `}>
-          <span>{countProgress}</span>
-          <span>{scrollPositionY}</span>
-        </div>
-      </div>
+      <main className=" border border-red-500 w-full h-screen flex flex-col items-center justify-center  ">
+        <section className=" border border-green-500 w-full h-full flex flex-col items-center justify-center  ">
+          {/* this is the heading of landing page */}
+          <div className="w-full flex flex-col items-center justify-center ">
+            <h1 className=" gradientName uppercase text-center font-black text-7xl  ">
+              <span>Junior</span>
+              <span> Full Stack</span>
+              <span> Developer</span>
+            </h1>
+            <p className="capitalize text-center font-medium text-md my-4  p-3 text-black ">
+              I build exceptional digital experiences that are fast, accessible,
+              and <br />
+              visually appealing. Let&apos;s bring your ideas to life with
+              modern <br />
+              web technologies.
+            </p>
+            <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6 border border-red-400 ">
+              <button className={` px-6 py-3 shadow-lg  bdrImgLandingPage `}>
+                My Resume
+              </button>
+              <button className={` px-6 py-3  bdrImg2LandingPage `}>
+                View Projects
+              </button>
+              <button className={` px-6 py-3  bdrImg3LandingPage `}>
+                Latest Blogs
+              </button>
+            </div>
+          </div>
+          {/* CTA btns */}
+          {/* just a div */}
+          {/* <div className=" w-full h-full flex flex-col items-center mt-6 ">
+            <div
+              className={`blockquote bg-white w-[90vw] h-[70vh] border border-gray-50  ${
+                scrollPositionY >= 200 ? "" : ""
+              } `}>
+              <span>{countProgress}</span>
+              <span>{scrollPositionY}</span>
+            </div>
+          </div> */}
+        </section>
+      </main>
     </div>
   );
 }
