@@ -58,7 +58,7 @@ export default function LandingPage() {
               <span> Full Stack</span>
               <span> Developer</span>
             </h1>
-            <p className="capitalize text-center font-medium text-md my-4  p-3 text-black ">
+            <p className="textShadow text- capitalize text-center font-medium text-md my-4  p-3 text-black ">
               I build exceptional digital experiences that are fast, accessible,
               and <br />
               visually appealing. Let&apos;s bring your ideas to life with
@@ -67,9 +67,9 @@ export default function LandingPage() {
             </p>
             {/* CTA btns */}
             <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6  ">
-              <button className={` landingPageCTA px-6 py-3  `}>My Resume</button>
-              <button className={` landingPageCTA px-6 py-3   `}>View Projects</button>
-              <button className={` landingPageCTA px-6 py-3  `}>Latest Blogs</button>
+              <button className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>My Resume</button>
+              <button className={` text-lg font-semibold landingPageCTA px-5 py-2   `}>View Projects</button>
+              <button className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>Latest Blogs</button>
             </div>
           </div>
           {/* just a div */}

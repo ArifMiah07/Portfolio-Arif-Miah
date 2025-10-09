@@ -140,6 +140,11 @@ body p {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+/* paragraph */
+.textShadow {
+  color: #fafbff60;
+  text-shadow: rgb(0, 0, 0) 0.5px 0.9px;
+}
 
 /* border image in landing page */
 .bdrImgLandingPage {
@@ -158,6 +163,8 @@ body p {
   box-sizing: border-box;
   /* box-shadow: 4px 8px 6px 2px #cae393, inset 4px 8px 6px 2px #cae393; */
   box-shadow: 4px 8px 1px 2px #8c9280, inset 4px 8px 2px 2px #565d41;
+  color: #fafbff60;
+  text-shadow: rgb(0, 0, 0) 0.5px 0.9px;
 }
 :hover.landingPageCTA {
   border: 2px solid #49c69d;
@@ -166,20 +173,26 @@ body p {
   /* box-shadow: 4px 8px 6px 2px #cae393, inset 4px 8px 6px 2px #cae393; */
   box-shadow: 1px 1px 1px 2px #8c9280, inset 1px 1px 1px 2px #565d41;
   background-color: white;
-  color: black;
-  animation: animateCTA 3s ease-in-out 1s 4 alternate both  ;
+  background: linear-gradient(transparent, #4d9f0c 40px),
+    linear-gradient(0.25turn, transparent, #3f87a6 20px);
+  /* color: black; */
+  /* text-shadow: red 1px 1px; */
+  animation: animateCTA 3s ease-in-out 0s 2 alternate both;
 }
 
 /* animate */
 
 @keyframes animateCTA {
-  from{
+  from {
     background-color: white;
     color: black;
+    text-shadow: -1px 0 rgb(232, 7, 7), 0 1px rgb(207, 26, 195),
+      1px 0 rgb(147, 0, 245), 0 -1px rgb(4, 214, 211);
   }
-  to{
+  to {
     background-color: black;
     color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 }
 
