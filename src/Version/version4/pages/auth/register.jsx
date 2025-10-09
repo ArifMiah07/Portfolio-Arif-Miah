@@ -25,7 +25,7 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
 
   // auth context
-  const { signupUserWithEmailAndPassword } = useContext(AuthContext);
+  const { handleSignupUserWithEmailAndPassword } = useContext(AuthContext);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -84,7 +84,7 @@ export default function Register() {
       toast.warning(" Plz enter a same password! password did not matched");
     }
     setLoading(true);
-    const signupPromise = signupUserWithEmailAndPassword(
+    const signupPromise = handleSignupUserWithEmailAndPassword(
       email,
       createPassword,
       name

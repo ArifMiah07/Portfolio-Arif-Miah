@@ -25,7 +25,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
 
   // auth context
-  const { signupUserWithEmailAndPassword } = useContext(AuthContext);
+  const { handleLoginWithEmailAndPassword } = useContext(AuthContext);
 
   /**
    * ++++++++++++++++++++++++++++++++++++++++++
@@ -84,24 +84,23 @@ export default function Login() {
       toast.warning(" Plz enter a same password! password did not matched");
     }
     setLoading(true);
-    const signupPromise = signupUserWithEmailAndPassword(
+    const signinPromise = handleLoginWithEmailAndPassword(
       email,
-      createPassword,
-      name
+      createPassword
     );
 
     // show toast
-    toast.promise(signupPromise, {
-      loading: "Signing up...",
+    toast.promise(signinPromise, {
+      loading: "Signing in...",
       success: (user) => {
-        console.log("Signup User: ", user);
+        console.log("Signin User: ", user);
         // if validation message
-        return user.uid ? "Successfully Signed Up!" : "Failed to Signed Up!";
+        return user.uid ? "Successfully Sign In!" : "Failed to Sign In!";
       },
       error: "Something went wrong!",
     });
-    const user = await signupPromise;
-    console.log("Signup User after await:", user);
+    const user = await signinPromise;
+    console.log("Signin User after await:", user);
     setLoading(false);
     // reset form
     e.target.reset();
@@ -436,8 +435,10 @@ export default function Login() {
               </button>
               {/* Sign in with other platform */}
               <button className="flex gap-1 px-5 items-center justify-center text-center border rounded-md mb-3  ">
-                <span className="flex items-center justify-center text-lg" ><MdExpandMore /></span>
-                <span>More sign in option</span>
+                <span className="flex items-center justify-center text-lg">
+                  <MdExpandMore />
+                </span>
+                <span>More sign in options</span>
               </button>
             </div>
           </div>

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function LandingPageNavbar({ scrollPositionY }) {
+  const { user, handleLogoutUser } = useContext(AuthContext);
   // states
   const [isDark, setIsDark] = useState(true);
   // functionalities
@@ -71,28 +73,38 @@ export default function LandingPageNavbar({ scrollPositionY }) {
         <button onClick={handleToggleTheme}>
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
+        {user && <span className="text-white userName bg-green-500 rounded-full capitalize px-3 py-1 text-md">{(user.displayName).slice(0, 1)}</span>}
+
         {isAdmin && (
           <div>
-            {isAdmin ? (
+            {user ? (
               // TODO: fix this later
               <div className="flex gap-6">
-                <button>
-                  <Link to={`/v4/login`}>
-                    <span>Login</span>
-                  </Link>{" "}
-                </button>
+                {user ? (
+                  <button type="button" onClick={handleLogoutUser}>
+                    <span>Logout</span>
+                  </button>
+                ) : (
+                  <button>
+                    <Link to={`/v4/login`}>
+                      <span>Login</span>
+                    </Link>{" "}
+                  </button>
+                )}
+              </div>
+            ) : (
+              <div className="flex flex-row items-center gap-6">
                 <button>
                   <Link to={`/v4/register`}>
                     <span>Register</span>
                   </Link>{" "}
                 </button>
+                <button>
+                  <Link to={`/v4/login`}>
+                    <span>Login</span>
+                  </Link>{" "}
+                </button>
               </div>
-            ) : (
-              <button>
-                <Link to={`/v4/logout`}>
-                  <span>Logout</span>
-                </Link>{" "}
-              </button>
             )}
           </div>
         )}
@@ -101,6 +113,6 @@ export default function LandingPageNavbar({ scrollPositionY }) {
   );
 }
 
-LandingPageNavbar.propTypes ={
+LandingPageNavbar.propTypes = {
   scrollPositionY: PropTypes.number.isRequired,
-}
+};
