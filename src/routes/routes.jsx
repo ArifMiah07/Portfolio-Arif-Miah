@@ -15,6 +15,7 @@ import HomePage4 from "../Version/version4/pages/home/Home";
 import LandingPage from "../Version/version4/pages/landingPage/LandingPage";
 import Register from "../Version/version4/pages/auth/register";
 import Login from "../Version/version4/pages/auth/login";
+import Preloader from "../Version/version4/components/Preloader";
 
 const router = createBrowserRouter([
   {
@@ -70,7 +71,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LandingPage />,
+        element: (
+          <Preloader>
+            <LandingPage />
+          </Preloader>
+        ),
       },
       {
         path: "",
@@ -107,13 +112,13 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: 'register',
-        element: <Register />
+        path: "register",
+        element: <Register />,
       },
       {
-        path: 'login',
-        element: <Login />
-      }
+        path: "login",
+        element: <Login />,
+      },
     ],
   },
 ]);

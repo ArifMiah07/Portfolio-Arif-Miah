@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LandingPageNavbar from "./LandingPageNavbar";
+
 // import gsap from 'gsap';
 
 export default function LandingPage() {
@@ -23,7 +24,7 @@ export default function LandingPage() {
   }, []);
 
   // console.log(scrollPositionY);
-
+  console.log(typeof countProgress)
   // functionalities
 
   return (
@@ -36,7 +37,7 @@ export default function LandingPage() {
      */
     <div className="z-1 landingPageBg w-full h-full min-h-screen  ">
       {/* header section */}
-      <header className="relative w-full h-full flex items-center mb-12 px-6 py-2 ">
+      <header className="relative w-full h-full flex items-center px-6 py-2 ">
         {/* nav section*/}
         <nav
           className={`w-full z-2  fixed flex items-center justify-center  ${
@@ -65,15 +66,9 @@ export default function LandingPage() {
               web technologies.
             </p>
             <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6 border border-red-400 ">
-              <button className={` px-6 py-3 shadow-lg  bdrImgLandingPage `}>
-                My Resume
-              </button>
-              <button className={` px-6 py-3  bdrImg2LandingPage `}>
-                View Projects
-              </button>
-              <button className={` px-6 py-3  bdrImg3LandingPage `}>
-                Latest Blogs
-              </button>
+              <button className={` px-6 py-3  `}>My Resume</button>
+              <button className={` px-6 py-3   `}>View Projects</button>
+              <button className={` px-6 py-3  `}>Latest Blogs</button>
             </div>
           </div>
           {/* CTA btns */}

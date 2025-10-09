@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 export default function LandingPageNavbar({ scrollPositionY }) {
   // states
@@ -71,7 +72,7 @@ export default function LandingPageNavbar({ scrollPositionY }) {
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
         {isAdmin && (
-          <button>
+          <div>
             {isAdmin ? (
               // TODO: fix this later
               <div className="flex gap-6">
@@ -93,9 +94,13 @@ export default function LandingPageNavbar({ scrollPositionY }) {
                 </Link>{" "}
               </button>
             )}
-          </button>
+          </div>
         )}
       </div>
     </div>
   );
+}
+
+LandingPageNavbar.propTypes ={
+  scrollPositionY: PropTypes.number.isRequired,
 }
