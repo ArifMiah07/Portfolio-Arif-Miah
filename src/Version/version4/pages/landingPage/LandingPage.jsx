@@ -24,7 +24,7 @@ export default function LandingPage() {
   }, []);
 
   // console.log(scrollPositionY);
-  console.log(typeof countProgress)
+  console.log(typeof countProgress);
   // functionalities
 
   return (
@@ -65,13 +65,13 @@ export default function LandingPage() {
               modern <br />
               web technologies.
             </p>
-            <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6 border border-red-400 ">
-              <button className={` px-6 py-3  `}>My Resume</button>
-              <button className={` px-6 py-3   `}>View Projects</button>
-              <button className={` px-6 py-3  `}>Latest Blogs</button>
+            {/* CTA btns */}
+            <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6  ">
+              <button className={` landingPageCTA px-6 py-3  `}>My Resume</button>
+              <button className={` landingPageCTA px-6 py-3   `}>View Projects</button>
+              <button className={` landingPageCTA px-6 py-3  `}>Latest Blogs</button>
             </div>
           </div>
-          {/* CTA btns */}
           {/* just a div */}
           {/* <div className=" w-full h-full flex flex-col items-center mt-6 ">
             <div

@@ -16,21 +16,21 @@ export default function Preloader({ children }) {
       });
     };
 
-    // 🔹 Animate loader in when mounted
+    // animate loader in when mounted
     gsap.fromTo(
       loaderRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 0.5, ease: "power2.inOut" }
     );
 
-    // 🔹 If the page is already loaded (like during Vite HMR)
+    // if the page is already loaded (like during Vite HMR)
     if (document.readyState === "complete") {
       console.log("Already loaded (fast refresh)");
       hideLoader();
       return;
     }
 
-    // 🔹 Otherwise wait for all assets to finish
+    // otherwise wait for all assets to finish
     const handleAssetsLoaded = () => {
       console.log("All assets loaded");
       hideLoader();

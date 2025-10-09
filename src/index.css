@@ -104,7 +104,11 @@ body p {
   }
 } */
 
-/* styles for landing page */
+/* 
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++
+* STYLES FOR - LANDING PAGE
+* ++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
 .landingPageBg {
   background:
   /* dark */ linear-gradient(
@@ -148,15 +152,49 @@ body p {
   border-image: url("/borderImage3.png") 90 / 19px round;
 }
 
-/* register and login styles */
+.landingPageCTA {
+  border: 2px solid #49c69d;
+  border-radius: 12px;
+  box-sizing: border-box;
+  /* box-shadow: 4px 8px 6px 2px #cae393, inset 4px 8px 6px 2px #cae393; */
+  box-shadow: 4px 8px 1px 2px #8c9280, inset 4px 8px 2px 2px #565d41;
+}
+:hover.landingPageCTA {
+  border: 2px solid #49c69d;
+  border-radius: 12px;
+  box-sizing: border-box;
+  /* box-shadow: 4px 8px 6px 2px #cae393, inset 4px 8px 6px 2px #cae393; */
+  box-shadow: 1px 1px 1px 2px #8c9280, inset 1px 1px 1px 2px #565d41;
+  background-color: white;
+  color: black;
+  animation: animateCTA 3s ease-in-out 1s 4 alternate both  ;
+}
+
+/* animate */
+
+@keyframes animateCTA {
+  from{
+    background-color: white;
+    color: black;
+  }
+  to{
+    background-color: black;
+    color: white;
+  }
+}
+
+/*
+* ++++++++++++++++++++++++++++++++++++++++++++++
+* STYLES FOR - AUTH PAGE
+* ++++++++++++++++++++++++++++++++++++++++++++++
+*/
 .ccRegisterPageBg {
   background: linear-gradient(45deg, rgba(93, 222, 7, 0.08), transparent 95.4%),
     linear-gradient(145deg, rgba(2, 2, 255, 0.08), transparent 95.4%),
     linear-gradient(245deg, rgba(255, 7, 197, 0.08), transparent 95.4%);
 }
 .ccRegisterPageSection {
-  box-shadow: 
-    inset 0 22px 14px 5px rgba(140, 140, 60, 0.36),
+  box-shadow: inset 0 22px 14px 5px rgba(140, 140, 60, 0.36),
     inset 0 -22px 14px 5px rgba(40, 40, 40, 0.3);
 }
 
@@ -165,17 +203,15 @@ body p {
     /* OUTER top + bottom */ 
     /* 0 22px 14px 5px rgba(120, 160, 255, 0.45),
     0 -22px 14px 5px rgba(255, 200, 120, 0.42), */
-    /* INSET top + bottom */ 
-    inset 0 14px 6px -1px rgba(140, 140, 60, 0.36),
+    /* INSET top + bottom */ inset
+      0 14px 6px -1px rgba(140, 140, 60, 0.36),
     inset 0 -14px 6px -1px rgba(40, 40, 40, 0.3);
   border-radius: 8px;
 }
 
-  .cardOuterOnly{
-    box-shadow:
-      18px 0   10px 3px rgba(255,  80,  90, 0.6), /* right */
-      -18px 0  10px 3px rgba( 80, 255, 120, 0.45), /* left */
-      0 18px   10px 3px rgba( 90, 120, 255, 0.45), /* bottom */
-      0 -18px  10px 3px rgba(255, 190, 100, 0.45); /* top */
-  }
-
+.cardOuterOnly {
+  box-shadow: 18px 0 10px 3px rgba(255, 80, 90, 0.6),
+    /* right */ -18px 0 10px 3px rgba(80, 255, 120, 0.45),
+    /* left */ 0 18px 10px 3px rgba(90, 120, 255, 0.45),
+    /* bottom */ 0 -18px 10px 3px rgba(255, 190, 100, 0.45); /* top */
+}
