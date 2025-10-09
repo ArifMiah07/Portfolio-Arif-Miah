@@ -3,6 +3,7 @@ import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { toast, Toaster } from "sonner";
+import { MdExpandMore } from "react-icons/md";
 
 export default function Register() {
   /**
@@ -442,6 +443,13 @@ export default function Register() {
                   alt="github logo"
                 />
                 <span>Sign up with Github</span>
+              </button>
+              {/* Sign in with other platform */}
+              <button className="flex gap-1 px-5 items-center justify-center text-center border rounded-md mb-3  ">
+                <span className="flex items-center justify-center text-lg">
+                  <MdExpandMore />
+                </span>
+                <span>More sign up options</span>
               </button>
             </div>
           </div>
