@@ -10,7 +10,7 @@ export default function Portfolio4() {
   return (
     // this the component
     <div
-      className=" min-h-screen border-4 box-border border-red-500 "
+      className=" max-h-full min-h-screen border-4 box-border border-red-500 "
       style={{ width: "calc(100vw - 10)" }}>
       {/* toaster */}
       <Toaster richColors position="top-right" />

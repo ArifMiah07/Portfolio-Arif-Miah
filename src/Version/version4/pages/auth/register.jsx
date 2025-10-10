@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
-import { Link, useLocation } from "react-router-dom";
+import { Link, redirect, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { toast, Toaster } from "sonner";
 import { MdExpandMore } from "react-icons/md";
@@ -107,6 +107,8 @@ export default function Register() {
     e.target.reset();
     // reset name validation
     setIsValidName(false);
+    redirect('/v4/home');
+
   };
 
   // handle captcha | solution

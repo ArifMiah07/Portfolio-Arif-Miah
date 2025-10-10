@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { toast, Toaster } from "sonner";
 import { MdExpandMore } from "react-icons/md";
@@ -23,6 +23,7 @@ export default function Login() {
   const [checkValidName, setCheckValidName] = useState("");
   const [isValidName, setIsValidName] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   // auth context
   const { handleLoginWithEmailAndPassword } = useContext(AuthContext);
@@ -99,13 +100,21 @@ export default function Login() {
       },
       error: "Something went wrong!",
     });
-    const user = await signinPromise;
-    console.log("Signin User after await:", user);
-    setLoading(false);
-    // reset form
-    e.target.reset();
-    // reset name validation
-    setIsValidName(false);
+    try {
+      const user = await signinPromise;
+      console.log("Signin User after await:", user);
+      setLoading(false);
+      // reset form
+      e.target.reset();
+      // reset name validation
+      setIsValidName(false);
+      if (user?.uid) {
+        navigate("/v4/home");
+      }
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
   };
 
   // handle captcha | solution
