@@ -3,8 +3,8 @@
  */
 
 import { Outlet } from "react-router-dom";
-import LeftSideBar from "../../version3/components/LeftSideBar/LeftSideBar";
-// import LandingPageNavbar from "../pages/landingPage/LandingPageNavbar";
+// import LeftSideBar from "../../version3/components/LeftSideBar/LeftSideBar";
+
 
 export default function MainLayout() {
   return (
@@ -15,18 +15,18 @@ export default function MainLayout() {
         {/* left side bar / this is static / layout*/}
         <section className=" w-full lg:w-1/12 h-full lg:h-screen overflow-y-scroll border border-purple-400 ">
             <h1>this is left side bar for global navigation</h1>
-            <LeftSideBar handleSideBar={null} isSideBarClose={null} />
+            <nav>Nav</nav>
         </section>
         {/* right side bar | 2 div | flex/grid | col/1-3/11-9*/}
         <section className=" w-full h-fit flex flex-col gap-5 border border-purple-400 ">
             {/* this is nav bar in each dynamic page */}
             <div className="border border-pink-400 ">
-                <nav>nav</nav>
+                <nav className="fixed ">nav</nav>
                 {/* <p></p> */}
             </div>
             {/* this page will show other pages / this is dynamic and only active routes will show here*/}
             {/* all content from pages */}
-            <div className=" w-full h-full border border-pink-400 ">
+            <div className=" w-full h-[200vh] border border-pink-400 ">
                 <h1>this is the actual content page</h1>
                 <Outlet />
             </div>
