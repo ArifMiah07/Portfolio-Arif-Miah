@@ -73,7 +73,13 @@ export default function LandingPageNavbar({ scrollPositionY }) {
         <button onClick={handleToggleTheme}>
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
-        {user && <span className="text-white userName bg-green-500 rounded-full capitalize px-3 py-1 text-md">{(user.displayName).slice(0, 1)}</span>}
+        {user && (
+          <button
+            type="button"
+            className="text-white userName bg-green-500 rounded-full capitalize px-3 py-1 text-md">
+            <Link to={`/user-profile`}> {user.displayName.slice(0, 1)}</Link>
+          </button>
+        )}
 
         {isAdmin && (
           <div>

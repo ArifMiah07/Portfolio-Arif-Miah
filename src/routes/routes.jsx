@@ -16,6 +16,7 @@ import LandingPage from "../Version/version4/pages/landingPage/LandingPage";
 import Register from "../Version/version4/pages/auth/register";
 import Login from "../Version/version4/pages/auth/login";
 import Preloader from "../Version/version4/components/Preloader";
+import UserProfile from "../Version/version4/pages/auth/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -118,6 +119,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "user-profile",
+        element: <UserProfile></UserProfile>,
       },
     ],
   },
