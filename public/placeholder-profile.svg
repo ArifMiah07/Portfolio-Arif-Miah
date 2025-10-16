@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- background circle -->
+    <circle cx="100" cy="100" r="100" fill="#F1F4F8"/>
+    <!-- head -->
+    <circle cx="100" cy="72" r="30" fill="#A7B4C3"/>
+    <!-- shoulders/torso -->
+    <path d="M40 160 C40 120 160 120 160 160 L160 170 C160 177 153 183 146 183 L54 183 C47 183 40 177 40 170 Z" fill="#A7B4C3"/>
+    <!-- subtle inner highlight -->
+    <path d="M100 44 A28 28 0 0 1 128 72 A28 28 0 0 1 100 100 A28 28 0 0 1 72 72 A28 28 0 0 1 100 44 Z" fill="#C8D3DD" opacity="0.25"/>
+</svg>

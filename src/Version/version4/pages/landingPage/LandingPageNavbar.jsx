@@ -77,7 +77,7 @@ export default function LandingPageNavbar({ scrollPositionY }) {
           <button
             type="button"
             className="text-white userName bg-green-500 rounded-full capitalize px-3 py-1 text-md">
-            <Link to={`/user-profile`}> {user.displayName.slice(0, 1)}</Link>
+            <Link to={`/v4/user-profile`}> {user.displayName.slice(0, 1)}</Link>
           </button>
         )}
 
