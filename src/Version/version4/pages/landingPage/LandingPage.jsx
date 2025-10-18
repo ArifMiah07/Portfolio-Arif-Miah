@@ -6,14 +6,14 @@ import LandingPageNavbar from "./LandingPageNavbar";
 export default function LandingPage() {
   // states
   const [scrollPositionY, setScrollPositionY] = useState(0);
-  const [countProgress, setCountProgress] = useState(0);
+  // const [countProgress, setCountProgress] = useState(0);
 
   useEffect(() => {
-    const maxScrollY =
-      document.documentElement.scrollHeight - window.innerHeight;
+    // const maxScrollY =
+    //   document.documentElement.scrollHeight - window.innerHeight;
 
-    const progress = window.scrollY / maxScrollY;
-    setCountProgress(progress);
+    // const progress = window.scrollY / maxScrollY;
+    // setCountProgress(progress);
     const handleScrollPosition = () => {
       setScrollPositionY(window.scrollY);
     };
@@ -24,7 +24,7 @@ export default function LandingPage() {
   }, []);
 
   // console.log(scrollPositionY);
-  console.log(typeof countProgress);
+  // console.log(typeof countProgress);
   // functionalities
 
   return (

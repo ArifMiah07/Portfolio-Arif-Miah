@@ -3,35 +3,32 @@
  */
 
 import { Outlet } from "react-router-dom";
+import NavBar4 from "../pages/shared/NavBar/NavBar4";
+import { useEffect, useState } from "react";
 // import LeftSideBar from "../../version3/components/LeftSideBar/LeftSideBar";
 
-
 export default function MainLayout() {
+  const [scrollPositionY, setScrollPositionY] = useState(0);
+
+  useEffect(() => {
+    // const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+    const handleScrollPosition = () => {
+      setScrollPositionY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScrollPosition);
+
+    return () => window.removeEventListener("scroll", handleScrollPosition);
+  }, []);
+
   return (
-    <div className="w-full h-full border border-blue-600">
-      <h1>this is main layout</h1>
-      {/* page layout / 2 section | flex | row */}
-      <div className=" w-full h-full flex flex-col lg:flex-row border-2 border-green-300">
-        {/* left side bar / this is static / layout*/}
-        <section className=" w-full lg:w-1/12 h-full lg:h-screen overflow-y-scroll border border-purple-400 ">
-            <h1>this is left side bar for global navigation</h1>
-            <nav>Nav</nav>
-        </section>
-        {/* right side bar | 2 div | flex/grid | col/1-3/11-9*/}
-        <section className=" w-full h-fit flex flex-col gap-5 border border-purple-400 ">
-            {/* this is nav bar in each dynamic page */}
-            <div className="border border-pink-400 ">
-                <nav className="fixed ">nav</nav>
-                {/* <p></p> */}
-            </div>
-            {/* this page will show other pages / this is dynamic and only active routes will show here*/}
-            {/* all content from pages */}
-            <div className=" w-full h-[200vh] border border-pink-400 ">
-                <h1>this is the actual content page</h1>
-                <Outlet />
-            </div>
-        </section>
-      </div>
+    <div className="  w-full h-full border-8 border-blue-600">
+        <nav className="w-full flex items-center justify-center border border-red-400 ">
+          <NavBar4 scrollPositionY={scrollPositionY}></NavBar4>{" "}
+        </nav>
+          <div className=" w-full h-full border-4 border-pink-400 ">
+            <Outlet />
+          </div>
     </div>
   );
 }

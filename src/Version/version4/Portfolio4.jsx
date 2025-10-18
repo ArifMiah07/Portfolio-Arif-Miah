@@ -1,6 +1,5 @@
 /** sorry that forgot what i did last time and i did documented and as it possible to create a new one instead of reading all of these dumb code written myself.
  */
-import { Toaster } from "sonner";
 import MainLayout from "./layouts/MainLayout";
 
 // Do : This page will me root page of version 4 and it page will show a landing page
@@ -10,11 +9,8 @@ export default function Portfolio4() {
   return (
     // this the component
     <div
-      className=" max-h-full min-h-screen border-4 box-border border-red-500 "
+      className=" w-full h-full   "
       style={{ width: "calc(100vw - 10)" }}>
-      {/* toaster */}
-      <Toaster richColors position="top-right" />
-
       {/* this is the root page */}
       <MainLayout />
     </div>
