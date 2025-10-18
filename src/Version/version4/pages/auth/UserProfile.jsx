@@ -62,7 +62,7 @@ export default function UserProfile() {
           </div>
         </div>
         <div className="w-full h-full min-h-screen bg-black/90 text-white border-t  ">
-          <nav className="w-full ">
+          <nav className=" border border-pink-500 p-2 w-full h-full flex flex-col justify-start ">
             <CustomTabs />
             {/* <ul className="flex items-center gap-6 p-2">
               <li>Feed</li>
@@ -98,6 +98,7 @@ export function CustomTabs() {
 
   const tabs = [
     { id: "feed", label: "Feed" },
+    { id: "about", label: "About" },
     { id: "comments", label: "Comments" },
     { id: "reacts", label: "Reacts" },
     { id: "shared", label: "Shared" },
@@ -105,7 +106,7 @@ export function CustomTabs() {
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md mx-auto border border-green-500 ">
       {/* Tab buttons */}
       <div className="flex justify-around border-b border-gray-300">
         {tabs.map((tab) => (
@@ -135,6 +136,22 @@ export function CustomTabs() {
                   <div key={index}>
                     <div className="text-white">
                       <p>Post number {index + 1}</p>
+                    </div>
+                  </div>
+                ))}
+            </section>
+          </div>
+        )}
+        {activeTab === "about" && (
+          <div>
+            <h1>📰 About information here...</h1>
+            <section>
+              {Array(10)
+                .fill(0)
+                .map((_, index) => (
+                  <div key={index}>
+                    <div className="text-white">
+                      <p>About yourself {index + 1}</p>
                     </div>
                   </div>
                 ))}
