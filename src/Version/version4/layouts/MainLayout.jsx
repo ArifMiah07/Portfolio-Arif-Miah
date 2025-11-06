@@ -22,7 +22,7 @@ export default function MainLayout() {
   }, []);
 
   return (
-    <div className="  w-full h-full border-8 border-blue-600">
+    <div className="  w-full min-h-screen border-8 border-blue-600">
         <nav className="w-full flex items-center justify-center border border-red-400 ">
           <NavBar4 scrollPositionY={scrollPositionY}></NavBar4>{" "}
         </nav>

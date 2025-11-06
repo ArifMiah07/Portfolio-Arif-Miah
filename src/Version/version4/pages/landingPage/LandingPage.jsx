@@ -35,7 +35,7 @@ export default function LandingPage() {
      * add animation
      *
      */
-    <div className="z-1 landingPageBg w-full h-full min-h-screen  ">
+    <div className="z-1 landingPageBg box-border w-full  " style={{minHeight: 'calc(100% - 100px)'}} >
       {/* header section */}
       <header className="relative w-full h-full flex items-center px-6 py-2 ">
         {/* nav section*/}
@@ -49,8 +49,8 @@ export default function LandingPage() {
           <LandingPageNavbar scrollPositionY={scrollPositionY} />
         </nav>
       </header>
-      <main className=" border border-red-500 w-full h-screen flex flex-col items-center justify-center  ">
-        <section className=" border border-green-500 w-full h-full flex flex-col items-center justify-center  ">
+      <main className="  w-full h-screen flex flex-col items-center justify-center  ">
+        <section className="  w-full h-full flex flex-col items-center justify-center  ">
           {/* this is the heading of landing page */}
           <div className="w-full flex flex-col items-center justify-center ">
             <h1 className=" gradientName uppercase text-center font-black text-7xl  ">
@@ -67,9 +67,18 @@ export default function LandingPage() {
             </p>
             {/* CTA btns */}
             <div className="w-full h-full flex flex-row items-center justify-evenly  gap-6  ">
-              <button className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>My Resume</button>
-              <button className={` text-lg font-semibold landingPageCTA px-5 py-2   `}>View Projects</button>
-              <button className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>Latest Blogs</button>
+              <button
+                className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>
+                My Resume
+              </button>
+              <button
+                className={` text-lg font-semibold landingPageCTA px-5 py-2   `}>
+                View Projects
+              </button>
+              <button
+                className={` text-lg font-semibold landingPageCTA px-5 py-2  `}>
+                Latest Blogs
+              </button>
             </div>
           </div>
           {/* just a div */}
