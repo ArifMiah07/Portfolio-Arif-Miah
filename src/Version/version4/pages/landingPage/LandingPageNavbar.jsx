@@ -70,7 +70,7 @@ export default function LandingPageNavbar({ scrollPositionY }) {
             ? "flex flex-row w-full items-start gap-6 "
             : "flex flex-row items-center justify-center gap-6"
         }`}>
-        <button onClick={handleToggleTheme}>
+        <button className="w-[48px] " onClick={handleToggleTheme}>
           {isDark ? <span>Light</span> : <span>Dark</span>}
         </button>
         {user && (

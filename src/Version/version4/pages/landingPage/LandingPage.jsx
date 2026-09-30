@@ -35,7 +35,7 @@ export default function LandingPage() {
      * add animation
      *
      */
-    <div className="z-1 landingPageBg box-border w-full  " style={{minHeight: 'calc(100% - 100px)'}} >
+    <div className="z-1 landingPageBg box-border w-full min-h-screen " >
       {/* header section */}
       <header className="relative w-full h-full flex items-center px-6 py-2 ">
         {/* nav section*/}
